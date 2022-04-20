@@ -8,7 +8,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 
-const LargeMainWindow = (props) => {
+const LargeMainWindow  = (props) =>  {
     let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -17,7 +17,7 @@ const LargeMainWindow = (props) => {
   }
 
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
+    
     subtitle.style.color = '#f00';
   }
 
@@ -58,13 +58,33 @@ const LargeMainWindow = (props) => {
         </div>
     </div>
     </button>
-    <Modal
+    <Modal className=" bg-gray-200 h-[52vh] m-10 rounded-xl mt-32 "
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
       >
-        <h2 >Hello</h2>
-        <button onClick={closeModal}>close</button>
-       
+        <div className=" bg-gray-400 m-2 top-2 h-56 rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
+        <button className="flex pl-1" onClick={closeModal}>close</button>
+        
+         <img src={props.imageurl} className="  h-36  relative w-48 mx-auto rounded-lg shadow-[5px_10px_15px_-2px_rgba(0,0,0,0.5)] " /> 
+        <h1 className=" relative text-lg pl-1">{props.Foodname}</h1>
+        <h1 className="inline mr-[4.5rem] pl-1 ">{props.Fooddesc}</h1>
+        <h1 className=" inline text-xl">{props.Foodprice}</h1>
+        
+        <div className="grid grid-rows-4 gap-2 text-lg mt-5 ">
+          
+          <div className="row-span-1 grid grid-cols-4 "> <input type="checkbox" className="inline ml-4 my-auto justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)] "/> <h1 className="inline cols-span-2">Mustard</h1> <h1 className="inline "></h1> <h1 className="col-span-1 justify-self-end mr-2">+0.5KM</h1> </div>
+          <div className="row-span-1 grid grid-cols-4 "> <input type="checkbox" className="inline ml-4 my-auto justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"/> <h1 className="inline cols-span-2">Mustard</h1> <h1 className="inline "></h1> <h1 className="col-span-1 justify-self-end mr-2">+0.5KM</h1> </div>
+          <div className="row-span-1 grid grid-cols-4 "> <input type="checkbox" className="inline ml-4 my-auto justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"/> <h1 className="inline cols-span-2">Mustard</h1> <h1 className="inline "></h1> <h1 className="col-span-1 justify-self-end mr-2">+0.5KM</h1> </div>
+          <div className="row-span-1 grid grid-cols-4 "> <input type="checkbox" className="inline ml-4 my-auto justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"/> <h1 className="inline cols-span-2">Mustard</h1> <h1 className="inline "></h1> <h1 className="col-span-1 justify-self-end mr-2">+0.5KM</h1> </div>
+          
+        </div>
+        <div className=" w-full h-16 bg-green-700 rounded-xl mt-4">
+        
+
+        </div>
+
+
+        </div>
         
       </Modal>
     </div>

@@ -1,59 +1,15 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import React, { Component } from 'react'
 
+export class PopUpWindow extends Component  {
+  render() {
+    return (
+      <div>
 
-
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root');
-
-const PopUpWindow = () => {
-    let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-
-  function openModal() {
-    setIsOpen(true);
+      </div>
+    )
   }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-  return (
-    <div>
-     
-    <div>
-      <button className="h-32 relative" onClick={openModal}>Open Modal</button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-       
-        contentLabel="Example Modal"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
-      </Modal>
-    </div>
-  
-
-
-     
-    </div>
-  )
 }
-
 
 export default PopUpWindow

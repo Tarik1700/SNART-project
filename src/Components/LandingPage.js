@@ -50,14 +50,11 @@ const LandingPage = () => {
         </div>
 
 
-        
-
-
         </div>
         <div className="relative bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-        <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM"/>
+        <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>
         <LargeMainWindow Foodname="Pasta" imageurl={img6} Foodprice="10 KM"/>
         <LargeMainWindow Foodname="Pizza" imageurl={img7} Foodprice="9 KM"/>
         <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM"/>
