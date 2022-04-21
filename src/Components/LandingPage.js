@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SmallFoodWindow from './SmallFoodWindow'
 import LargeMainWindow from './LargeMainWindow'
 import img1 from './img/foodimage.jpg'
@@ -12,10 +12,30 @@ import img8 from './img/pancakesimage.jpg'
 import img9 from './img/cheeseburgerimage.jpg'
 import img10 from './img/logo1.png'
 import img11 from './img/logo2.png'
+import Modal1 from './Modal1'
+
 
 const LandingPage = () => {
+
+  const [isOpen, setIsOpen] = useState(true)
+
+  
   return (
     <div className=" overflow-y-clip">
+
+        <div>
+
+        
+
+        <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >
+         
+       
+      </Modal1>
+
+        </div>
+
+
+
         <div className="h-24 shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
         <img src={img10} className="  h-16   my-auto " /> 
         <img src={img11} className="  h-10  my-auto  justify-self-start " /> 
@@ -55,15 +75,21 @@ const LandingPage = () => {
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
         <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>
-        <LargeMainWindow Foodname="Pasta" imageurl={img6} Foodprice="10 KM"/>
-        <LargeMainWindow Foodname="Pizza" imageurl={img7} Foodprice="9 KM"/>
-        <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM"/>
-        <LargeMainWindow Foodname="Cheeseburger" imageurl={img9} Foodprice="5 KM"/>
-        <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM"/>
-        <LargeMainWindow Foodname="Pasta" imageurl={img6} Foodprice="10 KM"/>
-        <LargeMainWindow Foodname="Pizza" imageurl={img7} Foodprice="9 KM"/>
-        <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM"/>
-        <LargeMainWindow Foodname="Cheeseburger" imageurl={img9} Foodprice="5 KM"/>
+        <LargeMainWindow Foodname="Pasta" imageurl={img7} Foodprice="10 KM" Fooddesc="Pasta with a red sauce"/>
+        <LargeMainWindow Foodname="Pizza" imageurl={img6} Foodprice="9 KM" Fooddesc="Pizza with salami"/>
+        <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM" Fooddesc="American pancakes with syrup"/>
+        <LargeMainWindow Foodname="Cheeseburger" imageurl={img9} Foodprice="5 KM" Fooddesc="Cheeseburger with fries"/>
+        <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>
+        <LargeMainWindow Foodname="Pasta" imageurl={img7} Foodprice="10 KM" Fooddesc="Pasta with a red sauce"/>
+        <LargeMainWindow Foodname="Pizza" imageurl={img6} Foodprice="9 KM" Fooddesc="Pizza with salami"/>
+        <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM" Fooddesc="American pancakes with syrup"/>
+        <LargeMainWindow Foodname="Cheeseburger" imageurl={img9} Foodprice="5 KM" Fooddesc="Cheeseburger with fries"/>
+        <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>
+        <LargeMainWindow Foodname="Pasta" imageurl={img7} Foodprice="10 KM" Fooddesc="Pasta with a red sauce"/>
+        <LargeMainWindow Foodname="Pizza" imageurl={img6} Foodprice="9 KM" Fooddesc="Pizza with salami"/>
+        <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM" Fooddesc="American pancakes with syrup"/>
+        <LargeMainWindow Foodname="Cheeseburger" imageurl={img9} Foodprice="5 KM" Fooddesc="Cheeseburger with fries"/>
+       
         </div>
        
 
