@@ -13,12 +13,12 @@ import img9 from './img/cheeseburgerimage.jpg'
 import img10 from './img/logo1.png'
 import img11 from './img/logo2.png'
 import Modal1 from './Modal1'
-
+import Basket from './Basket'
 
 const LandingPage = () => {
 
-  const [isOpen, setIsOpen] = useState(true)
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen1, setIsOpen1] = useState(false)
   
   return (
     <div className=" overflow-y-clip">
@@ -28,9 +28,10 @@ const LandingPage = () => {
         
 
         <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >
-         
-       
       </Modal1>
+
+      <Basket open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
+      </Basket>
 
         </div>
 
@@ -74,7 +75,7 @@ const LandingPage = () => {
         <div className="relative bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-        <LargeMainWindow Foodname="Hamburger" imageurl={img5} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>
+        <LargeMainWindow onOpen1={() => setIsOpen1(true)}  Foodname="Hamburger" imageurl={img5} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>
         <LargeMainWindow Foodname="Pasta" imageurl={img7} Foodprice="10 KM" Fooddesc="Pasta with a red sauce"/>
         <LargeMainWindow Foodname="Pizza" imageurl={img6} Foodprice="9 KM" Fooddesc="Pizza with salami"/>
         <LargeMainWindow Foodname="Pancakes" imageurl={img8} Foodprice="3 KM" Fooddesc="American pancakes with syrup"/>

@@ -3,7 +3,8 @@ import img1 from './img/plus.png'
 import PopUpWindow from './PopUpWindow'
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-
+import {useState} from 'react'
+import Basket from './Basket'
 Modal.setAppElement('#root');
 
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -13,19 +14,9 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 
 
-const LargeMainWindow  = (props) =>  {
-  /*
-  if (
-    document.getElementById("modal")
-  ) {
-    console.log("hi")
-   
-  }else{
-    console.log("hi2222222222")
-  }
-  await timer(3000)
-*/
+const LargeMainWindow  = (props, open1, onOpen1 ) =>  {
 
+  const [isOpen1, setIsOpen1] = useState(false)
 
 
 
@@ -67,11 +58,18 @@ myLoop()
     document.getElementById("modal").style.transform = "translate(0px,1000px)";
     
   }
+
+function both(){
+  closeModal();
+  setIsOpen1(true);
+}
+
   return (
     <div className="snap-start ">
        
       <div>
-      
+      <Basket open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
+      </Basket>
 
 
 
@@ -169,7 +167,8 @@ myLoop()
             
           
         </div>
-        <button  className=" [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" onClick={closeModal}>
+        <button  className=" [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 
+        shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" onClick={both}>
         <div className=" ">
         <svg className="mx-auto pt-2 pl-1 h-full " width="50"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_2_83)">
