@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import {useState} from 'react'
 import Basket from './Basket'
+import Accent from './Accent'
+
 Modal.setAppElement('#root');
 
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -16,9 +18,9 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props, open1, onOpen1 ) =>  {
 
-  const [isOpen1, setIsOpen1] = useState(false)
+  
 
-
+  const [isOpen2, setIsOpen2] = useState(false)
 
 function myLoop() {        
   setTimeout(function() {   
@@ -61,17 +63,18 @@ myLoop()
 
 function both(){
   closeModal();
-  setIsOpen1(true);
+  setIsOpen2(true);
 }
 
   return (
     <div className="snap-start ">
        
       <div>
-      <Basket open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
-      </Basket>
+     
 
-
+<Accent open2={isOpen2}  onClose2={() => setIsOpen2(false)} >
+      </Accent>
+      
 
 
 
@@ -119,7 +122,7 @@ function both(){
     labelledby: "heading1",
     describedby: "full_description1"
   }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-7 rounded-xl mt-32  font-[poppins] 
-    transition-all duration-700 translate-y-[50rem]"
+    transition-all duration-700 translate-y-[50rem] z-1000"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
       >
