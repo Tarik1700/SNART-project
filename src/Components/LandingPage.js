@@ -17,7 +17,7 @@ import Basket from './Basket'
 
 const LandingPage = () => {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
   const [isOpen1, setIsOpen1] = useState(false)
   
   return (
