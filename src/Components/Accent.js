@@ -29,10 +29,10 @@ export default function Accent( {open2, children2, onClose2, props  }) {
         setTimeout(function() {   
                               
           if (document.getElementById("modal1")) {          
-            console.log("h3i") 
+            
             document.getElementById("modal1").style.transform = "translate(0px,0px)"
           }else{
-            console.log("3")
+           
             myLoop2(); 
           } 
                                

@@ -26,10 +26,10 @@ function myLoop() {
   setTimeout(function() {   
                         
     if (document.getElementById("modal")) {          
-      console.log("hi") 
+     
       document.getElementById("modal").style.transform = "translate(0px,0px)"
     }else{
-      console.log("hi2222222222")
+      
       myLoop(); 
     } 
                          

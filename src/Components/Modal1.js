@@ -15,7 +15,7 @@ export default function Modal1( {open, children, onClose,  }) {
           type="number" id="textarea1" maxLength="10" name="txta1" rows="1" cols="10" required />
 
 
-        <button className="h-11 top-[13rem] rounded-xl left-[11.5rem] border mx-auto relative 
+        <button className="h-11 top-[13rem] rounded-xl left-[7rem] border mx-auto relative 
          bg-[#5DBB63] w-28 text-white" onClick={onClose}> Submit </button>
         {children}
     </div> 
