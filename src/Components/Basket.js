@@ -2,10 +2,9 @@ import React from 'react'
 import img1 from './img/plus.png'
 import {useState} from 'react'
 
-export default function Basket( {open1, children1, onClose1, props, onAdd, cartItems, Foodprice, data  }) {
+export default function Basket( {open1, children1, onClose1, props, onAdd, cartItems, Foodprice  }) {
 
- const {testing} = data;
- 
+
 
   function myLoop3() {        
     setTimeout(function() {   
