@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Basket( {open1, children1, onClose1, props  }) {
+export default function Basket( {open1, children1, onClose1, props, onAdd  }) {
 
 
 
