@@ -1,8 +1,11 @@
 import React from 'react'
+import img1 from './img/plus.png'
+import {useState} from 'react'
 
-export default function Basket( {open1, children1, onClose1, props, onAdd  }) {
+export default function Basket( {open1, children1, onClose1, props, onAdd, cartItems, Foodprice, data  }) {
 
-
+ const {testing} = data;
+ 
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -44,7 +47,16 @@ export default function Basket( {open1, children1, onClose1, props, onAdd  }) {
         <button onClick={onClose1} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
-       
+     
+{test.map((testing, index) => ( 
+        <div key = {index} className="col-span-2 text-center text-2xl flex">
+        <h1 className="mx-auto ml-[6rem]"> {Foodprice}</h1>
+         <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
+     </div>
+        
+        )) }
+
+
          
         <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
       <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>

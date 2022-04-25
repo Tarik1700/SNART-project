@@ -64,7 +64,14 @@ myLoop()
 function both(){
   closeModal();
   setIsOpen2(true);
-  onAdd();
+  handleTest();
+}
+
+const [test, setTest] = useState([{ test: ""}]);
+
+
+const handleTest = () => {
+  setTest([...test, { test: ""}])
 }
 
 const [cartItems, setCartItems] = useState([]);
@@ -83,8 +90,8 @@ console.log("added")
 <Accent open2={isOpen2}  onClose2={() => setIsOpen2(false)} >
       </Accent>
       
-<Basket onAdd={onAdd} cartItems={cartItems}></Basket>
-
+<Basket Foodprice={props.Foodprice}  onAdd={onAdd} cartItems={cartItems}></Basket>
+<Basket data={test.data} />
 
 
    
@@ -120,7 +127,7 @@ console.log("added")
         </div>
         
 
-        
+       
         
 
         </div>
@@ -146,6 +153,13 @@ console.log("added")
         <h1 className="  text-xl font-bold pr-2 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
         <div className="relative h-auto">
         
+        {test.map((singleTest, index) => ( 
+        <div key = {index} className="col-span-2 text-center text-2xl flex">
+        <h1 className="mx-auto ml-[6rem]"> {props.Foodprice}</h1>
+         <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
+     </div>
+        
+        )) }
         
         </div>
         
