@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import {useState} from 'react'
 import Basket from './Basket'
 import Accent from './Accent'
+import TimeToReady from './TimeToReady'
 
 Modal.setAppElement('#root');
 
@@ -84,7 +85,7 @@ console.log("added")
 
 <Accent open2={isOpen2}  onClose2={() => setIsOpen2(false)} >
       </Accent>
-
+<TimeToReady/>
 
 
 

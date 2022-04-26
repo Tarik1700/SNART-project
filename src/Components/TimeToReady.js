@@ -3,6 +3,8 @@ import {useState} from 'react'
 
 const TimeToReady = ( props) => {
 
+    const {open1, children1, onClose1, onAdd, cartItems, price } = props;
+
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -41,7 +43,7 @@ const TimeToReady = ( props) => {
 
   return (
       <>
-      <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[999]"/>
+      <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[997]"/>
    
 
 
@@ -74,10 +76,16 @@ const TimeToReady = ( props) => {
 
         </div>
         <div className="text-sm mt-6 relative font-[poppins]">
-            <h1 className="font-extrabold text-2xl font-poppins pl-3 pb-2">Order status:</h1>
-          
+            <h1 className="font-extrabold text-2xl font-poppins pl-3 ">Order status:</h1>
+            <div className="h-24 z-[999] bg-white relative mb-3 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+
+</div>
+            
             
           
+        </div>
+        <div className="h-16 z-[999] mt-6 bg-white relative mb-3 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+        <h1 className="font-extrabold text-center my-auto mx-auto pt-2"> Your order will be ready in ___ minutes, we'll be with You shortly</h1>
         </div>
         <div>
 
@@ -91,4 +99,4 @@ const TimeToReady = ( props) => {
     
   )
 }
-export default Basket
+export default TimeToReady
