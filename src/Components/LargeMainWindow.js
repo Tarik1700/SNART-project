@@ -148,8 +148,7 @@ console.log("added")
         
                 
 <Basket price={props.Foodprice} ></Basket>
-<h1 className="h-24 ">== {props.textThing}</h1>
-{console.log(textThing)}
+
 
         </div>
         
