@@ -18,7 +18,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props, open1, onOpen1 ) =>  {
 
-  const { thingie } = props.Foodprice;
+  const { thingie, handleTest1 } = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -65,15 +65,10 @@ myLoop()
 function both(){
   closeModal();
   setIsOpen2(true);
-  handleTest();
+  handleTest1();
 }
 
-const [test, setTest] = useState([{ test: ""}]);
 
-
-const handleTest = () => {
-  setTest([...test, { test: ""}])
-}
 
 const [cartItems, setCartItems] = useState([]);
 const onAdd = (Foodname) => {
@@ -149,13 +144,7 @@ console.log("added")
         <h1 className="  text-xl font-bold pr-2 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
         <div className="relative h-auto">
         
-        {test.map((singleTest, index) => ( 
-        <div key = {index} className="col-span-2 text-center text-2xl flex">
-        <h1 className="mx-auto ml-[6rem]"> {props.Foodprice}</h1>
-         <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
-     </div>
-        
-        )) }
+    
         
                 
 <Basket price={props.Foodprice} ></Basket>

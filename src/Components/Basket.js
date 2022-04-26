@@ -1,10 +1,11 @@
 import React from 'react'
 import img1 from './img/plus.png'
 import {useState} from 'react'
+import LargeMainWindow from './LargeMainWindow';
 
 const Basket = ( props) => {
 
-const {open1, children1, onClose1, onAdd, cartItems,  test, handleTest, price } = props;
+const {open1, children1, onClose1, onAdd, cartItems, price } = props;
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -31,6 +32,14 @@ const {open1, children1, onClose1, onAdd, cartItems,  test, handleTest, price } 
     
   }
 
+  const [test, setTest] = useState([{ test: ""}]);
+
+
+  const handleTest = () => {
+    setTest([...test, { test: ""}])
+  }
+
+
     if (!open1) return null
 
   return (
@@ -47,8 +56,15 @@ const {open1, children1, onClose1, onAdd, cartItems,  test, handleTest, price } 
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
      
+{test.map((singleTest, index) => ( 
+        <div key = {index} className="col-span-2 text-center text-2xl flex">
+        <h1 className="mx-auto ml-[6rem]"> {props.Foodprice}</h1>
+         <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
+     </div>
+        
+        )) }
 
-
+<LargeMainWindow handleTest1={handleTest} ></LargeMainWindow>
               
         <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
       <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
