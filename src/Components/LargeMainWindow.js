@@ -18,6 +18,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props, open1, onOpen1 ) =>  {
 
+  const { thingie } = props.Foodprice;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -80,7 +81,6 @@ setCartItems([...cartItems, {...Foodname, qty: 1}]);
 console.log("added")
 }
 
-
   return (
     <div className="snap-start ">
        
@@ -89,12 +89,8 @@ console.log("added")
 
 <Accent open2={isOpen2}  onClose2={() => setIsOpen2(false)} >
       </Accent>
-      
-<Basket Foodprice={props.Foodprice}  onAdd={onAdd} cartItems={cartItems}></Basket>
-<Basket data={test.data} />
 
 
-   
 
 
 
@@ -161,6 +157,10 @@ console.log("added")
         
         )) }
         
+                
+<Basket price={props.Foodprice} ></Basket>
+
+
         </div>
         
 
