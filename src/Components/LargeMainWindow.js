@@ -18,7 +18,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props, open1, onOpen1 ) =>  {
 
-  const { thingie, handleTest1 } = props;
+  const { handleTest1, textThing} = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -65,7 +65,7 @@ myLoop()
 function both(){
   closeModal();
   setIsOpen2(true);
-  handleTest1();
+  this.handleTest1();
 }
 
 
@@ -148,7 +148,8 @@ console.log("added")
         
                 
 <Basket price={props.Foodprice} ></Basket>
-
+<h1 className="h-24 ">== {props.textThing}</h1>
+{console.log(textThing)}
 
         </div>
         

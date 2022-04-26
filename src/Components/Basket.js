@@ -40,7 +40,7 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
   }
 
 
-    if (!open1) return null
+  if(!open1) return null
 
   return (
       <>
@@ -63,9 +63,9 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
      </div>
         
         )) }
-
-<LargeMainWindow handleTest1={handleTest} ></LargeMainWindow>
-              
+<div className="hidden">
+<LargeMainWindow handleTest1={handleTest} textThing="this is just a test" ></LargeMainWindow>
+</div>       
         <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
       <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
         <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div> 
