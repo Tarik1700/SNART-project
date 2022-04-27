@@ -17,9 +17,9 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 
 
-const LargeMainWindow  = (props, open1, onOpen1 ) =>  {
+const LargeMainWindow  = (props) =>  {
 
-  const { handleTest1, textThing} = props;
+  const {looping, textThing} = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -63,10 +63,10 @@ myLoop()
     
   }
 
-function both(){
+const both = () => {
   closeModal();
   setIsOpen2(true);
-  this.handleTest1();
+ 
 }
 
 
@@ -77,6 +77,10 @@ setCartItems([...cartItems, {...Foodname, qty: 1}]);
 console.log("added")
 }
 
+const justatest = () => {
+  console.log("testing")
+}
+
   return (
     <div className="snap-start ">
        
@@ -85,7 +89,7 @@ console.log("added")
 
 <Accent open2={isOpen2}  onClose2={() => setIsOpen2(false)} >
       </Accent>
-<TimeToReady/>
+<TimeToReady testingThing="this is just a test" openthing1={justatest}/>
 
 
 
@@ -95,7 +99,8 @@ console.log("added")
 
 
      
-      <button className=" active:scale-[1.1] transition-all duration-[25ms] [-webkit-tap-highlight-color:rgba(0,0,0,0);]" onClick={openModal}>
+      <button className=" active:scale-[1.1] transition-all duration-[25ms] 
+      [-webkit-tap-highlight-color:rgba(0,0,0,0);]" onClick={openModal}>
         <div className="px-2  ">
         
         <div className=" bg-[#E7E7E7] h-[7rem]  top-3 mx-auto   relative rounded-lg"> 

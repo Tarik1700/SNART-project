@@ -3,7 +3,7 @@ import img1 from './img/plus.png'
 import {useState} from 'react'
 import LargeMainWindow from './LargeMainWindow';
 
-const Basket = ( props) => {
+const Basket = (props) => {
 
 const {open1, children1, onClose1, onAdd, cartItems, price } = props;
 
@@ -35,7 +35,8 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
   const [test, setTest] = useState([{ test: ""}]);
 
 
-  const handleTest = () => {
+  const kh = () => {
+    console.log("worked")
     setTest([...test, { test: ""}])
   }
 
@@ -44,8 +45,11 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
 
   return (
       <>
+      <div className="hidden">
+<LargeMainWindow k={kh} textThing="this is just a test" ></LargeMainWindow>
+</div> 
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[999]"/>
-   
+      
 
 
 <div id="basket" className=" transition-all fixed top-[50vh] left-52 w-[22rem] h-auto font-[poppins]  transform -translate-x-[50%] 
@@ -63,9 +67,8 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
      </div>
         
         )) }
-<div className="hidden">
-<LargeMainWindow handleTest1={handleTest} textThing="this is just a test" ></LargeMainWindow>
-</div>       
+      
+
         <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
       <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
         <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div> 
@@ -96,8 +99,8 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
             
           
         </div>
-        <button  onClick={closeBasket} className=" mb-3 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
-        <div className="text-white text-xl my-auto mx-auto font-poppins">
+        <button  onClick={props.looping} className=" mb-3 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
+        <div className="text-white text-xl my-auto mx-auto font-poppins">{props.text}
         CONFIRM ORDER
 
 
@@ -105,8 +108,8 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
         </button>
 
 
-        <h1 className=" fixed text-xl font-bold pr-2 justify-self-end my-auto">{price} </h1>
-{console.log(price)}
+        <h1 className=" fixed text-xl font-bold pr-2 justify-self-end my-auto"> </h1>
+
         </div>
     </> 
     

@@ -1,9 +1,9 @@
 import React from 'react'
 import {useState} from 'react'
 
-const TimeToReady = ( props) => {
+const TimeToReady = (props) => {
 
-    const {open1, children1, onClose1, onAdd, cartItems, price } = props;
+    const {open1, children1, onClose1, onAdd, cartItems, price, testingThing } = props;
 
 
   function myLoop3() {        
@@ -39,7 +39,10 @@ const TimeToReady = ( props) => {
   }
 
 
-  
+const h = () =>{
+    console.log("test")
+}
+if(!open1) return null
 
   return (
       <>
@@ -79,6 +82,8 @@ const TimeToReady = ( props) => {
             <h1 className="font-extrabold text-2xl font-poppins pl-3 ">Order status:</h1>
             <div className="h-24 z-[999] bg-white relative mb-3 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
 
+
+<button onClick={props.openthing1}>aaaaa</button> 
 </div>
             
             

@@ -14,6 +14,7 @@ import img10 from './img/logo1.png'
 import img11 from './img/logo2.png'
 import Modal1 from './Modal1'
 import Basket from './Basket'
+import Welcome from './Welcome'
 
 const LandingPage = () => {
 
@@ -27,7 +28,7 @@ const LandingPage = () => {
 
         <div>
 
-        
+        <Welcome></Welcome>
 
         <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>

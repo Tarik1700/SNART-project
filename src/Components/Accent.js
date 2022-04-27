@@ -1,7 +1,7 @@
 import React from 'react'
 import Basket from './Basket'
 import {useState} from 'react'
-
+import LargeMainWindow from './LargeMainWindow'
 
 export default function Accent( {open2, children2, onClose2, props  }) {
 
@@ -51,13 +51,15 @@ export default function Accent( {open2, children2, onClose2, props  }) {
               }, 200)
             }
               
-            }  
-                    
+            }
+
+             
           
 
     if (!open2) return null
   return (
       <>
+      
       <Basket open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
       </Basket>
       <button  onClick={both} className="fixed z-[999] " >
