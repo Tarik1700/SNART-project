@@ -16,6 +16,7 @@ import Modal1 from './Modal1'
 import Basket from './Basket'
 import Welcome from './Welcome'
 
+
 const LandingPage = () => {
 
   const [isOpen, setIsOpen] = useState(true)
@@ -28,7 +29,7 @@ const LandingPage = () => {
 
         <div>
 
-        <Welcome></Welcome>
+        <Welcome />
 
         <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>

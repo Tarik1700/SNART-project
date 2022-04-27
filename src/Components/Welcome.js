@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-export default function Welcome({text}) {
+export default function Welcome(props) {
   return (
     <div>
-       <h1> trebalo bi bit ovdje --- {text}</h1>
-
+       <h1 className=" text-black" > trebalo bi bit ovdje --- {props.Text} ---</h1>
+      {console.log(props)}
 
     </div>
   )

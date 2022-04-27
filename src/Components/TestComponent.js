@@ -1,23 +1,12 @@
 import React from 'react'
-import Basket from './LargeMainWindow'
 import Welcome from './Welcome'
 
-const TestComponent = () => {
+export default function TestComponent(){
 
-  
-      const greeting = "test"
+
   return (
-    <div>
-  
-      <div>
-      <div >
-      <Welcome  text={"greeting"}  ></Welcome>
-      </div> 
-      
-          </div>
-
+    <div className="text-black">
+      <Welcome text="greeting"  />
     </div>
   )
 }
-
-export default TestComponent

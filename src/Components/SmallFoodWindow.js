@@ -8,6 +8,7 @@ const SmallFoodWindow = (props) => {
         <div className=" p-1 h-10">
         <img src={props.imageurl} className=" h-11 w-18 mx-auto rounded-lg" />
         </div>
+        
         <div className="">
         <h1 className=" text-xs pt-3 text-center">{props.Foodname}</h1>
         </div>
