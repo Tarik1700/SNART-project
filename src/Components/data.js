@@ -35,7 +35,24 @@ const data={
       price: 5,
       image: img9,
     },
-    
+    {
+      id: '6',
+      name: 'Fish',
+      price: 9,
+      image: img9,
+    },
+    {
+      id: '7',
+      name: 'Fries',
+      price: 3,
+      image: img9,
+    },
+    {
+      id: '8',
+      name: 'Sandwich',
+      price: 2.5,
+      image: img9,
+    },
   ],
 };
 export default data;
