@@ -23,7 +23,24 @@ const LandingPage = () => {
   const [isOpen1, setIsOpen1] = useState(false)
   
   const {products} = data;
+
+
+  const [test, setTest] = useState([]);
+
+
   
+const passingtest = (product) => {
+  const exist = test.find((x => x.id === product.id));
+  if(exist){
+    setTest(
+      test.map((x)=> 
+      x.id === product.id ? {...exist, qty: exist.qty +1 } : x
+      )
+    );
+  }else{
+ setTest([...test, { ...product, qty: 1}])
+}
+};
 
   return (
     <div className=" overflow-y-clip">
@@ -80,7 +97,8 @@ const LandingPage = () => {
         <div className="relative bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-{products.map((product) =>(<LargeMainWindow key={product.id} Foodname={product.name} imageurl={product.image} Foodprice="15 KM" Fooddesc="Chicken burger with fries"/>) )}
+{products.map((product) =>(<LargeMainWindow key={product.id}  passingtest={passingtest} test={test}
+Foodname={product.name} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc="Chicken burger with fries"/>) )}
         
         
        

@@ -19,7 +19,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props) =>  {
 
-  const {looping, textThing} = props;
+  const {looping, textThing, id, product, passingtest, test} = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -84,12 +84,6 @@ const justatest = () => {
 }
 
 
-const passingtest = () => {
-  console.log("worked")
- setTest([...test, { test: ""}])
-}
-
-const [test, setTest] = useState([]);
 
 
 
