@@ -5,7 +5,7 @@ import LargeMainWindow from './LargeMainWindow';
 
 const Basket = ( props) => {
 
-const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice } = props;
+const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname } = props;
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -53,7 +53,7 @@ const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice } = props;
      bg-[#F5F5F5]  z-[999] rounded-xl translate-y-[27rem] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
-        <button onClick={onClose1} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button onClick={closeBasket} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
      
@@ -63,11 +63,12 @@ const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice } = props;
         <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
 
         <div className="">
-
+        {test.length === 0 && <div className="text-xl text-center">Basket is empty</div>}
 { test.map((singleTest, index) => ( 
-    <div key = {index} className="col-span-2 text-center text-2xl flex">
-    <h1 className="mx-auto ml-[6rem]">{Foodprice}</h1>
-     <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
+    <div key = {index} className="col-2  text-center text-xl flex">
+      <h1 className="mx-auto my-auto text-lg">{Foodname}</h1>
+    <h1 className="mx-auto my-auto font-bold ">{Foodprice}</h1>
+     <img src={img1} className="  h-10  justify-end mx-auto  my-auto  " /> 
  </div>
     
     )) }

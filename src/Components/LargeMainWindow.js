@@ -89,7 +89,7 @@ const passingtest = () => {
  setTest([...test, { test: ""}])
 }
 
-const [test, setTest] = useState([{ test: ""}]);
+const [test, setTest] = useState([]);
 
 
 
@@ -99,7 +99,8 @@ const [test, setTest] = useState([{ test: ""}]);
       <div>
      
 
-<Accent Foodprice={props.Foodprice} test1={test} passingtest2={passingtest} open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
+<Accent Foodname={props.Foodname} Foodprice={props.Foodprice} test1={test} passingtest2={passingtest} 
+          open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
 <TimeToReady testingThing="this is just a test" openthing1={justatest}/>
 

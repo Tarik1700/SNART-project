@@ -3,7 +3,7 @@ import Basket from './Basket'
 import {useState} from 'react'
 import LargeMainWindow from './LargeMainWindow'
 
-export default function Accent( {open2, children2, onClose2, props, test1, passingtest2, Foodprice  }) {
+export default function Accent( {open2, children2, onClose2, props, test1, passingtest2, Foodprice, Foodname  }) {
 
     
       
@@ -56,14 +56,14 @@ export default function Accent( {open2, children2, onClose2, props, test1, passi
              
           
 
-    if (!open2) return null
+    
   return (
       <>
       
-      <Basket Foodprice={Foodprice} test1={test1} passingtest2={passingtest2} open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
+      <Basket Foodname={Foodname} Foodprice={Foodprice} test1={test1} passingtest2={passingtest2} open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
       </Basket>
       <button  onClick={both} className="fixed z-[999] " >
-<div onClick={animate} id="modal1" className="[-webkit-tap-highlight-color:rgba(0,0,0,0);]  transition-all fixed 
+<div onClick={animate} id="modal1" className=" border-2 border-[#C4C4C4] [-webkit-tap-highlight-color:rgba(0,0,0,0);]  transition-all fixed 
       -bottom-[4.5rem]  left-0 right-0 w-full  font-[poppins]  transform 
      bg-white z-[999] rounded-[70px] rounded-br-none  h-32 translate-y-52 ">
         <div className="text-white text-xl  relative mx-auto ">
