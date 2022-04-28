@@ -3,9 +3,9 @@ import img1 from './img/plus.png'
 import {useState} from 'react'
 import LargeMainWindow from './LargeMainWindow';
 
-const Basket = (props) => {
+const Basket = ( props) => {
 
-const {open1, children1, onClose1, onAdd, cartItems, price } = props;
+const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice } = props;
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -27,29 +27,26 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
   function closeBasket() {
     setTimeout(function() {  
     onClose1();
+
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,432px)";
     
   }
 
-  const [test, setTest] = useState([{ test: ""}]);
-
-
-  const kh = () => {
+  
+  const handleTest = () => {
     console.log("worked")
-    setTest([...test, { test: ""}])
+    props.passingtest2();
   }
 
+  const test = props.test1
 
   if(!open1) return null
 
   return (
       <>
-      <div className="hidden">
-<LargeMainWindow k={kh} textThing="this is just a test" ></LargeMainWindow>
-</div> 
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[999]"/>
-      
+   
 
 
 <div id="basket" className=" transition-all fixed top-[50vh] left-52 w-[22rem] h-auto font-[poppins]  transform -translate-x-[50%] 
@@ -60,31 +57,21 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
      
-{test.map((singleTest, index) => ( 
-        <div key = {index} className="col-span-2 text-center text-2xl flex">
-        <h1 className="mx-auto ml-[6rem]"> {props.Foodprice}</h1>
-         <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
-     </div>
-        
-        )) }
-      
+<div> {console.log(props.passingtest2) }</div>
+     
 
         <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
-      <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
-        <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div> 
-        <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
-        <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div> 
-        <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
-        <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div> 
-        <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
-        <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div> 
-        <div className="grid grid-cols-4  pl-10"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">aaaaaaaaaaa</h1>
-        <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div>
-     <hr className="bg-black opacity-100 h-[0.17rem] mx-4 mt-1" ></hr>
-     <div className="grid grid-cols-4 mt-5 pl-6"> <h1 className=" font-extrabold justify-self-start my-auto pl-1 text-2xl row-span-1 col-span-3 text-black ">Total:</h1>
-        <h1 className="  text-xl font-bold pr-3 justify-self-end my-auto">+0.00KM</h1><div></div><div></div></div>
-        
-        
+
+        <div className="">
+
+{ test.map((singleTest, index) => ( 
+    <div key = {index} className="col-span-2 text-center text-2xl flex">
+    <h1 className="mx-auto ml-[6rem]">{Foodprice}</h1>
+     <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
+ </div>
+    
+    )) }
+</div>  
 
 
         </div>
@@ -99,8 +86,8 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
             
           
         </div>
-        <button  onClick={props.looping} className=" mb-3 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
-        <div className="text-white text-xl my-auto mx-auto font-poppins">{props.text}
+        <button  onClick={closeBasket} className=" mb-3 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
+        <div className="text-white text-xl my-auto mx-auto font-poppins">
         CONFIRM ORDER
 
 
@@ -108,7 +95,7 @@ const {open1, children1, onClose1, onAdd, cartItems, price } = props;
         </button>
 
 
-        <h1 className=" fixed text-xl font-bold pr-2 justify-self-end my-auto"> </h1>
+        <h1 className=" fixed text-xl font-bold pr-2 justify-self-end my-auto">{price} </h1>
 
         </div>
     </> 

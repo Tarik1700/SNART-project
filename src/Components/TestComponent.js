@@ -1,12 +1,13 @@
 import React from 'react'
 import Welcome from './Welcome'
 
-export default function TestComponent(){
+export default function TestComponent(props){
 
 
   return (
-    <div className="text-black">
-      <Welcome text="greeting"  />
-    </div>
+    <>
+      <Welcome text={props.Texts}  />
+      
+      </>
   )
 }

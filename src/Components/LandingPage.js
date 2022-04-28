@@ -15,7 +15,7 @@ import img11 from './img/logo2.png'
 import Modal1 from './Modal1'
 import Basket from './Basket'
 import Welcome from './Welcome'
-
+import TestComponent from './TestComponent'
 
 const LandingPage = () => {
 
@@ -23,12 +23,11 @@ const LandingPage = () => {
   const [isOpen1, setIsOpen1] = useState(false)
   
 
-
   return (
     <div className=" overflow-y-clip">
 
         <div>
-
+        <TestComponent Texts="hello"></TestComponent>
         <Welcome />
 
         <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >

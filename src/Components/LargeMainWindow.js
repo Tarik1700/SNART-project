@@ -4,9 +4,9 @@ import PopUpWindow from './PopUpWindow'
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import {useState} from 'react'
-import Basket from './Basket'
 import Accent from './Accent'
 import TimeToReady from './TimeToReady'
+import Basket from "./Basket";
 
 Modal.setAppElement('#root');
 
@@ -64,9 +64,11 @@ myLoop()
   }
 
 const both = () => {
+  console.log(props.handleTest1)
   closeModal();
   setIsOpen2(true);
- 
+  passingtest();
+
 }
 
 
@@ -81,14 +83,24 @@ const justatest = () => {
   console.log("testing")
 }
 
+
+const passingtest = () => {
+  console.log("worked")
+ setTest([...test, { test: ""}])
+}
+
+const [test, setTest] = useState([{ test: ""}]);
+
+
+
   return (
     <div className="snap-start ">
        
       <div>
      
 
-<Accent open2={isOpen2}  onClose2={() => setIsOpen2(false)} >
-      </Accent>
+<Accent Foodprice={props.Foodprice} test1={test} passingtest2={passingtest} open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
+   
 <TimeToReady testingThing="this is just a test" openthing1={justatest}/>
 
 
@@ -153,8 +165,6 @@ const justatest = () => {
     
         
                 
-<Basket price={props.Foodprice} ></Basket>
-
 
         </div>
         
