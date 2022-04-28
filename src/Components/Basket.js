@@ -5,7 +5,11 @@ import LargeMainWindow from './LargeMainWindow';
 
 const Basket = ( props) => {
 
-const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname, passingtest2, passingtest2Remove } = props;
+const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice } = props;
+
+
+
+
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -39,7 +43,7 @@ const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname,
     props.passingtest2();
   }
 
-  const test = props.test1
+
 
   if(!open1) return null
 
@@ -68,7 +72,7 @@ const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname,
 { test.map((item) => ( 
     <div key = {item.id} className="col-2  text-center text-xl grid grid-cols-9 ">
       <h1 className="mx-auto my-auto text-base col-span-3 pl-2">{item.name}</h1>
-      <div className="col-span-4 text-lg my-auto font-extrabold">
+      <div className="col-span-4 text-lg my-auto ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
        
@@ -81,6 +85,15 @@ const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname,
 
        
     )) }
+    {test.length !== 0 && (
+      <>
+      <hr className="mx-4 bg-black"></hr>
+      <div className="grid grid-cols-2 justify-items-start mt-4">
+        <div className=" my-auto font-extrabold pl-4 text-2xl">Total:</div>
+        <div className=" my-auto  text-2xl font-extrabold justify-self-end pr-6">{itemsPrice.toFixed(2)} KM</div>
+      </div>
+      </>
+    )}
 </div>  
 
 

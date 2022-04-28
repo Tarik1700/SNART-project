@@ -19,10 +19,11 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props) =>  {
 
-  const {looping, textThing, id, product, passingtest, test, passingtest2Remove} = props;
+  const {looping, textThing, id, product, passingtest, test, passingtest2Remove, itemsPrice} = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
+
 
 function myLoop() {        
   setTimeout(function() {   
@@ -73,16 +74,6 @@ const both = () => {
 
 
 
-const [cartItems, setCartItems] = useState([]);
-const onAdd = (Foodname) => {
-setCartItems([...cartItems, {...Foodname, qty: 1}]);
-console.log("added")
-}
-
-const justatest = () => {
-  console.log("testing")
-}
-
 
 
 
@@ -93,10 +84,10 @@ const justatest = () => {
       <div>
      
 
-<Accent Foodname={props.Foodname} Foodprice={props.Foodprice} test1={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
+<Accent itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
-<TimeToReady testingThing="this is just a test" openthing1={justatest}/>
+<TimeToReady testingThing="this is just a test"/>
 
 
 
@@ -125,7 +116,7 @@ const justatest = () => {
         
         <div className="col-span-2 text-center text-2xl flex">
            <h1 className="mx-auto ml-[6rem]"> {props.Foodprice}</h1>
-            <img src={img1} className="  h-10  justify-end mx-auto  mr-3 mt-3 " /> 
+          {/* <img onClick={()=>passingtest(product)} src={img1} className="  h-12  justify-end mx-auto  mr-3 mt-3 " /> */ }
         </div>
 
         </div>
@@ -137,6 +128,7 @@ const justatest = () => {
         </div>
     </div>
     </button>
+    
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"

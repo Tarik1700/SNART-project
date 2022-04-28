@@ -5,16 +5,10 @@ import img1 from './img/foodimage.jpg'
 import img2 from './img/lunchphoto.jpg'
 import img3 from './img/dinnerphoto.jpg'
 import img4 from './img/pizzaphoto.jpg'
-import img5 from './img/hamburgerimage.jpg'
-import img6 from './img/pizzaimage.jpg'
-import img7 from './img/pastaimage.jpg'
-import img8 from './img/pancakesimage.jpg'
-import img9 from './img/cheeseburgerimage.jpg'
 import img10 from './img/logo1.png'
 import img11 from './img/logo2.png'
 import Modal1 from './Modal1'
 import Basket from './Basket'
-import Welcome from './Welcome'
 import data from './data'
 
 const LandingPage = () => {
@@ -55,13 +49,15 @@ if(exist.qty === 1){
 }
 
 }
+const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
+ 
 
   return (
     <div className=" overflow-y-clip">
 
         <div>
         
-        <Welcome />
+        
 
         <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>
@@ -112,7 +108,7 @@ if(exist.qty === 1){
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
 {products.map((product) =>(<LargeMainWindow key={product.id} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
-Foodname={product.name} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc="Chicken burger with fries"/>) )}
+Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc="Chicken burger with fries"/>) )}
         
         
        
