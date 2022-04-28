@@ -19,7 +19,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props) =>  {
 
-  const {looping, textThing, id, product, passingtest, test} = props;
+  const {looping, textThing, id, product, passingtest, test, passingtest2Remove} = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -67,7 +67,7 @@ const both = () => {
   console.log(props.handleTest1)
   closeModal();
   setIsOpen2(true);
-  passingtest();
+  passingtest(product);
 
 }
 
@@ -93,7 +93,7 @@ const justatest = () => {
       <div>
      
 
-<Accent Foodname={props.Foodname} Foodprice={props.Foodprice} test1={test} passingtest2={passingtest} 
+<Accent Foodname={props.Foodname} Foodprice={props.Foodprice} test1={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
 <TimeToReady testingThing="this is just a test" openthing1={justatest}/>

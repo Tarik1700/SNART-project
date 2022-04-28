@@ -30,7 +30,7 @@ const LandingPage = () => {
 
   
 const passingtest = (product) => {
-  const exist = test.find((x => x.id === product.id));
+  const exist = test.find((x) => x.id === product.id);
   if(exist){
     setTest(
       test.map((x)=> 
@@ -41,6 +41,20 @@ const passingtest = (product) => {
  setTest([...test, { ...product, qty: 1}])
 }
 };
+
+const passingtest2Remove =(product) =>{
+const exist = test.find((x) => x.id === product.id);
+if(exist.qty === 1){
+  setTest(test.filter((x) => x.id !== product.id ));
+}else{
+  setTest(
+    test.map((x)=> 
+    x.id === product.id ? {...exist, qty: exist.qty - 1 } : x
+    )
+  );
+}
+
+}
 
   return (
     <div className=" overflow-y-clip">
@@ -97,7 +111,7 @@ const passingtest = (product) => {
         <div className="relative bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-{products.map((product) =>(<LargeMainWindow key={product.id}  passingtest={passingtest} test={test}
+{products.map((product) =>(<LargeMainWindow key={product.id} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc="Chicken burger with fries"/>) )}
         
         

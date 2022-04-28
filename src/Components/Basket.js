@@ -5,7 +5,7 @@ import LargeMainWindow from './LargeMainWindow';
 
 const Basket = ( props) => {
 
-const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname } = props;
+const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname, passingtest2, passingtest2Remove } = props;
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -60,17 +60,26 @@ const {open1, children1, onClose1, onAdd, cartItems, price, Foodprice, Foodname 
 <div> {console.log(props.passingtest2) }</div>
      
 
-        <h1 className=" relative text-lg pl-6 pt-10 font-bold">Bill:</h1>
+        <h1 className=" relative text-2xl pl-4 pt-10 font-bold">Bill:</h1>
+        <hr className="mx-4 bg-black "></hr>
 
         <div className="">
         {test.length === 0 && <div className="text-xl text-center">Basket is empty</div>}
-{ test.map((singleTest, index) => ( 
-    <div key = {index} className="col-2  text-center text-xl flex">
-      <h1 className="mx-auto my-auto text-lg">{Foodname}</h1>
-    <h1 className="mx-auto my-auto font-bold ">{Foodprice}</h1>
-     <img src={img1} className="  h-10  justify-end mx-auto  my-auto  " /> 
+{ test.map((item) => ( 
+    <div key = {item.id} className="col-2  text-center text-xl grid grid-cols-9 ">
+      <h1 className="mx-auto my-auto text-base col-span-3 pl-2">{item.name}</h1>
+      <div className="col-span-4 text-lg my-auto font-extrabold">
+      {item.qty} x {item.price.toFixed(2)} KM
+       </div>
+       
+     <button className=" text-right text-5xl  justify-end mx-auto 
+      my-auto text-[#5DBB63]" onClick={()=>passingtest2(item)}>+</button> 
+     <button className=" text-right self text-5xl   justify-end mx-auto 
+      my-auto text-red-700 " onClick={()=>passingtest2Remove(item)} >-</button> 
  </div>
     
+
+       
     )) }
 </div>  
 
