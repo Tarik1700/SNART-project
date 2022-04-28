@@ -2,12 +2,14 @@ import React from 'react'
 import img1 from './img/plus.png'
 import {useState} from 'react'
 import LargeMainWindow from './LargeMainWindow';
+import TimeToReady from './TimeToReady';
 
 const Basket = ( props) => {
 
 const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice } = props;
 
 
+const [isOpen2, setIsOpen2] = useState(false)
 
 
 
@@ -28,7 +30,19 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
 
 
   
-  function closeBasket() {
+  const closeBasket = () => {
+   
+    setTimeout(function() {  
+      document.getElementById("comments").style.display = "none";
+    
+    setIsOpen2(true);
+  
+    }, 500)
+    document.getElementById("basket").style.transform = "translate(-50%,432px)";
+    
+  }
+
+  const closeBasketArrow = () => {
     setTimeout(function() {  
     onClose1();
 
@@ -36,7 +50,6 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
     document.getElementById("basket").style.transform = "translate(-50%,432px)";
     
   }
-
   
   const handleTest = () => {
     console.log("worked")
@@ -57,7 +70,7 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
      bg-[#F5F5F5]  z-[999] rounded-xl translate-y-[27rem] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
-        <button onClick={closeBasket} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button onClick={closeBasketArrow} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
      
@@ -98,12 +111,16 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
 
 
         </div>
+
+        <div className="pt-1">
+        <TimeToReady isOpen2={isOpen2}> </TimeToReady>
+<div id="comments" className="">
         <div className="text-sm mt-6 relative font-[poppins]">
             <h1 className="font-extrabold text-2xl font-poppins pl-3 pb-2">Comments</h1>
           
         <textarea placeholder="If you have any special requests for the kitchen write them here:"
          className=" px-4 rounded-xl h-36 border-2 w-[21rem] ml-2 relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
-          type="text" id="textarea2" maxLength="130" name="txta2" rows="4" cols="1"  />
+          type="text"  maxLength="130" name="txta2" rows="4" cols="1"  />
         
         
             
@@ -116,9 +133,8 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
 
         </div>
         </button>
-
-
-        <h1 className=" fixed text-xl font-bold pr-2 justify-self-end my-auto">{price} </h1>
+        </div>
+        </div>
 
         </div>
     </> 

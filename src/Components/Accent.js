@@ -19,7 +19,7 @@ export default function Accent( {open2, children2, onClose2, props, test,
         
         onClose2();
       }
-
+       
 
     function both(){
         openBasket();
