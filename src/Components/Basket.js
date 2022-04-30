@@ -33,12 +33,12 @@ const [isOpenReady, setIsOpenReady] = useState (false)
   const closeBasket = () => {
    if(test.length > 0){
     setTimeout(function() {  
-     onClose1();
+    
     setIsOpen2(true);
     setIsOpenReady(true);
   
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,29rem)";
+    document.getElementById("basket").style.transform = "translate(-50%,65vh)";
   } else{
     alert("Basket is empty")
   }
@@ -49,7 +49,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     onClose1();
 
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,29rem)";
+    document.getElementById("basket").style.transform = "translate(-50%,65vh)";
     
   }
   
@@ -70,8 +70,10 @@ const [isOpenReady, setIsOpenReady] = useState (false)
 <TimeToReady IsOpenReady={isOpenReady} isOpen2={isOpen2} test={test} itemsPrice={itemsPrice} > </TimeToReady>
 </div>
 
-<div id="basket" className=" transition-all fixed top-[50vh] left-52 w-[22rem] h-auto font-[poppins]  transform -translate-x-[50%] 
-     bg-[#F5F5F5]  z-[1000] rounded-xl translate-y-[29rem] duration-700  ">
+
+<div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
+<div id="basket" className=" transition-all relative  top-[21rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[65vh] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         <button id="btn3" onClick={closeBasketArrow} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,27 +121,32 @@ const [isOpenReady, setIsOpenReady] = useState (false)
         <div className="pt-1">
         
 <div id="comments" className="">
-        <div className="text-sm mt-6 relative font-[poppins]">
-            <h1 className="font-extrabold text-2xl font-poppins pl-3 pb-2">Comments</h1>
+        <div className="text-sm mt-6 relative font-[poppins] mx-2">
+            <h1 className="font-extrabold text-2xl font-poppins pl-1 pb-2">Comments</h1>
           
         <textarea placeholder="If you have any special requests for the kitchen write them here:"
-         className=" px-4 rounded-xl h-36 border-2 w-[21rem] ml-2 relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
+         className=" px-4 rounded-xl h-36 border-2 w-full  relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
           type="text"  maxLength="130" name="txta2" rows="4" cols="1"  />
         
         
             
           
         </div>
-        <button  onClick={closeBasket} className=" mb-3 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
+        <div className="mx-2 mb-2">
+        <button  onClick={closeBasket} className=" relative mb-2 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-xl mt-4 
+        shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
         <div className="text-white text-xl my-auto mx-auto font-poppins">
         CONFIRM ORDER
 
-
+        
         </div>
+        
         </button>
         </div>
         </div>
+        </div>
 
+        </div>
         </div>
     </> 
     

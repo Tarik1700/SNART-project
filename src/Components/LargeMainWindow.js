@@ -133,7 +133,7 @@ const both = () => {
     labelledby: "heading1",
     describedby: "full_description1"
   }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-7 rounded-xl mt-[3rem]  font-[poppins] 
-    transition-all duration-700 translate-y-[50rem] z-1000"
+    transition-all duration-700 translate-y-[100vh] z-1000"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
       >
