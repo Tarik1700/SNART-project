@@ -11,7 +11,7 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
 
 const [isOpen2, setIsOpen2] = useState(false)
 
-
+const [isOpenReady, setIsOpenReady] = useState (false)
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -35,9 +35,10 @@ const [isOpen2, setIsOpen2] = useState(false)
     setTimeout(function() {  
      onClose1();
     setIsOpen2(true);
+    setIsOpenReady(true);
   
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,432px)";
+    document.getElementById("basket").style.transform = "translate(-50%,29rem)";
   } else{
     alert("Basket is empty")
   }
@@ -48,7 +49,7 @@ const [isOpen2, setIsOpen2] = useState(false)
     onClose1();
 
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,432px)";
+    document.getElementById("basket").style.transform = "translate(-50%,29rem)";
     
   }
   
@@ -59,18 +60,18 @@ const [isOpen2, setIsOpen2] = useState(false)
 
 
 
-  if(!open1) return <TimeToReady></TimeToReady> 
+  if(!open1) return null
 
   return (
       <>
-      <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[999]"/>
+      <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
    
-<div className="hidden">
-<TimeToReady isOpen2={isOpen2} test={test} itemsPrice={itemsPrice} > </TimeToReady>
+<div className="">
+<TimeToReady IsOpenReady={isOpenReady} isOpen2={isOpen2} test={test} itemsPrice={itemsPrice} > </TimeToReady>
 </div>
 
 <div id="basket" className=" transition-all fixed top-[50vh] left-52 w-[22rem] h-auto font-[poppins]  transform -translate-x-[50%] 
-     bg-[#F5F5F5]  z-[999] rounded-xl translate-y-[27rem] duration-700  ">
+     bg-[#F5F5F5]  z-[1000] rounded-xl translate-y-[29rem] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         <button id="btn3" onClick={closeBasketArrow} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">

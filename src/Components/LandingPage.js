@@ -108,9 +108,9 @@ const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
 {products.map((product) =>(<LargeMainWindow key={product.id} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
-Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc="Chicken burger with fries"/>) )}
+Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/>) )}
         
-        
+        <div className="pb-12"></div>
        
         </div>
        
