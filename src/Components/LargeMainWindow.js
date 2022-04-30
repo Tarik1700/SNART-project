@@ -98,7 +98,7 @@ const both = () => {
 
      
       <button className=" active:scale-[1.1] transition-all duration-[25ms] 
-      [-webkit-tap-highlight-color:rgba(0,0,0,0);]" onClick={openModal}>
+      [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
         <div className="px-2  ">
         
         <div className=" bg-[#E7E7E7] h-[7rem]  top-3 mx-auto   relative rounded-lg"> 
@@ -115,7 +115,7 @@ const both = () => {
         </div>
         
         <div className="col-span-2 text-center text-2xl flex">
-           <h1 className="mx-auto ml-[6rem]"> {props.Foodprice}</h1>
+           <h1 className="mx-auto "> {props.Foodprice}</h1>
           {/* <img onClick={()=>passingtest(product)} src={img1} className="  h-12  justify-end mx-auto  mr-3 mt-3 " /> */ }
         </div>
 
@@ -132,7 +132,7 @@ const both = () => {
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"
-  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-7 rounded-xl mt-32  font-[poppins] 
+  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-7 rounded-xl mt-[3rem]  font-[poppins] 
     transition-all duration-700 translate-y-[50rem] z-1000"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -184,7 +184,8 @@ const both = () => {
             
           
         </div>
-        <button  className=" [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-[21rem] ml-2 bg-[#5DBB63] rounded-xl mt-4 
+        <div className="mx-2">
+        <button  className=" relative  [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-xl mt-4 
         shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" onClick={both}>
         <div className=" ">
         <svg className="mx-auto pt-2 pl-1 h-full " width="50"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,6 +209,7 @@ const both = () => {
 
         </div>
         </button>
+        </div>
       </Modal>
     </div>
   )
