@@ -27,7 +27,7 @@ const TimeToReady = ( props) => {
     setTimeout(function() {  
     onClose1();
     }, 500)
-    document.getElementById("basket12").style.transform = "translate(-50%,432px)";
+    document.getElementById("basket12").style.transform = "translate(-50%,30vh)";
     
   }
 
@@ -36,7 +36,7 @@ const TimeToReady = ( props) => {
     onClose1();
 
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,432px)";
+    document.getElementById("basket").style.transform = "translate(-50%,30vh)";
     
   }
   
@@ -48,9 +48,9 @@ const TimeToReady = ( props) => {
   return (
       
 
-
-<div id="basket" className=" transition-all fixed top-[50vh] left-52 w-[22rem] h-auto font-[poppins]  transform -translate-x-[50%] 
-     bg-[#F5F5F5]  z-[1000] rounded-xl translate-y-[29rem] duration-700  ">
+<div className="fixed left-0 right-0 top-0 bottom-0 z-[1000] mx-6">
+<div id="basket" className=" transition-all relative  top-[21rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[65vh] duration-700 ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         
@@ -101,7 +101,7 @@ const TimeToReady = ( props) => {
         </div>
        
         </div>
-     
+        </div>
     
   )
 }
