@@ -28,12 +28,13 @@ export default class Modal1 extends Component {
         <>
         <div className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
         <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">  
-      <div className=" transition-all relative  top-[20%]  w-full h-[60vh] font-[poppins]  transform 
+      <div className=" transition-all relative  top-[20%]  w-full h-auto font-[poppins]  transform 
        bg-[#F5F5F5]   z-[1000]   duration-700 rounded-[3rem]">
-           <p className="mx-auto h-auto my-auto top-[10%] text-xl text-center px-12 relative">
+           <p className="mx-auto h-auto my-auto top-[2rem] text-xl text-center px-12 relative">
                By entering ID code and choosing the table number, you agree with our terms and conditions to make an order
            </p>
            <div className="mx-4 mt-[20%]   ">
+             <p className="text-xl">Please input the ID code below: </p>
            <input className=" rounded-xl h-12 border-2 w-full  relative  "
             type="number" id="textarea1" maxLength="10" name="txta1" rows="1" cols="10" required />
   </div>
@@ -53,7 +54,7 @@ export default class Modal1 extends Component {
            bg-[#5DBB63] w-28 text-white" type="submit" value="Submit" /> */}
         </form>
   </div>
-  <div className="mt-20 text-center">
+  <div className="relative mt-[3.5rem] pb-4 text-center">
           <button className="h-11  rounded-xl   border mx-auto relative 
            bg-[#5DBB63] w-28 text-white" onClick={this.handleSubmit}> Submit </button>
           </div>
