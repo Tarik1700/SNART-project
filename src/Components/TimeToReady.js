@@ -50,7 +50,7 @@ const TimeToReady = ( props) => {
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[1000] mx-6">
 <div id="basket" className=" transition-all relative  top-[21rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[65vh] duration-700 ">
+     bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[65vh] duration-700 ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         
@@ -96,7 +96,7 @@ const TimeToReady = ( props) => {
 </div>
             
         </div>
-        <div className="h-16 z-[999] mt-6 bg-white relative mb-3 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+        <div className="h-16 z-[999] mt-6 bg-white relative  rounded-xl m-2  shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
         <h1 className="font-extrabold text-center"> Your order will be ready in ___ minutes, we'll be with You shortly</h1>
         </div>
        
