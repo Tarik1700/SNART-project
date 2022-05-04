@@ -49,6 +49,7 @@ myLoop()
 
   function openModal() {
     setIsOpen(true);
+   
   }
 
   function afterOpenModal() {
@@ -73,7 +74,10 @@ const both = () => {
 }
 
 
-
+const animate =() => {
+  document.getElementById("button").style.transform = "scale(1.1,1.1)";
+  console.log("hi")
+}
 
 
 
@@ -97,7 +101,7 @@ const both = () => {
 
 
      
-      <button className=" active:scale-[1.1] transition-all duration-[25ms] 
+      <button   className=" active:scale-[1.1] transition-all duration-[25ms] 
       [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
         <div className="px-2  ">
         
