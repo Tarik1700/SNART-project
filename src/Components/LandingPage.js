@@ -53,7 +53,7 @@ const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
  
 
   return (
-    <div className=" overflow-y-clip">
+    <div className=" overflow-y-clip ">
 
         <div>
         
@@ -104,7 +104,7 @@ const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
 
 
         </div>
-        <div className="relative bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
+        <div className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
 {products.map((product) =>(<LargeMainWindow key={product.id} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
