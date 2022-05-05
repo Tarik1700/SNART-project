@@ -10,8 +10,25 @@ import img11 from './img/logo2.png'
 import Modal1 from './Modal1'
 import Basket from './Basket'
 import data from './data'
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs, addDoc, serverTimestamp } from 'firebase/firestore/lite';
+
 
 const LandingPage = () => {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCTKSeLGWP2zwZaHTKVmUlyXBQ8ZuwKjsU",
+    authDomain: "snart-54aa9.firebaseapp.com",
+    projectId: "snart-54aa9",
+    storageBucket: "snart-54aa9.appspot.com",
+    messagingSenderId: "1083026503280",
+    appId: "1:1083026503280:web:fe3c1c06ee7a2dfdb866b5"
+  };
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+
+
 
   const [isOpen, setIsOpen] = useState(true)
   const [isOpen1, setIsOpen1] = useState(false)
@@ -51,6 +68,18 @@ if(exist.qty === 1){
 }
 const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
  
+
+const addOrderToFireBase = () => {
+console.log("worked")
+  const list1 = collection(db, 'orders')
+  
+  return addDoc(list1, {
+    created: serverTimestamp(),
+    test1: [{ test }]
+});
+   
+};
+
 
   return (
     <div className=" overflow-y-clip ">
@@ -107,7 +136,7 @@ const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
         <div className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-{products.map((product) =>(<LargeMainWindow key={product.id} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
+{products.map((product) =>(<LargeMainWindow key={product.id} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/>) )}
         
         <div className="pb-12"></div>

@@ -19,7 +19,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props) =>  {
 
-  const {looping, textThing, id, product, passingtest, test, passingtest2Remove, itemsPrice} = props;
+  const {looping, textThing, id, product, passingtest, test, passingtest2Remove, itemsPrice, addOrderToFireBase} = props;
   
 
   const [isOpen2, setIsOpen2] = useState(false)
@@ -88,7 +88,7 @@ const animate =() => {
       <div>
      
 
-<Accent itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
+<Accent addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
 <TimeToReady testingThing="this is just a test"/>

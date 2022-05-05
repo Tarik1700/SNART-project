@@ -6,12 +6,14 @@ import TimeToReady from './TimeToReady';
 
 const Basket = ( props) => {
 
-const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice } = props;
+ 
+const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase } = props;
 
 
 const [isOpen2, setIsOpen2] = useState(false)
 
 const [isOpenReady, setIsOpenReady] = useState (false)
+
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -36,7 +38,8 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     
     setIsOpen2(true);
     setIsOpenReady(true);
-  
+    addOrderToFireBase();
+
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,65vh)";
   } else{
@@ -57,6 +60,15 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     console.log("worked")
     props.passingtest2();
   }
+
+
+
+
+
+  
+
+
+
 
 
 
@@ -89,12 +101,15 @@ const [isOpenReady, setIsOpenReady] = useState (false)
         <div className="">
         {test.length === 0 && <div className="text-xl text-center">Basket is empty</div>}
 { test.map((item) => ( 
+  
     <div key = {item.id} className="col-2  text-center text-xl grid grid-cols-9 ">
       <h1 className="mx-auto my-auto text-base col-span-3 pl-2">{item.name}</h1>
       <div className="col-span-4 text-lg my-auto ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
-       
+
+      {console.log(test)}
+
      <button id="btn1" className=" text-right text-5xl  justify-end mx-auto 
       my-auto text-[#5DBB63]" onClick={()=>passingtest2(item)}>+</button> 
      <button id="btn2" className=" text-right self text-5xl   justify-end mx-auto 
