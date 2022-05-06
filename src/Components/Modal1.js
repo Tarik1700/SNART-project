@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Modal1 extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: '1'};
+    this.state = {value: 'Table 1'};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +17,7 @@ export default class Modal1 extends Component {
 
   handleSubmit(event) {
     alert('Your table is ' + this.state.value);
-    
+    this.props.addToArray2(this.state.value);
     
     
     event.preventDefault();
@@ -52,10 +52,10 @@ export default class Modal1 extends Component {
           <label className="text-xl">
             Please choose the table number:
             <select className="w-full h-12 border rounded-xl  mt-2" value={this.state.value} onChange={this.handleChange}>
-              <option value="1">Table number 1</option>
-              <option value="2">Table number 2</option>
-              <option value="3">Table number 3</option>
-              <option value="4">Table number 4</option>
+              <option value="Table 1">Table number 1</option>
+              <option value="Table 2">Table number 2</option>
+              <option value="Table 3">Table number 3</option>
+              <option value="Table 4">Table number 4</option>
             </select>
           </label>
           { /*<input className="h-11  rounded-xl   border mx-auto relative 

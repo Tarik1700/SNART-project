@@ -81,12 +81,27 @@ console.log("worked")
 };
 
 let [arr3, setarr3] =useState([]);
+let [arr4, setarr4] =useState([]);
+let [arr5, setarr5] =useState([]);
+
+const addToArray2 = (y) =>{
+  setarr4(arr4 = test.concat(y));
+  
+  console.log(arr4);
+  return arr4;
+}
+
 
 const addToArray = (x) =>{
-  arr3 = test.concat(x);
+  arr3 = test.concat(x, arr4);
+  
+
   //const arr3 = [...test, ...x];
   console.log(arr3);
+  console.log();
 }
+
+
 
 
   return (
@@ -96,7 +111,7 @@ const addToArray = (x) =>{
         
         
 
-        <Modal1 addToArray={addToArray} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
+        <Modal1 addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>
 
       <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
