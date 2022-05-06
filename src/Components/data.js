@@ -65,6 +65,13 @@ const data={
       image: img12,
       description: 'Chicken sandwich',
     },
+    {
+      id: '9',
+      name: 'Cake',
+      price: 3.5,
+      image: img12,
+      description: 'Chocolate cake',
+    },
   ],
 };
 export default data;

@@ -82,7 +82,7 @@ console.log("worked")
 
 let [arr3, setarr3] =useState([]);
 let [arr4, setarr4] =useState([]);
-let [arr5, setarr5] =useState([]);
+
 
 const addToArray2 = (y) =>{
   setarr4(arr4 = test.concat(y));
@@ -94,7 +94,6 @@ const addToArray2 = (y) =>{
 
 const addToArray = (x) =>{
   arr3 = test.concat(x, arr4);
-  
 
   //const arr3 = [...test, ...x];
   console.log(arr3);

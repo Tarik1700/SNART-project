@@ -16,7 +16,7 @@ export default class Modal1 extends Component {
   }
 
   handleSubmit(event) {
-    alert('Your table is ' + this.state.value);
+   // alert('Your table is ' + this.state.value);
     this.props.addToArray2(this.state.value);
     
     
