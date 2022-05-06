@@ -7,6 +7,8 @@ export default class Modal1 extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    
   }
 
   handleChange(event) {
@@ -15,11 +17,17 @@ export default class Modal1 extends Component {
 
   handleSubmit(event) {
     alert('Your table is ' + this.state.value);
+    
+    
+    
     event.preventDefault();
     this.props.onClose();
+    //this.props.test.push( this.state.value);
   }
 
-  
+
+
+
 
   render() {
     if (!this.props.open) return null

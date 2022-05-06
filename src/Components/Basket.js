@@ -38,7 +38,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     
     setIsOpen2(true);
     setIsOpenReady(true);
-    addOrderToFireBase();
+    //addOrderToFireBase();
 
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,65vh)";
@@ -64,8 +64,8 @@ const [isOpenReady, setIsOpenReady] = useState (false)
 
 
 
-
   
+  const [message, setMessage] = useState([]);
 
 
 
@@ -139,9 +139,10 @@ const [isOpenReady, setIsOpenReady] = useState (false)
         <div className="text-sm mt-6 relative font-[poppins] mx-2">
             <h1 className="font-extrabold text-2xl font-poppins pl-1 pb-2">Comments</h1>
           
-        <textarea placeholder="If you have any special requests for the kitchen write them here:"
+        <textarea value={message} 
+      onChange={e => setMessage(e.target.value)}  placeholder="If you have any special requests for the kitchen write them here:"
          className=" px-4 rounded-xl h-36 border-2 w-full  relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
-          type="text"  maxLength="130" name="txta2" rows="4" cols="1"  />
+          type="text"  maxLength="130" name="message" rows="4" cols="1"  />
         
         
             

@@ -80,6 +80,11 @@ console.log("worked")
    
 };
 
+const addToArray = (test, x) =>{
+  test.concat(x);
+  console.log(test);
+}
+
 
   return (
     <div className=" overflow-y-clip ">
@@ -88,7 +93,7 @@ console.log("worked")
         
         
 
-        <Modal1 open={isOpen}  onClose={() => setIsOpen(false)} >
+        <Modal1 addToArray={addToArray} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>
 
       <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
