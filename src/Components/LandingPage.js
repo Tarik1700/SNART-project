@@ -75,14 +75,17 @@ console.log("worked")
   
   return addDoc(list1, {
     created: serverTimestamp(),
-    test1: [{ test }]
+    test1: [{ arr3 }]
 });
    
 };
 
-const addToArray = (test, x) =>{
-  test.concat(x);
-  console.log(test);
+let [arr3, setarr3] =useState([]);
+
+const addToArray = (x) =>{
+  arr3 = test.concat(x);
+  //const arr3 = [...test, ...x];
+  console.log(arr3);
 }
 
 
@@ -141,7 +144,7 @@ const addToArray = (test, x) =>{
         <div className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-{products.map((product) =>(<LargeMainWindow key={product.id} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
+{products.map((product) =>(<LargeMainWindow key={product.id} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/>) )}
         
         <div className="pb-12"></div>

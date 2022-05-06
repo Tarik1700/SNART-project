@@ -7,7 +7,7 @@ import TimeToReady from './TimeToReady';
 const Basket = ( props) => {
 
  
-const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase } = props;
+const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray } = props;
 
 
 const [isOpen2, setIsOpen2] = useState(false)
@@ -38,7 +38,9 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     
     setIsOpen2(true);
     setIsOpenReady(true);
-    //addOrderToFireBase();
+    addToArray(message);
+    addOrderToFireBase();
+    
 
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,65vh)";
@@ -65,7 +67,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
 
 
   
-  const [message, setMessage] = useState([]);
+  const [message, setMessage] = useState("");
 
 
 
@@ -92,7 +94,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
      
-<div> {console.log(props.passingtest2) }</div>
+<div> </div>
      
 
         <h1 className=" relative text-2xl pl-4 pt-10 font-bold">Bill:</h1>
@@ -108,7 +110,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
 
-      {console.log(test)}
+     
 
      <button id="btn1" className=" text-right text-5xl  justify-end mx-auto 
       my-auto text-[#5DBB63]" onClick={()=>passingtest2(item)}>+</button> 
