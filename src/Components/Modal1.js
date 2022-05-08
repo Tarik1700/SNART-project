@@ -8,9 +8,16 @@ export default class Modal1 extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
+   
+    this.state2 ={
+      error: ""
+    }
+
     this.state = {
       details:{code: ""}
     }
+
+ 
   }
 
   handleChange(event) {
@@ -40,7 +47,7 @@ export default class Modal1 extends Component {
 
 
     const submitHandler = e => {
-      
+      e.preventDefault();
 
       Login(this.state.details);
   }
@@ -54,20 +61,20 @@ export default class Modal1 extends Component {
     }
     
     const Login = details  => {
-      console.log(this.state.details);
-      
-
+console.log(this.state.details)
+console.log(adminUser.code)
       if ( this.state.details.code === adminUser.code ) {
         console.log("Logged in ");
         this.props.addToArray2(this.state1.value);
         this.props.onClose();
          this.props.setUser({
-           
+         
            code : details.code
          });
       } else { 
+       
         console.log("ID does not exist ");
-        this.props.setError("ID does not exist");
+        this.setState({...this.state2.error= "ID does not exist"});
       }
     }
 
@@ -87,10 +94,10 @@ export default class Modal1 extends Component {
            <div className="mx-4 mt-[20%]   ">
            <form onSubmit={submitHandler}>
              <label className="text-xl">Please input the ID code below: </label>
-             {(this.props.error !=="" ) ? ( <div className="error animate bg-red-200 mb-1 text-center rounded-lg font-bold p-1" > {this.props.error}</div>) : " "}
-           <input  onChange={e => this.setState({...this.state.details.code =  e.target.value })} value={this.state.details.code}
+             {(this.state2.error !=="" ) ? ( <div className="error animate bg-red-200 mb-1 text-center rounded-lg font-bold p-1" > {this.state2.error}</div>) : " "}
+           <input  onChange={e => this.setState({...this.state.details.code = e.target.value })} value={this.state.details.code}
            className=" rounded-xl h-12 border-2 w-full  relative  "
-            type="number" id="code" name="code"  />
+            type="number" id="code" name="code" min = "00000" max ="99999" />
             </form>
   </div>
 

@@ -107,27 +107,35 @@ const addToArray = (x) =>{
 
 
 const[user , setUser] = useState ({email:""});
-const[error, setError] = useState ("");
+
 const [details,setDetails] = useState ({name:"",email:"" ,password:""});
-var counter = 0;
-var result           = '';
+
+var result  = '';
+
+//const[counter, setCounter] = useState (0);
+
+var counter = 1;
+
+
+
+
 
 function makeid(length) {
   
   var characters       = '0123456789';
   var charactersLength = characters.length;
   
-  if(counter < 1){
+  if(counter === 1){
     counter++;
   for ( var i = 0; i < length ; i++ ) {
     result += characters.charAt(Math.floor(Math.random() * 
 charactersLength));
  }
- console.log(result)
+ console.log("New random ID code is: " + result)
+ 
  return result;
 }else{
-  
-  console.log(result)
+  console.log("The current ID is: " + result)
   return result;
 }
 }
@@ -139,7 +147,7 @@ charactersLength));
         
         
 
-        <Modal1 makeid={makeid} details={details} error ={error} user ={user} setUser={setUser} setError={setError}
+        <Modal1 makeid={makeid} details={details}  user ={user} setUser={setUser} 
          addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>
 
