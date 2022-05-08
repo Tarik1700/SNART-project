@@ -103,6 +103,17 @@ const addToArray = (x) =>{
 
 
 
+
+
+
+const[user , setUser] = useState ({email:""});
+const[error, setError] = useState ("");
+const [details,setDetails] = useState ({name:"",email:"" ,password:""});
+
+
+
+
+
   return (
     <div className=" overflow-y-clip ">
 
@@ -110,7 +121,8 @@ const addToArray = (x) =>{
         
         
 
-        <Modal1 addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
+        <Modal1 details={details} error ={error} user ={user} setUser={setUser} setError={setError}
+         addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
       </Modal1>
 
       <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} >

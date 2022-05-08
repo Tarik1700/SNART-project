@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 
 export default class Modal1 extends Component {
   constructor(props) {
@@ -8,7 +8,9 @@ export default class Modal1 extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    
+    this.state = {
+      details:{code: ""}
+    }
   }
 
   handleChange(event) {
@@ -20,17 +22,52 @@ export default class Modal1 extends Component {
     this.props.addToArray2(this.state.value);
     
     
-    event.preventDefault();
+    
     this.props.onClose();
+
+    
     //this.props.test.push( this.state.value);
   }
 
 
-
+ 
+  
 
 
   render() {
+
+    
     if (!this.props.open) return null
+
+
+    const submitHandler = e => {
+      
+
+      Login(this.state.details);
+  }
+
+    const adminUser = {
+   code:"123456789",
+   code:"888888888",
+    }
+
+    const Login = details  => {
+      console.log(this.state.details);
+    
+      if ( this.state.details.code == adminUser.code ) {
+        console.log("Logged in ");
+        this.props.addToArray2(this.state.value);
+        this.props.onClose();
+         this.props.setUser({
+           
+           code : details.code
+         });
+      } else { 
+        console.log("ID does not exist ");
+        this.props.setError("ID does not exist");
+      }
+    }
+
 
     return (
         <>
@@ -42,9 +79,13 @@ export default class Modal1 extends Component {
                By entering ID code and choosing the table number, you agree with our terms and conditions to make an order
            </p>
            <div className="mx-4 mt-[20%]   ">
-             <p className="text-xl">Please input the ID code below: </p>
-           <input className=" rounded-xl h-12 border-2 w-full  relative  "
-            type="number" id="textarea1" maxLength="10" name="txta1" rows="1" cols="10" required />
+           <form onSubmit={submitHandler}>
+             <label className="text-xl">Please input the ID code below: </label>
+             {(this.props.error !=="" ) ? ( <div className="error animate bg-red-200 mb-1 text-center rounded-lg font-bold p-1" > {this.props.error}</div>) : " "}
+           <input  onChange={e => this.setState({...this.state.details.code =  e.target.value })} value={this.state.details.code}
+           className=" rounded-xl h-12 border-2 w-full  relative  "
+            type="number" id="code" name="code"  />
+            </form>
   </div>
 
   <div className="relative h-12 bg-[#F5F5F5] pl-1 mt-[2vh] rounded-xl  my-auto mx-3">
@@ -64,7 +105,7 @@ export default class Modal1 extends Component {
   </div>
   <div className="relative mt-[3.5rem] pb-4 text-center">
           <button className="h-11  rounded-xl   border mx-auto relative 
-           bg-[#5DBB63] w-28 text-white" onClick={this.handleSubmit}> Submit </button>
+           bg-[#5DBB63] w-28 text-white" onClick={submitHandler}> Submit </button>
           </div>
       </div> 
       </div>
