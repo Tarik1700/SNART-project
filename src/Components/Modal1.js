@@ -21,7 +21,8 @@ export default class Modal1 extends Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({...this.state1.value = event.target.value});
+    console.log(event.target.value)
   }
 
   handleSubmit(event) {
