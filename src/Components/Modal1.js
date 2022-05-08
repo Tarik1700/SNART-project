@@ -3,7 +3,7 @@ import React, { Component} from 'react'
 export default class Modal1 extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: 'Table 1'};
+    this.state1 = {value: 'Table 1'};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,11 +31,10 @@ export default class Modal1 extends Component {
 
 
  
-  
-
+ 
 
   render() {
-
+    
     
     if (!this.props.open) return null
 
@@ -45,18 +44,22 @@ export default class Modal1 extends Component {
 
       Login(this.state.details);
   }
+  
+
+ 
 
     const adminUser = {
-   code:"123456789",
-   code:"888888888",
+   code: this.props.makeid(5),
+   
     }
-
+    
     const Login = details  => {
       console.log(this.state.details);
-    
-      if ( this.state.details.code == adminUser.code ) {
+      
+
+      if ( this.state.details.code === adminUser.code ) {
         console.log("Logged in ");
-        this.props.addToArray2(this.state.value);
+        this.props.addToArray2(this.state1.value);
         this.props.onClose();
          this.props.setUser({
            
@@ -68,6 +71,9 @@ export default class Modal1 extends Component {
       }
     }
 
+
+    
+  
 
     return (
         <>
@@ -92,7 +98,7 @@ export default class Modal1 extends Component {
   <form onSubmit={this.handleSubmit}>
           <label className="text-xl">
             Please choose the table number:
-            <select className="w-full h-12 border rounded-xl  mt-2" value={this.state.value} onChange={this.handleChange}>
+            <select className="w-full h-12 border rounded-xl  mt-2" value={this.state1.value} onChange={this.handleChange}>
               <option value="Table 1">Table number 1</option>
               <option value="Table 2">Table number 2</option>
               <option value="Table 3">Table number 3</option>
