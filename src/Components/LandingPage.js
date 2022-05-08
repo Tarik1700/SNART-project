@@ -93,7 +93,7 @@ const addToArray2 = (y) =>{
 
 
 const addToArray = (x) =>{
-  arr3 = test.concat(x, arr4);
+  arr3 = test.concat(x, arr4, result);
 
   //const arr3 = [...test, ...x];
   console.log(arr3);
@@ -104,21 +104,10 @@ const addToArray = (x) =>{
 
 
 
-
-
 const[user , setUser] = useState ({email:""});
-
 const [details,setDetails] = useState ({name:"",email:"" ,password:""});
-
 var result  = '';
-
-//const[counter, setCounter] = useState (0);
-
 var counter = 1;
-
-
-
-
 
 function makeid(length) {
   
@@ -135,7 +124,7 @@ charactersLength));
  
  return result;
 }else{
-  console.log("The current ID is: " + result)
+ 
   return result;
 }
 }
