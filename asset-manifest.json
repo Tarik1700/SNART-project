@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SNART-project/static/css/main.1b323f1d.css",
-    "main.js": "/SNART-project/static/js/main.0b241762.js",
+    "main.css": "/SNART-project/static/css/main.bfb6c62c.css",
+    "main.js": "/SNART-project/static/js/main.1b666360.js",
     "static/media/foodimage.jpg": "/SNART-project/static/media/foodimage.24b373774d655f3cd77c.jpg",
     "static/media/sandwich.jpg": "/SNART-project/static/media/sandwich.0ac5f4f9500ff7cd5165.jpg",
     "static/media/cheeseburgerimage.jpg": "/SNART-project/static/media/cheeseburgerimage.aee41815285e8d302b9a.jpg",
@@ -17,11 +17,11 @@
     "static/media/logo1.png": "/SNART-project/static/media/logo1.c258394aa7585575980a.png",
     "static/media/logo2.png": "/SNART-project/static/media/logo2.5e1d2b6a04f9c59c2a6d.png",
     "index.html": "/SNART-project/index.html",
-    "main.1b323f1d.css.map": "/SNART-project/static/css/main.1b323f1d.css.map",
-    "main.0b241762.js.map": "/SNART-project/static/js/main.0b241762.js.map"
+    "main.bfb6c62c.css.map": "/SNART-project/static/css/main.bfb6c62c.css.map",
+    "main.1b666360.js.map": "/SNART-project/static/js/main.1b666360.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b323f1d.css",
-    "static/js/main.0b241762.js"
+    "static/css/main.bfb6c62c.css",
+    "static/js/main.1b666360.js"
   ]
 }
