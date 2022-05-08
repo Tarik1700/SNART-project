@@ -39,6 +39,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     setIsOpen2(true);
     setIsOpenReady(true);
     addToArray(message);
+    onClose1();
     addOrderToFireBase();
     
 

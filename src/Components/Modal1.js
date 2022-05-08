@@ -73,25 +73,26 @@ console.log(this.state.details)
            code : details.code
          });
       } else { 
-        alert("The current code is: " + adminUser.code)
+        alert("The current ID code is: " + adminUser.code)
         console.log("ID does not exist ");
         this.setState({...this.state2.error= "ID does not exist"});
         
       }
       console.log("Current code is: " + adminUser.code)
-      
+    
     }
 
-
+   
     
   
 
     return (
         <>
+      
         <div className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
         <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">  
       <div className=" transition-all relative  top-[15%]  w-full h-auto font-[poppins]  transform 
-       bg-[#F5F5F5]   z-[1000]   duration-700 rounded-[3rem]">
+       bg-[#F5F5F5]   z-[1000]   duration-700 rounded-[2rem]">
            <p className="mx-auto h-auto my-auto top-[2rem] text-xl text-center px-4 relative">
                By entering ID code and choosing the table number, you agree with our terms and conditions to make an order
            </p>
