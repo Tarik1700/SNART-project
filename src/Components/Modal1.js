@@ -72,12 +72,13 @@ console.log(this.state.details)
            code : details.code
          });
       } else { 
-       
+        alert("The current code is: " + adminUser.code)
         console.log("ID does not exist ");
         this.setState({...this.state2.error= "ID does not exist"});
+        
       }
       console.log("Current code is: " + adminUser.code)
-      alert("The current code is: " + adminUser.code)
+      
     }
 
 
