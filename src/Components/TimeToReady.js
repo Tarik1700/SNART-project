@@ -49,7 +49,7 @@ const TimeToReady = ( props) => {
       
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[1000] mx-6">
-<div id="basket" className=" transition-all relative  top-[21rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+<div id="basket" className=" transition-all relative  top-[15rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
      bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[65vh] duration-700 ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
@@ -80,7 +80,7 @@ const TimeToReady = ( props) => {
       <>
       <hr className="mx-4 bg-black"></hr>
       <div className="grid grid-cols-2 justify-items-start mt-4">
-        <div className=" my-auto font-extrabold pl-4 text-2xl">Total:</div>
+        <div className=" my-auto font-extrabold pl-4 text-2xl font-[poppins]">Total:</div>
         <div className=" my-auto  text-2xl font-extrabold justify-self-end pr-6">{itemsPrice.toFixed(2)} KM</div>
       </div>
       </>
@@ -91,8 +91,34 @@ const TimeToReady = ( props) => {
         </div>
         <div className="text-sm mt-6 relative font-[poppins]">
             <h1 className="font-extrabold text-2xl font-poppins pl-3 ">Order status:</h1>
-            <div className="h-24 z-[999] bg-white relative mb-3 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+            <div className="h-auto z-[999] bg-white relative mb-3 pb-1 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+            <div className=" w-auto my-auto mr-2 h-10 top-[0.5rem] rounded-[100rem] mx-2 relative bg-slate-400">
+      
+  <div className=" w-[95%]   h-7  rounded-[100rem] mx-2 mt-[0.4rem] inline-block   bg-green-400">
+  <div className=" w-[50%]   -mt-[0.4rem]  ml-[50.1%] h-10 rounded-l-none   rounded-[100rem] mx-2 inline-block  bg-slate-400">
+      
 
+</div>
+  </div>
+  </div>
+  <div class="grid pl-2 h-10   grid-cols-5 mt-2 divide-x divide-gray-500">
+  <div className="w-0"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+  <div className=" my-auto mt-0  h-[3rem] grid grid-cols-3">
+    <div className="pl-4 place-self-start mt-[1rem] text-xs text-">
+Order <br></br> taken!
+    </div>
+    <div className=" place-self-center mt-[1.7rem] font-extrabold">
+Almost there
+    </div>
+    <div className=" place-self-end pr-4 text-xs">
+Order <br></br> ready!
+    </div>
+
+  </div>
 </div>
             
         </div>

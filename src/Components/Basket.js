@@ -40,7 +40,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     setIsOpenReady(true);
     addToArray(message);
     onClose1();
-    addOrderToFireBase();
+    //addOrderToFireBase();
     
 
     }, 500)
