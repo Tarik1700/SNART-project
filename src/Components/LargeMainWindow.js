@@ -64,6 +64,7 @@ myLoop()
   function closeModal() {
     setTimeout(function() {  
       setsidepricing(0);
+      setsidepricingqty(0);
     setIsOpen(false);
     }, 400)
     document.getElementById("modal").style.transform = "translate(0px,1000px)";
@@ -103,7 +104,7 @@ const animate =() => {
       <div>
      
 
-<Accent sidepricing={sidepricing} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
+<Accent sidepricing={sidepricing} sidepricingqty={sidepricingqty} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
 <TimeToReady testingThing="this is just a test"/>

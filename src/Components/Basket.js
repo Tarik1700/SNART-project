@@ -8,7 +8,7 @@ const Basket = ( props) => {
 
  
 const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
-  sidepricing } = props;
+  sidepricing, sidepricingqty } = props;
 
 
 const [isOpen2, setIsOpen2] = useState(false)
@@ -83,12 +83,12 @@ const [isOpenReady, setIsOpenReady] = useState (false)
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
    
 <div className="">
-<TimeToReady IsOpenReady={isOpenReady} isOpen2={isOpen2} test={test} itemsPrice={itemsPrice} > </TimeToReady>
+<TimeToReady sidepricing={sidepricing}  IsOpenReady={isOpenReady} isOpen2={isOpen2} test={test} itemsPrice={itemsPrice} > </TimeToReady>
 </div>
 
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
-<div id="basket" className=" transition-all relative  top-[21rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+<div id="basket" className=" transition-all relative  top-[18rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
      bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[65vh] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
@@ -107,7 +107,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
 { test.map((item) => ( 
   
     <div key = {item.id} className="col-2  text-center text-xl grid grid-cols-9 ">
-      <h1 className="mx-auto my-auto text-base col-span-3 pl-2">{item.name}</h1>
+      <h1 className="text-left my-auto text-base col-span-3 pl-6">{item.name}</h1>
       <div className="col-span-4 text-lg my-auto ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
@@ -126,9 +126,9 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     {test.length !== 0 && (
       <>
       <div  className="col-2  text-center text-xl grid grid-cols-9 "> 
-      <h1 className="mx-auto my-auto text-base col-span-3 pl-2">Sides:</h1>
-      <div className="col-span-4 text-lg my-auto ">
-       {sidepricing.toFixed(2)} KM
+      <h1 className="text-left pl-6 my-auto text-base col-span-3 ">Sides:</h1>
+      <div className="col-span-4 text-lg my-auto pl-1 ">
+       {/*sidepricingqty*/} 1 x {sidepricing.toFixed(2)} KM
         </div>
       <div></div>
     

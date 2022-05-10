@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 const TimeToReady = ( props) => {
 
-    const {open1, onClose1, isOpen2, test, itemsPrice, IsOpenReady } = props;
+    const {open1, onClose1, isOpen2, test, itemsPrice, IsOpenReady, sidepricing } = props;
 
 
   function myLoop3() {        
@@ -49,7 +49,7 @@ const TimeToReady = ( props) => {
       
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[1000] mx-6">
-<div id="basket" className=" transition-all relative  top-[15rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+<div id="basket" className=" transition-all relative  top-[18rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
      bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[65vh] duration-700 ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
@@ -78,6 +78,16 @@ const TimeToReady = ( props) => {
     )) }
     {test.length !== 0 && (
       <>
+      <div  className="col-2  text-xl grid grid-cols-9 "> 
+      <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
+      <div className="col-span-6 text-lg place-self-end pr-5 my-auto pl-1 ">
+       {/*sidepricingqty*/} 1 x {sidepricing.toFixed(2)} KM
+        </div>
+      <div></div>
+    
+ 
+      
+      </div>
       <hr className="mx-4 bg-black"></hr>
       <div className="grid grid-cols-2 justify-items-start mt-4">
         <div className=" my-auto font-extrabold pl-4 text-2xl font-[poppins]">Total:</div>
