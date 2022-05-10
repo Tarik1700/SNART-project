@@ -7,6 +7,8 @@ import img10 from './img/fishimage.jpg'
 import img11 from './img/friesimage.jpg'
 import img12 from './img/sandwich.jpg'
 
+
+
 const data={
   products: [
     {
@@ -15,12 +17,15 @@ const data={
       price: 15,
       image: img5,
       description: 'Chicken burger with fries',
-      sides: [ {
-      side1: 'Ketchup',
-      side2: 'Mayonnaise',
-      side3: 'Chilli',
-      side4: 'Mustard',
-      } ],
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '2',
@@ -28,12 +33,15 @@ const data={
       price: 10,
       image: img7,
       description: 'Macaroni in red sauce',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '3',
@@ -41,12 +49,15 @@ const data={
       price: 9,
       image: img6,
       description: 'Pizza with salami',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '4',
@@ -54,12 +65,15 @@ const data={
       price: 3,
       image: img8,
       description: 'American pancakes',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '5',
@@ -67,12 +81,15 @@ const data={
       price: 5,
       image: img9,
       description: 'Double cheeseburger',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '6',
@@ -80,12 +97,15 @@ const data={
       price: 9,
       image: img10,
       description: 'Fish with green sauce',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '7',
@@ -93,12 +113,15 @@ const data={
       price: 3,
       image: img11,
       description: 'Golden fries with sauce',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '8',
@@ -106,12 +129,15 @@ const data={
       price: 2.5,
       image: img12,
       description: 'Chicken sandwich',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
     {
       id: '9',
@@ -119,12 +145,15 @@ const data={
       price: 3.5,
       image: img12,
       description: 'Chocolate cake',
-      sides: {
-        side1: 'Ketchup',
-        side2: 'Mayonnaise',
-        side3: 'Chilli',
-        side4: 'Mustard',
-        }
+      sides: [{
+        sidename: 'Ketchup',
+      },{
+        sidename: 'Mayonnaise',
+    },{
+      sidename: 'Chilli',
+    },{
+      sidename: 'Mustard',
+        }],
     },
   ],
 };

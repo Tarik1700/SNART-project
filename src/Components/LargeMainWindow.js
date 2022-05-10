@@ -22,11 +22,9 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 const LargeMainWindow  = (props) =>  {
 
   const {looping, textThing, id, product, passingtest, test, passingtest2Remove,
-     itemsPrice, addOrderToFireBase, addToArray, } = props;
+     itemsPrice, addOrderToFireBase, addToArray } = props;
   
-     const {products} = data;
-     
-   
+  
 
   const [isOpen2, setIsOpen2] = useState(false)
 
@@ -84,8 +82,6 @@ const animate =() => {
   document.getElementById("button").style.transform = "scale(1.1,1.1)";
   console.log("hi")
 }
-
-
 
 
   return (
@@ -196,7 +192,9 @@ const animate =() => {
 }
 <div className="grid auto-rows-auto gap-4 text-lg mt-9 relative font-[poppins]">
 
-{/* products.map(({sides}, i) =>(  sides.map((side))  )   ) */}
+
+
+{product.sides.map((side) => (   <Sides side={side} />   ))}
     
 
            
