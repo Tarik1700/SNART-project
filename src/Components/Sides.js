@@ -2,22 +2,24 @@ import React from 'react'
 
 export default function Sides({side, itemsPrice, setsidepricing, sidepricing, key, setsidepricingqty, sidepricingqty, }) {
 
+  let qty = 0;
   const handleChange = (e) => {
     let isChecked = e.target.checked;
-    
+
     console.log(isChecked)
     // do whatever you want with isChecked value
     if(isChecked){
      
      setsidepricing(( (sidepricing) + (side.sideprice)))
-     setsidepricingqty(( (sidepricingqty) + 1))
+     setsidepricingqty(side.sidename, qty = qty + 1 )
     }else{
       setsidepricing(( (sidepricing) - (side.sideprice)))
-      setsidepricingqty(( (sidepricingqty) - 1))
+      setsidepricingqty(side.sidename, qty = qty - 1 )
     }
     
   }
-  console.log("qty" + sidepricingqty)
+  console.log("qty " + sidepricingqty + qty)
+  
   return (
     <div>
         <div key={key} className="row-span-1 grid grid-cols-4 ">

@@ -67,7 +67,7 @@ if(exist.qty === 1){
 
 }
 const [sidepricing, setsidepricing] = useState (0);
-const [sidepricingqty, setsidepricingqty] = useState (0);
+const [sidepricingqty, setsidepricingqty] = useState ([]);
 const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0) + sidepricing;
 
 

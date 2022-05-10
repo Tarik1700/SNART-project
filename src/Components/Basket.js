@@ -125,6 +125,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     )) }
     {test.length !== 0 && (
       <>
+      
       <div  className="col-2  text-center text-xl grid grid-cols-9 "> 
       <h1 className="text-left pl-6 my-auto text-base col-span-3 ">Sides:</h1>
       <div className="col-span-4 text-lg my-auto pl-1 ">
