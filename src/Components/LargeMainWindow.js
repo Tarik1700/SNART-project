@@ -7,6 +7,8 @@ import {useState} from 'react'
 import Accent from './Accent'
 import TimeToReady from './TimeToReady'
 import Basket from "./Basket";
+import Sides from "./Sides";
+import data from './data'
 
 Modal.setAppElement('#root');
 
@@ -19,8 +21,12 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props) =>  {
 
-  const {looping, textThing, id, product, passingtest, test, passingtest2Remove, itemsPrice, addOrderToFireBase, addToArray} = props;
+  const {looping, textThing, id, product, passingtest, test, passingtest2Remove,
+     itemsPrice, addOrderToFireBase, addToArray, } = props;
   
+     const {products} = data;
+     
+   
 
   const [isOpen2, setIsOpen2] = useState(false)
 
@@ -162,8 +168,9 @@ const animate =() => {
 
 
         </div>
+
+{/*
         <div className="grid grid-rows-4 gap-4 text-lg mt-9 relative font-[poppins]">
-          
           <div className="row-span-1 grid grid-cols-4 "> <input type="checkbox" className="inline ml-6 my-auto 
           justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]  "/> <h1 className="inline 
           cols-span-2 text-sm my-auto">Ketchup</h1> <h1 className="inline "></h1> <h1 className="col-span-1 justify-self-end
@@ -183,11 +190,19 @@ const animate =() => {
           justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]  "/> <h1 className="inline 
           cols-span-2 text-sm my-auto">Mustard</h1> <h1 className="inline "></h1> <h1 className="col-span-1 justify-self-end
            mr-4">+0.5KM</h1> </div>
-        
-        
-            
-          
         </div>
+*/
+
+}
+<div className="grid auto-rows-auto gap-4 text-lg mt-9 relative font-[poppins]">
+
+{/* products.map(({sides}, i) =>(  sides.map((side))  )   ) */}
+    
+
+           
+          
+</div>
+
         <div className="mx-2">
         <button  className=" relative  [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-xl mt-4 
         shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" onClick={both}>
