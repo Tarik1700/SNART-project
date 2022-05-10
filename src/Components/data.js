@@ -18,13 +18,21 @@ const data={
       image: img5,
       description: 'Chicken burger with fries',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -34,13 +42,21 @@ const data={
       image: img7,
       description: 'Macaroni in red sauce',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -50,13 +66,21 @@ const data={
       image: img6,
       description: 'Pizza with salami',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -66,13 +90,21 @@ const data={
       image: img8,
       description: 'American pancakes',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -82,13 +114,21 @@ const data={
       image: img9,
       description: 'Double cheeseburger',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -98,13 +138,21 @@ const data={
       image: img10,
       description: 'Fish with green sauce',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -114,13 +162,21 @@ const data={
       image: img11,
       description: 'Golden fries with sauce',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -130,13 +186,21 @@ const data={
       image: img12,
       description: 'Chicken sandwich',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
     {
@@ -146,13 +210,21 @@ const data={
       image: img12,
       description: 'Chocolate cake',
       sides: [{
+        sideID: '1',
         sidename: 'Ketchup',
+        sideprice: 0.5,
       },{
+        sideID: '2',
         sidename: 'Mayonnaise',
+        sideprice: 0.4,
     },{
+      sideID: '3',
       sidename: 'Chilli',
+      sideprice: 0.8,
     },{
+      sideID: '4',
       sidename: 'Mustard',
+      sideprice: 0.3,
         }],
     },
   ],

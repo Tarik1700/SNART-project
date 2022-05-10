@@ -22,7 +22,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 const LargeMainWindow  = (props) =>  {
 
   const {looping, textThing, id, product, passingtest, test, passingtest2Remove,
-     itemsPrice, addOrderToFireBase, addToArray } = props;
+     itemsPrice, addOrderToFireBase, addToArray, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty } = props;
   
   
 
@@ -63,6 +63,16 @@ myLoop()
 
   function closeModal() {
     setTimeout(function() {  
+      setsidepricing(0);
+    setIsOpen(false);
+    }, 400)
+    document.getElementById("modal").style.transform = "translate(0px,1000px)";
+    
+  }
+
+  function closeModalWithSide() {
+    setTimeout(function() {  
+      
     setIsOpen(false);
     }, 400)
     document.getElementById("modal").style.transform = "translate(0px,1000px)";
@@ -70,18 +80,21 @@ myLoop()
   }
 
 const both = () => {
-  console.log(props.handleTest1)
-  closeModal();
+  console.log(props.handleTest1);
+  
+  
+  closeModalWithSide();
   setIsOpen2(true);
   passingtest(product);
-
+  
 }
-
+console.log("items price:" + sidepricing)
 
 const animate =() => {
   document.getElementById("button").style.transform = "scale(1.1,1.1)";
   console.log("hi")
 }
+
 
 
   return (
@@ -90,7 +103,7 @@ const animate =() => {
       <div>
      
 
-<Accent addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
+<Accent sidepricing={sidepricing} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
 <TimeToReady testingThing="this is just a test"/>
@@ -194,7 +207,8 @@ const animate =() => {
 
 
 
-{product.sides.map((side) => (   <Sides side={side} />   ))}
+{product.sides.map((side) => (   <Sides side={side} key={side.sideID} itemsPrice={itemsPrice} 
+setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={setsidepricingqty} sidepricingqty={sidepricingqty} />   ))}
     
 
            

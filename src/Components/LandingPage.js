@@ -66,8 +66,11 @@ if(exist.qty === 1){
 }
 
 }
-const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0);
- 
+const [sidepricing, setsidepricing] = useState (0);
+const [sidepricingqty, setsidepricingqty] = useState (0);
+const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0) + sidepricing;
+
+
 
 const addOrderToFireBase = () => {
 console.log("worked")
@@ -128,7 +131,7 @@ charactersLength));
   return result;
 }
 }
-let a = [] ;
+
   return (
     <div className=" overflow-y-clip ">
 
@@ -185,7 +188,7 @@ let a = [] ;
         <div className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
         shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
 
-{products.map((product) =>( <LargeMainWindow  products={products} sides={product.sides} key={product.id} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
+{products.map((product) =>( <LargeMainWindow sidepricingqty={sidepricingqty} setsidepricingqty={setsidepricingqty} sidepricing={sidepricing} setsidepricing={setsidepricing} products={products} sides={product.sides} key={product.id} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/> ) )}
         
 

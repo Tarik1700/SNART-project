@@ -7,7 +7,8 @@ import TimeToReady from './TimeToReady';
 const Basket = ( props) => {
 
  
-const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray } = props;
+const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
+  sidepricing } = props;
 
 
 const [isOpen2, setIsOpen2] = useState(false)
@@ -124,10 +125,20 @@ const [isOpenReady, setIsOpenReady] = useState (false)
     )) }
     {test.length !== 0 && (
       <>
+      <div  className="col-2  text-center text-xl grid grid-cols-9 "> 
+      <h1 className="mx-auto my-auto text-base col-span-3 pl-2">Sides:</h1>
+      <div className="col-span-4 text-lg my-auto ">
+       {sidepricing.toFixed(2)} KM
+        </div>
+      <div></div>
+    
+ 
+      
+      </div>
       <hr className="mx-4 bg-black"></hr>
       <div className="grid grid-cols-2 justify-items-start mt-4">
         <div className=" my-auto font-extrabold pl-4 text-2xl">Total:</div>
-        <div className=" my-auto  text-2xl font-extrabold justify-self-end pr-6">{itemsPrice.toFixed(2)} KM</div>
+        <div className=" my-auto  text-2xl font-extrabold justify-self-end pr-6">{itemsPrice.toFixed(2)}  KM</div>
       </div>
       </>
     )}
