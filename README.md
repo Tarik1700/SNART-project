@@ -8,7 +8,7 @@
 </p>
 
   <h1> About:
-  <h5> As a part of a team, we are building a restaurant ordering system, my part was to design and build the mobile view which the customers will be interacting with. It was made in react with modal windows and JS animations with TailwindCSS as a CSS framework.
+  <h5> As a part of a team, we are building a restaurant ordering system, this was my part to design and build the mobile view which the customers will be interacting with. It was made in react with modal windows and JS animations with TailwindCSS as a CSS framework, and firebase to store the data .
    
   <h1> Disclaimer:
   
