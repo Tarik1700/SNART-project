@@ -11,10 +11,10 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
   sidepricing, sidepricingqty } = props;
 
 
-const [isOpen3, setIsOpen3] =  React.useState(false);
+
 
 const [isOpenReady, setIsOpenReady] = useState (false)
-
+const [isOpen3, setIsOpen3] = useState ();
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -32,7 +32,9 @@ const [isOpenReady, setIsOpenReady] = useState (false)
   myLoop3();
 
 function openingTmeToReady() {
-  setIsOpen3(true);
+  console.log("1" + isOpen3)
+  setIsOpen3(2);
+  console.log("2" + isOpen3)
 }
 
   
@@ -46,11 +48,11 @@ function openingTmeToReady() {
     setIsOpenReady(true);
     addToArray(message);
     //addOrderToFireBase();
-    console.log(isOpen3)
+   // console.log(isOpen3)
 
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,65vh)";
-    console.log(isOpen3)
+    //console.log(isOpen3)
     
   } else{
     alert("Basket is empty")
