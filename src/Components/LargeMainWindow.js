@@ -22,7 +22,7 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 const LargeMainWindow  = (props) =>  {
 
   const {looping, textThing, id, product, passingtest, test, passingtest2Remove,
-     itemsPrice, addOrderToFireBase, addToArray, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty } = props;
+     itemsPrice, addOrderToFireBase, addToArray, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty, setTest } = props;
   
   
 
@@ -64,7 +64,7 @@ myLoop()
   function closeModal() {
     setTimeout(function() {  
       setsidepricing(0);
-      setsidepricingqty(0);
+      setsidepricingqty(sidepricingqty.filter((x) => x.sideName === 0 ))
     setIsOpen(false);
     }, 400)
     document.getElementById("modal").style.transform = "translate(0px,1000px)";
@@ -73,7 +73,7 @@ myLoop()
 
   function closeModalWithSide() {
     setTimeout(function() {  
-      
+
     setIsOpen(false);
     }, 400)
     document.getElementById("modal").style.transform = "translate(0px,1000px)";
@@ -82,14 +82,17 @@ myLoop()
 
 const both = () => {
   console.log(props.handleTest1);
+
   
   
   closeModalWithSide();
   setIsOpen2(true);
-  passingtest(product);
+  passingtest(product, sidepricingqty);
   
+  setsidepricingqty(sidepricingqty.filter((x) => x.sideName === 0 ))
+  console.log(test)
 }
-console.log("items price:" + sidepricing)
+//console.log("items price:" + sidepricing)
 
 const animate =() => {
   document.getElementById("button").style.transform = "scale(1.1,1.1)";

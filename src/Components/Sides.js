@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Sides({side, itemsPrice, setsidepricing, sidepricing, key, setsidepricingqty, sidepricingqty, }) {
+export default function Sides({side, itemsPrice, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty, }) {
 
   let qty = 0;
   const handleChange = (e) => {
@@ -11,18 +11,19 @@ export default function Sides({side, itemsPrice, setsidepricing, sidepricing, ke
     if(isChecked){
      
      setsidepricing(( (sidepricing) + (side.sideprice)))
-     setsidepricingqty(side.sidename, qty = qty + 1 )
+     setsidepricingqty([...sidepricingqty, {ID: side.sideID, sideName: side.sidename, sideQuantity: 1 }])
     }else{
       setsidepricing(( (sidepricing) - (side.sideprice)))
-      setsidepricingqty(side.sidename, qty = qty - 1 )
-    }
+      setsidepricingqty(sidepricingqty.filter((x) => x.sideName !== side.sidename ))
     
+    }
+   //, ...sidepricingqty, sideQty: sideQty + 1  
   }
-  console.log("qty " + sidepricingqty + qty)
+//  console.log("qty " + sidepricingqty )
   
   return (
     <div>
-        <div key={key} className="row-span-1 grid grid-cols-4 ">
+        <div  className="row-span-1 grid grid-cols-4 ">
              <input  value={side.sideprice} onChange={e => handleChange(e)} type="checkbox" className="inline ml-6 my-auto 
           justify-self-start col-span-1 w-5 h-5 shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]  "/> 
           <h1 className="inline cols-span-2 text-sm my-auto"> {side.sidename}</h1> 
