@@ -46,13 +46,15 @@ const passingtest = (product, sidesthings) => {
     setTest(
       test.map((x)=> 
       x.id === product.id ? {...exist, qty: exist.qty +1 } : x
-      ), ...sidesthings 
+      )
     );
   }else{
- setTest([...test, { ...product, qty: 1, ...sidesthings }])
+ setTest([...test, { ...product, qty: 1, sides: sidesthings }])
 }
-setTest(test.filter((x) => x.sides === product ));
+
+//setTest(test.filter((h) => h.id !== product.id));
 };
+
 
 const passingtest2Remove =(product) =>{
 const exist = test.find((x) => x.id === product.id);
@@ -70,7 +72,7 @@ if(exist.qty === 1){
 const [sidepricing, setsidepricing] = useState (0);
 const [sidepricingqty, setsidepricingqty] = useState ([]);
 const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0) + sidepricing;
-console.log( test )
+//console.log( test )
 
 
 
@@ -102,7 +104,7 @@ const addToArray = (x) =>{
 
   //const arr3 = [...test, ...x];
   console.log(arr3);
-  console.log();
+  //console.log(result);
 }
 
 

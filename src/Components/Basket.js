@@ -11,7 +11,7 @@ const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPr
   sidepricing, sidepricingqty } = props;
 
 
-const [isOpen2, setIsOpen2] = useState(false)
+const [isOpen3, setIsOpen3] =  React.useState(false);
 
 const [isOpenReady, setIsOpenReady] = useState (false)
 
@@ -31,24 +31,31 @@ const [isOpenReady, setIsOpenReady] = useState (false)
   }
   myLoop3();
 
+function openingTmeToReady() {
+  setIsOpen3(true);
+}
 
   
   const closeBasket = () => {
+    
    if(test.length > 0){
     setTimeout(function() {  
     
-    setIsOpen2(true);
+    onClose1();
+    openingTmeToReady();
     setIsOpenReady(true);
     addToArray(message);
-    onClose1();
     //addOrderToFireBase();
-    
+    console.log(isOpen3)
 
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,65vh)";
+    console.log(isOpen3)
+    
   } else{
     alert("Basket is empty")
   }
+  
   }
 
   const closeBasketArrow = () => {
@@ -83,7 +90,7 @@ const [isOpenReady, setIsOpenReady] = useState (false)
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
    
 <div className="">
-<TimeToReady sidepricing={sidepricing}  IsOpenReady={isOpenReady} isOpen2={isOpen2} test={test} itemsPrice={itemsPrice} > </TimeToReady>
+<TimeToReady sidepricing={sidepricing}  IsOpenReady={isOpenReady} isOpen3={isOpen3} test={test} itemsPrice={itemsPrice} > </TimeToReady>
 </div>
 
 

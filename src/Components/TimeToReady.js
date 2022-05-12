@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 const TimeToReady = ( props) => {
 
-    const {open1, onClose1, isOpen2, test, itemsPrice, IsOpenReady, sidepricing } = props;
+    const {open1, onClose1, isOpen3, test, itemsPrice, IsOpenReady, sidepricing } = props;
 
 
   function myLoop3() {        
@@ -40,10 +40,10 @@ const TimeToReady = ( props) => {
     
   }
   
+  console.log(isOpen3)
 
 
-
-  if (!isOpen2) return null
+  if (!isOpen3) return null
 
   return (
       
@@ -81,7 +81,7 @@ const TimeToReady = ( props) => {
       <div  className="col-2  text-xl grid grid-cols-9 "> 
       <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
       <div className="col-span-6 text-lg place-self-end pr-5 my-auto pl-1 ">
-       {/*sidepricingqty*/} 1 x {sidepricing.toFixed(2)} KM
+        1 x {sidepricing.toFixed(2)} KM
         </div>
       <div></div>
     
@@ -111,7 +111,7 @@ const TimeToReady = ( props) => {
 </div>
   </div>
   </div>
-  <div class="grid pl-2 h-10   grid-cols-5 mt-2 divide-x divide-gray-500">
+  <div className="grid pl-2 h-10   grid-cols-5 mt-2 divide-x divide-gray-500">
   <div className="w-0"></div>
   <div></div>
   <div></div>

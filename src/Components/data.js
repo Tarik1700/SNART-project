@@ -18,19 +18,19 @@ const data={
       image: img5,
       description: 'Chicken burger with fries',
       sides: [{
-        sideID: '1',
+        sideID: '100',
         sidename: 'Ketchup',
         sideprice: 0.5,
       },{
-        sideID: '2',
+        sideID: '101',
         sidename: 'Mayonnaise',
         sideprice: 0.4,
     },{
-      sideID: '3',
+      sideID: '102',
       sidename: 'Chilli',
       sideprice: 0.8,
     },{
-      sideID: '4',
+      sideID: '103',
       sidename: 'Mustard',
       sideprice: 0.3,
         }],
