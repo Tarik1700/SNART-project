@@ -1,11 +1,12 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 const TimeToReady = ( props) => {
 
-    const {open1, onClose1, isOpen3, test, itemsPrice, IsOpenReady, sidepricing } = props;
+    const { isOpen30, test, itemsPrice, sidepricing, onClose2 } = props;
 
 
+    
   function myLoop3() {        
     setTimeout(function() {   
                           
@@ -25,7 +26,7 @@ const TimeToReady = ( props) => {
   
   function closeBasket() {
     setTimeout(function() {  
-    onClose1();
+   
     }, 500)
     document.getElementById("basket12").style.transform = "translate(-50%,30vh)";
     
@@ -33,20 +34,18 @@ const TimeToReady = ( props) => {
 
   const closeBasketArrow = () => {
     setTimeout(function() {  
-    onClose1();
+    
 
     }, 500)
     document.getElementById("basket").style.transform = "translate(-50%,30vh)";
     
   }
   
-  console.log(isOpen3)
 
-
-  if (!isOpen3) return null
+  if (!isOpen30) return 
 
   return (
-      
+      <>
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[1000] mx-6">
 <div id="basket" className=" transition-all relative  top-[18rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
@@ -138,7 +137,8 @@ Order <br></br> ready!
        
         </div>
         </div>
-    
+        </>
   )
+
 }
 export default TimeToReady

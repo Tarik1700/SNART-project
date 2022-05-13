@@ -1,6 +1,6 @@
 import React from 'react'
 import img1 from './img/plus.png'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import LargeMainWindow from './LargeMainWindow';
 import TimeToReady from './TimeToReady';
 
@@ -8,13 +8,13 @@ const Basket = ( props) => {
 
  
 const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
-  sidepricing, sidepricingqty } = props;
+  sidepricing, sidepricingqty, isOpen3, setisOpen30 } = props;
 
 
 
+  
+const [isOpenReady, setIsOpenReady] = useState ()
 
-const [isOpenReady, setIsOpenReady] = useState (false)
-const [isOpen3, setIsOpen3] = useState ();
 
   function myLoop3() {        
     setTimeout(function() {   
@@ -33,32 +33,40 @@ const [isOpen3, setIsOpen3] = useState ();
 
 function openingTmeToReady() {
   console.log("1" + isOpen3)
-  setIsOpen3(2);
+  
+  setisOpen30();
   console.log("2" + isOpen3)
 }
 
   
+
+  
+
   const closeBasket = () => {
     
    if(test.length > 0){
     setTimeout(function() {  
     
     onClose1();
-    openingTmeToReady();
+    setisOpen30(true);
     setIsOpenReady(true);
     addToArray(message);
     //addOrderToFireBase();
    // console.log(isOpen3)
 
     }, 500)
+    
     document.getElementById("basket").style.transform = "translate(-50%,65vh)";
     //console.log(isOpen3)
     
   } else{
     alert("Basket is empty")
+    
+  }
+ 
   }
   
-  }
+  
 
   const closeBasketArrow = () => {
     setTimeout(function() {  
@@ -83,16 +91,17 @@ function openingTmeToReady() {
 
 
 
-
+ 
 
   if(!open1) return null
 
   return (
       <>
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
-   
+   <div>  <TimeToReady  onClose2={() => setisOpen30()} sidepricing={sidepricing}  IsOpenReady={isOpenReady} isOpen3={isOpen3} test={test} itemsPrice={itemsPrice} />
+    </div>
 <div className="">
-<TimeToReady sidepricing={sidepricing}  IsOpenReady={isOpenReady} isOpen3={isOpen3} test={test} itemsPrice={itemsPrice} > </TimeToReady>
+
 </div>
 
 
