@@ -90,7 +90,7 @@ const both = () => {
   passingtest(product, sidepricingqty);
   
   setsidepricingqty(sidepricingqty.filter((x) => x.sideName === 0 ))
-  console.log(test)
+ // console.log(test)
 }
 //console.log("items price:" + sidepricing)
 
@@ -110,7 +110,6 @@ const animate =() => {
 <Accent sidepricing={sidepricing} sidepricingqty={sidepricingqty} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
-<TimeToReady testingThing="this is just a test"/>
 
 
 

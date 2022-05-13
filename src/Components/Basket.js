@@ -8,10 +8,10 @@ const Basket = ( props) => {
 
  
 const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
-  sidepricing, sidepricingqty, isOpen3, setisOpen30 } = props;
+  sidepricing, sidepricingqty } = props;
 
 
-
+  const [opening, setOpening] = useState(false)
   
 const [isOpenReady, setIsOpenReady] = useState ()
 
@@ -32,10 +32,10 @@ const [isOpenReady, setIsOpenReady] = useState ()
   myLoop3();
 
 function openingTmeToReady() {
-  console.log("1" + isOpen3)
+  console.log("1" + opening)
   
-  setisOpen30();
-  console.log("2" + isOpen3)
+  setOpening();
+  console.log("2" + opening)
 }
 
   
@@ -46,17 +46,17 @@ function openingTmeToReady() {
     
    if(test.length > 0){
     setTimeout(function() {  
-    
+      setOpening(true);
     onClose1();
-    setisOpen30(true);
+    
     setIsOpenReady(true);
     addToArray(message);
-    //addOrderToFireBase();
+    addOrderToFireBase();
    // console.log(isOpen3)
 
     }, 500)
     
-    document.getElementById("basket").style.transform = "translate(-50%,65vh)";
+    document.getElementById("basket").style.transform = "translate(-50%,69vh)";
     //console.log(isOpen3)
     
   } else{
@@ -73,7 +73,7 @@ function openingTmeToReady() {
     onClose1();
 
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,65vh)";
+    document.getElementById("basket").style.transform = "translate(-50%,69vh)";
     
   }
   
@@ -93,13 +93,12 @@ function openingTmeToReady() {
 
  
 
-  if(!open1) return null
+  if(!open1) return <TimeToReady  opening={opening} setOpening={setOpening} sidepricingqty={sidepricingqty} sidepricing={sidepricing}  IsOpenReady={isOpenReady}  test={test} itemsPrice={itemsPrice} />
 
   return (
       <>
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
-   <div>  <TimeToReady  onClose2={() => setisOpen30()} sidepricing={sidepricing}  IsOpenReady={isOpenReady} isOpen3={isOpen3} test={test} itemsPrice={itemsPrice} />
-    </div>
+   <div>   </div>
 <div className="">
 
 </div>
@@ -107,7 +106,7 @@ function openingTmeToReady() {
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
 <div id="basket" className=" transition-all relative  top-[18rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[65vh] duration-700  ">
+     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[70vh] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         <button id="btn3" onClick={closeBasketArrow} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,16 +124,17 @@ function openingTmeToReady() {
 { test.map((item) => ( 
   
     <div key = {item.id} className="col-2  text-center text-xl grid grid-cols-9 ">
-      <h1 className="text-left my-auto text-base col-span-3 pl-6">{item.name}</h1>
-      <div className="col-span-4 text-lg my-auto ">
+     
+      <h1 className="text-left my-auto text-base col-span-3  pl-4">{item.name} {item.sides.map((items)=> (<div className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
+      <div className="col-span-4 text-lg ml-5 my-auto mt-0 ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
 
      
 
-     <button id="btn1" className=" text-right text-5xl  justify-end mx-auto 
+     <button id="btn1" className=" text-right [font-size:3rem]  [line-height:2.2rem] mt-0 justify-end mx-auto 
       my-auto text-[#5DBB63]" onClick={()=>passingtest2(item)}>+</button> 
-     <button id="btn2" className=" text-right self text-5xl   justify-end mx-auto 
+     <button id="btn2" className=" text-right self [font-size:3rem] [line-height:2.2rem] mt-0 justify-end mx-auto 
       my-auto text-red-700 " onClick={()=>passingtest2Remove(item)} >-</button> 
  </div>
     
@@ -144,9 +144,9 @@ function openingTmeToReady() {
     {test.length !== 0 && (
       <>
       
-      <div  className="col-2  text-center text-xl grid grid-cols-9 "> 
+      <div  className="col-2  text-center text-xl grid grid-cols-9 pt-2 "> 
       <h1 className="text-left pl-6 my-auto text-base col-span-3 ">Sides:</h1>
-      <div className="col-span-4 text-lg my-auto pl-1 ">
+      <div className="col-span-4 text-lg my-auto ml-[1.6rem]  ">
        {/*sidepricingqty*/} 1 x {sidepricing.toFixed(2)} KM
         </div>
       <div></div>

@@ -7,7 +7,7 @@ export default function Accent( {open2, children2, onClose2, props, test,
   passingtest2, Foodprice, Foodname,passingtest2Remove, itemsPrice, addOrderToFireBase, addToArray, sidepricing, sidepricingqty  }) {
 
     
-    const [isOpen3, setIsOpen3] = useState(false)
+   
 
     const [isOpen1, setIsOpen1] = useState(false)
 
@@ -59,7 +59,7 @@ export default function Accent( {open2, children2, onClose2, props, test,
   return (
       <>
       
-      <Basket isOpen3={isOpen3} setisOpen30 ={setIsOpen3}  sidepricingqty={sidepricingqty} sidepricing={sidepricing} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} passingtest2Remove={passingtest2Remove}  test={test} passingtest2={passingtest2} open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
+      <Basket   sidepricingqty={sidepricingqty} sidepricing={sidepricing} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} passingtest2Remove={passingtest2Remove}  test={test} passingtest2={passingtest2} open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
       </Basket>
       <button  onClick={both} className="fixed z-[999] " >
 <div onClick={animate} id="modal1" className=" border-[4px]   border-[#9f9f9f] [-webkit-tap-highlight-color:rgba(0,0,0,0);]  transition-all fixed 

@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 
 const TimeToReady = ( props) => {
 
-    const { isOpen30, test, itemsPrice, sidepricing, onClose2 } = props;
+    const { opening, setOpening, test, itemsPrice, sidepricing, onClose2, sidepricingqty } = props;
 
 
     
@@ -24,32 +24,16 @@ const TimeToReady = ( props) => {
 
 
   
-  function closeBasket() {
-    setTimeout(function() {  
-   
-    }, 500)
-    document.getElementById("basket12").style.transform = "translate(-50%,30vh)";
-    
-  }
-
-  const closeBasketArrow = () => {
-    setTimeout(function() {  
-    
-
-    }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,30vh)";
-    
-  }
   
 
-  if (!isOpen30) return 
+  if (!opening) return null
 
   return (
-      <>
-
-<div className="fixed left-0 right-0 top-0 bottom-0 z-[1000] mx-6">
-<div id="basket" className=" transition-all relative  top-[18rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[65vh] duration-700 ">
+    <>
+ <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
+<div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6">
+<div id="basket" className=" transition-all relative  top-[20rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+     bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[69vh] duration-700 ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         
@@ -63,9 +47,10 @@ const TimeToReady = ( props) => {
         <div className="">
         
 { test.map((item) => ( 
-    <div key = {item.id} className="col-2   text-xl grid grid-cols-9 ">
-      <h1 className="text-left my-auto text-base col-span-3 pl-6">{item.name}</h1>
-      <div className="col-span-6 text-lg my-auto place-self-end pr-5">
+    <div key = {item.id} className="col-2 auto-rows-auto text-xl grid grid-cols-9 ">
+      <h1 className="text-left my-auto text-base col-span-3 pl-6">{item.name} {item.sides.map((items)=> (<div className=" pl-3"> {items.sideName} </div>) ) }</h1>
+      
+      <div className="col-span-6 text-lg my-auto place-self-end mt-0 pr-5">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
        
@@ -80,7 +65,7 @@ const TimeToReady = ( props) => {
       <div  className="col-2  text-xl grid grid-cols-9 "> 
       <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
       <div className="col-span-6 text-lg place-self-end pr-5 my-auto pl-1 ">
-        1 x {sidepricing.toFixed(2)} KM
+         {sidepricing.toFixed(2)} KM
         </div>
       <div></div>
     
