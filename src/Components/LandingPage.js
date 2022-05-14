@@ -38,7 +38,14 @@ const LandingPage = () => {
 
   const [test, setTest] = useState([]);
 
+  const[numbers, setnumbers ] = useState (0)
 
+const countering = () =>{
+  
+  setnumbers(numbers + 1) 
+  console.log(numbers)
+  return numbers;
+}
   
 const passingtest = (product, sidesthings) => {
   const exist = test.find((x) => x.id === product.id);
@@ -49,7 +56,7 @@ const passingtest = (product, sidesthings) => {
       )
     );
   }else{
- setTest([...test, { ...product, qty: 1, sides: sidesthings }])
+ setTest([...test, { ...product, qty: 1, sides: sidesthings, id: countering() }])
 }
 
 //setTest(test.filter((h) => h.id !== product.id));
@@ -59,7 +66,9 @@ const passingtest = (product, sidesthings) => {
 const passingtest2Remove =(product) =>{
 const exist = test.find((x) => x.id === product.id);
 if(exist.qty === 1){
-  setTest(test.filter((x) => x.id !== product.id ));
+  product.sides.map((items) => (setsidepricing(sidepricing - items.sidePrice)));
+  setTest(test.filter((x) => x.id !== product.id  ))
+  
 }else{
   setTest(
     test.map((x)=> 
@@ -100,7 +109,7 @@ const addToArray2 = (y) =>{
 
 
 const addToArray = (x) =>{
-  arr3 = test.concat(x, arr4, result);
+  arr3 = test.concat(x, arr4);
 
   //const arr3 = [...test, ...x];
   console.log(arr3);

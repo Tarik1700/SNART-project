@@ -95,21 +95,22 @@ const TimeToReady = ( props) => {
 </div>
   </div>
   </div>
-  <div className="grid pl-2 h-10   grid-cols-5 mt-2 divide-x divide-gray-500">
-  <div className="w-0"></div>
+  <div className="grid w-max  gap-[1170%]  pl-8 h-10  grid-cols-6 mt-2 ">
+  <div className="border-l-2 border-black"></div>
+  <div className="border-l-2 border-black"></div>
+  <div className="border-l-2 border-black"></div>
   <div></div>
-  <div></div>
-  <div></div>
+  
 </div>
-  <div className=" my-auto mt-0  h-[3rem] grid grid-cols-3">
-    <div className="pl-4 place-self-start mt-[1rem] text-xs text-">
-Order <br></br> taken!
+  <div className=" my-auto mt-0 text-center h-[3rem] grid grid-cols-3">
+    <div className="pl-4  place-self-start  text-xs ">
+Order <br></br> Taken!
     </div>
-    <div className=" place-self-center mt-[1.7rem] font-extrabold">
-Almost there
+    <div className=" place-self-center font-extrabold">
+Almost There
     </div>
-    <div className=" place-self-end pr-4 text-xs">
-Order <br></br> ready!
+    <div className=" place-self-end mb-4 pr-4 text-xs">
+Order <br></br> Ready!
     </div>
 
   </div>

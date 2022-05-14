@@ -11,7 +11,7 @@ export default function Sides({side, itemsPrice, setsidepricing, sidepricing, se
     if(isChecked){
      
      setsidepricing(( (sidepricing) + (side.sideprice)))
-     setsidepricingqty([...sidepricingqty, {ID: side.sideID, sideName: side.sidename, sideQuantity: 1 }])
+     setsidepricingqty([...sidepricingqty, {ID: side.sideID, sideName: side.sidename, sideQuantity: 1, sidePrice: side.sideprice }])
     }else{
       setsidepricing(( (sidepricing) - (side.sideprice)))
       setsidepricingqty(sidepricingqty.filter((x) => x.sideName !== side.sidename ))

@@ -105,7 +105,7 @@ function openingTmeToReady() {
 
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
-<div id="basket" className=" transition-all relative  top-[18rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+<div id="basket" className=" transition-all relative  top-[20rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
      bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[70vh] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
@@ -132,7 +132,7 @@ function openingTmeToReady() {
 
      
 
-     <button id="btn1" className=" text-right [font-size:3rem]  [line-height:2.2rem] mt-0 justify-end mx-auto 
+     <button id="btn1" className=" hidden text-right [font-size:3rem]  [line-height:2.2rem] mt-0 justify-end mx-auto 
       my-auto text-[#5DBB63]" onClick={()=>passingtest2(item)}>+</button> 
      <button id="btn2" className=" text-right self [font-size:3rem] [line-height:2.2rem] mt-0 justify-end mx-auto 
       my-auto text-red-700 " onClick={()=>passingtest2Remove(item)} >-</button> 
@@ -144,10 +144,10 @@ function openingTmeToReady() {
     {test.length !== 0 && (
       <>
       
-      <div  className="col-2  text-center text-xl grid grid-cols-9 pt-2 "> 
-      <h1 className="text-left pl-6 my-auto text-base col-span-3 ">Sides:</h1>
-      <div className="col-span-4 text-lg my-auto ml-[1.6rem]  ">
-       {/*sidepricingqty*/} 1 x {sidepricing.toFixed(2)} KM
+       <div  className="col-2 mt-2 text-xl grid grid-cols-9 "> 
+      <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
+      <div className="col-span-6 text-lg place-self-end pr-[5.7rem] my-auto pl-1 ">
+         {sidepricing.toFixed(2)} KM
         </div>
       <div></div>
     

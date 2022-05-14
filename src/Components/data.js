@@ -1,4 +1,4 @@
-import img5 from './img/hamburgerimage.jpg'
+
 import img6 from './img/pizzaimage.jpg'
 import img7 from './img/pastaimage.jpg'
 import img8 from './img/pancakesimage.jpg'
@@ -7,16 +7,16 @@ import img10 from './img/fishimage.jpg'
 import img11 from './img/friesimage.jpg'
 import img12 from './img/sandwich.jpg'
 
-
+const img5= ''
 
 const data={
   products: [
     {
       id: '1',
-      name: 'Hamburger',
-      price: 15,
-      image: img5,
-      description: 'Chicken burger with fries',
+      name: 'Omelette',
+      price: 5,
+      image: 'https://korpa.ba/product_uploads/a9eIXZKVdveCab0phTUTi17e14pqPfnm.jpg',
+      description: 'Omelette with vegetables',
       sides: [{
         sideID: '100',
         sidename: 'Ketchup',
