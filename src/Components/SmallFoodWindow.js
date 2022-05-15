@@ -15,7 +15,7 @@ const SmallFoodWindow = (props) => {
         </div>
         
         <div className="">
-        <h1 className=" text-xs pt-3 text-center">{props.Foodname}</h1>
+        <h1 className=" text-xs pt-2 text-center">{props.Foodname}</h1>
         </div>
         
 

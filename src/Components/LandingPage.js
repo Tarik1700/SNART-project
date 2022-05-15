@@ -195,17 +195,24 @@ charactersLength));
         </Link>
         </div>
         <div className="h-24  ">
-        <SmallFoodWindow Foodname="Chicken" imageurl= {img1}  />
+        <Link to="Nuggets"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+        
+        <SmallFoodWindow Foodname="Fried" imageurl= {img1}  />
+        </Link>
         </div>
         <div>
-        <SmallFoodWindow Foodname="Lunch" imageurl= {img2}  />
+        <Link to="Nutella pancakes"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+        
+        <SmallFoodWindow Foodname="Deserts" imageurl= {img2}  />
+        </Link>
         </div>
         <div>
-        <SmallFoodWindow Foodname="Dinner" imageurl= {img3}  />
+        <Link to="Olimpija negazirana"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+        
+        <SmallFoodWindow Foodname="Drinks" imageurl= {img3}  />
+        </Link>
         </div>
-        <div>
-        <SmallFoodWindow Foodname="Pizza" imageurl= {img4}  />
-        </div>
+        
 
 
         </div>
