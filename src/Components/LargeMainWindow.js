@@ -1,6 +1,5 @@
 import React from "react"
 import img1 from './img/plus.png'
-import PopUpWindow from './PopUpWindow'
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import {useState} from 'react'
