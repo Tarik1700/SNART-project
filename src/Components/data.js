@@ -1,14 +1,4 @@
 
-import img6 from './img/pizzaimage.jpg'
-import img7 from './img/pastaimage.jpg'
-import img8 from './img/pancakesimage.jpg'
-import img9 from './img/cheeseburgerimage.jpg'
-import img10 from './img/fishimage.jpg'
-import img11 from './img/friesimage.jpg'
-import img12 from './img/sandwich.jpg'
-
-const img5= ''
-
 const data={
   products: [
     {
@@ -109,7 +99,7 @@ const data={
     },
     {
       id: '5',
-      name: 'House burger + meni',
+      name: 'Burger + meni',
       price: 12,
       image: 'https://korpa.ba/product_uploads/JS9Pd8umUPv1BSkmYaJnGNXzWajSo3rw.jpg',
       description: 'Hamburger 300g, ketchup, mayonnaise, cabbage, tomato, egg',

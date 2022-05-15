@@ -101,7 +101,7 @@ const TimeToReady = ( props) => {
   <div className="grid relative w-max gap-[32.2vw]  h-10 grid-cols-3  ">
   <div className="border-l-2 border-black"></div>
   <div className="border-l-2 border-black"></div>
-  <div className="border-l-2 border-black "></div>
+  <div className="border-l-2 border-black"></div>
   </div>
   
 </div>
