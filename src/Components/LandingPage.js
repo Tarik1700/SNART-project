@@ -172,7 +172,7 @@ charactersLength));
         <div className="relative bg-[#F3F3F3] mt-6  h-24 mx-2 rounded-xl grid  grid-flow-col 
         shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth">
         <div className="h-24  ">
-            <SmallFoodWindow Foodname="Breakfast" imageurl= {img1}  />
+            <SmallFoodWindow href="firstmenu" Foodname="Breakfast" imageurl= {img1}  />
         </div>
         <div>
         <SmallFoodWindow Foodname="Lunch" imageurl= {img2}  />

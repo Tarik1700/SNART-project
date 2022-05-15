@@ -102,7 +102,7 @@ const animate =() => {
 
 
   return (
-    <div className="snap-start ">
+    <div id="firstmenu" className="snap-start ">
        
       <div>
      
@@ -127,8 +127,8 @@ const animate =() => {
         
         <div className="grid grid-cols-3 grid-rows-2 h-28 gap-1 ">
 
-         <div className=" pt-2 pr-0 pl-2  h-full w-full row-span-2">
-        <img src={props.imageurl} className="  h-24 w-28 mx-auto rounded-lg " /> 
+         <div className=" pt-2 pr-0 pl-0   row-span-2">
+        <img src={props.imageurl} className=" object-cover h-24 w-28 mx-auto rounded-lg " /> 
       
         </div>
         <div className="col-span-2">
@@ -164,7 +164,7 @@ const animate =() => {
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
         
-         <img src={props.imageurl} className="  h-[11rem] top-3 relative w-[14rem] mx-auto rounded-lg
+         <img src={props.imageurl} className=" object-cover h-[11rem] top-3 relative w-[14rem] mx-auto rounded-lg
           shadow-[5px_5px_5px_-1px_rgba(0,0,0,0.5)] " /> 
         <h1 className=" relative text-lg pl-3 mt-5 font-bold">{props.Foodname}</h1>
       <div className="grid grid-cols-4  pl-2"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">{props.Fooddesc}</h1>

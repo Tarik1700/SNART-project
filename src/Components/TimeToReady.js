@@ -32,8 +32,8 @@ const TimeToReady = ( props) => {
     <>
  <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6">
-<div id="basket" className=" transition-all relative  top-[20rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[69vh] duration-700 ">
+<div id="basket" className=" transition-all relative    w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+     bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[100vh] duration-700 ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         
@@ -47,10 +47,12 @@ const TimeToReady = ( props) => {
         <div className="">
         
 { test.map((item) => ( 
+<>
+<hr className="mx-4 "/>
     <div key = {item.id} className="col-2 auto-rows-auto text-xl grid grid-cols-9 ">
-      <h1 className="text-left my-auto text-base col-span-3 pl-6">{item.name} {item.sides.map((items)=> (<div className=" pl-3"> {items.sideName} </div>) ) }</h1>
+      <h1 className="text-left my-auto text-base col-span-5 pl-6">{item.name} {item.sides.map((items)=> (<div className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
       
-      <div className="col-span-6 text-lg my-auto place-self-end mt-0 pr-5">
+      <div className="col-span-4 text-lg my-auto place-self-end mt-0 pr-5">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
        
@@ -59,7 +61,7 @@ const TimeToReady = ( props) => {
     
 
        
-    )) }
+ </>)) }
     {test.length !== 0 && (
       <>
       <div  className="col-2  text-xl grid grid-cols-9 "> 
@@ -95,11 +97,12 @@ const TimeToReady = ( props) => {
 </div>
   </div>
   </div>
-  <div className="grid w-max  gap-[1170%]  pl-8 h-10  grid-cols-6 mt-2 ">
+  <div className="w-max mt-2 h-10 mx-9 ">
+  <div className="grid relative w-max gap-[32.2vw]  h-10 grid-cols-3  ">
   <div className="border-l-2 border-black"></div>
   <div className="border-l-2 border-black"></div>
-  <div className="border-l-2 border-black"></div>
-  <div></div>
+  <div className="border-l-2 border-black "></div>
+  </div>
   
 </div>
   <div className=" my-auto mt-0 text-center h-[3rem] grid grid-cols-3">

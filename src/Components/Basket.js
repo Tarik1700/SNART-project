@@ -21,7 +21,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
                           
       if (document.getElementById("basket")) {          
        
-        document.getElementById("basket").style.transform = "translate(-50%,-50%)"
+        document.getElementById("basket").style.transform = "translate(-50%,0%)"
       }else{
         
         myLoop3(); 
@@ -56,7 +56,7 @@ function openingTmeToReady() {
 
     }, 500)
     
-    document.getElementById("basket").style.transform = "translate(-50%,69vh)";
+    document.getElementById("basket").style.transform = "translate(-50%,100vh)";
     //console.log(isOpen3)
     
   } else{
@@ -73,7 +73,7 @@ function openingTmeToReady() {
     onClose1();
 
     }, 500)
-    document.getElementById("basket").style.transform = "translate(-50%,69vh)";
+    document.getElementById("basket").style.transform = "translate(-50%,100vh)";
     
   }
   
@@ -105,8 +105,8 @@ function openingTmeToReady() {
 
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
-<div id="basket" className=" transition-all relative  top-[20rem]  w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[70vh] duration-700  ">
+<div id="basket" className=" transition-all relative    w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
+     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[100vh] duration-700  ">
 
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         <button id="btn3" onClick={closeBasketArrow} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,10 +122,11 @@ function openingTmeToReady() {
         <div className="">
         {test.length === 0 && <div className="text-xl text-center">Basket is empty</div>}
 { test.map((item) => ( 
-  
-    <div key = {item.id} className="col-2  text-center text-xl grid grid-cols-9 ">
+  <>
+   <hr className="mx-4 "/>
+    <div key = {item.id} className="col-2 mr-2 text-center text-xl  grid grid-cols-9 ">
      
-      <h1 className="text-left my-auto text-base col-span-3  pl-4">{item.name} {item.sides.map((items)=> (<div className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
+      <h1 className="text-left my-auto text-base col-span-4 pl-4">{item.name} {item.sides.map((items)=> (<div className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
       <div className="col-span-4 text-lg ml-5 my-auto mt-0 ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
@@ -140,7 +141,7 @@ function openingTmeToReady() {
     
 
        
-    )) }
+ </>)) }
     {test.length !== 0 && (
       <>
       
