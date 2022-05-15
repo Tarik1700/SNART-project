@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SNART-project/static/css/main.bfb6c62c.css",
-    "main.js": "/SNART-project/static/js/main.95a6b9ee.js",
+    "main.css": "/SNART-project/static/css/main.2430b81c.css",
+    "main.js": "/SNART-project/static/js/main.9f41a662.js",
     "static/media/foodimage.jpg": "/SNART-project/static/media/foodimage.24b373774d655f3cd77c.jpg",
     "static/media/sandwich.jpg": "/SNART-project/static/media/sandwich.0ac5f4f9500ff7cd5165.jpg",
     "static/media/cheeseburgerimage.jpg": "/SNART-project/static/media/cheeseburgerimage.aee41815285e8d302b9a.jpg",
@@ -12,16 +12,15 @@
     "static/media/pizzaphoto.jpg": "/SNART-project/static/media/pizzaphoto.8e944d798c5097b89076.jpg",
     "static/media/pizzaimage.jpg": "/SNART-project/static/media/pizzaimage.a3c9c20ede7b3525406e.jpg",
     "static/media/pancakesimage.jpg": "/SNART-project/static/media/pancakesimage.eddc44c64ee21a9de08a.jpg",
-    "static/media/hamburgerimage.jpg": "/SNART-project/static/media/hamburgerimage.2818fb7bce2f66ce5669.jpg",
     "static/media/dinnerphoto.jpg": "/SNART-project/static/media/dinnerphoto.b402fe6c833d45683080.jpg",
     "static/media/logo1.png": "/SNART-project/static/media/logo1.c258394aa7585575980a.png",
     "static/media/logo2.png": "/SNART-project/static/media/logo2.5e1d2b6a04f9c59c2a6d.png",
     "index.html": "/SNART-project/index.html",
-    "main.bfb6c62c.css.map": "/SNART-project/static/css/main.bfb6c62c.css.map",
-    "main.95a6b9ee.js.map": "/SNART-project/static/js/main.95a6b9ee.js.map"
+    "main.2430b81c.css.map": "/SNART-project/static/css/main.2430b81c.css.map",
+    "main.9f41a662.js.map": "/SNART-project/static/js/main.9f41a662.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfb6c62c.css",
-    "static/js/main.95a6b9ee.js"
+    "static/css/main.2430b81c.css",
+    "static/js/main.9f41a662.js"
   ]
 }
