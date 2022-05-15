@@ -147,6 +147,30 @@ const data={
     },
     {
       id: '7',
+      name: 'Hot-dog',
+      price: 4,
+      image: 'https://korpa.ba/product_uploads/W9g6xRlSPUT6KTBbu5Uq0XQMaL1B4pWr.jpg',
+      description: 'Sausages 100g, mustard',
+      sides: [{
+        sideID: '1',
+        sidename: 'Ketchup',
+        sideprice: 0.5,
+      },{
+        sideID: '2',
+        sidename: 'Mayonnaise',
+        sideprice: 0.5,
+    },{
+      sideID: '3',
+      sidename: 'Chilli',
+      sideprice: 0.8,
+    },{
+      sideID: '4',
+      sidename: 'Mustard',
+      sideprice: 0.7,
+        }],
+    },
+    {
+      id: '8',
       name: 'Cezar salad',
       price: 10,
       image: 'https://korpa.ba/product_uploads/qP5aFjFkcHtxaZ58iC7IWdt4IyBMwfiF.jpg',
@@ -170,7 +194,7 @@ const data={
         }],
     },
     {
-      id: '8',
+      id: '9',
       name: 'Chicken with sesame',
       price: 11,
       image: 'https://korpa.ba/product_uploads/SpYR3s6Ig26xvyWQWagc43VNXcfdhT61.jpg',
@@ -193,30 +217,9 @@ const data={
       sideprice: 0.7,
         }],
     },
-    {
-      id: '9',
-      name: 'Fried chicken',
-      price: 11,
-      image: 'https://korpa.ba/product_uploads/hOqlMeB9BC1bXqyFwnrqagAYpXL28trg.jpg',
-      description: 'Chicken file 200g, fries, cabbage, sesame, mayonnaise, tartar sauce',
-      sides: [{
-        sideID: '1',
-        sidename: 'Ketchup',
-        sideprice: 0.5,
-      },{
-        sideID: '2',
-        sidename: 'Mayonnaise',
-        sideprice: 0.5,
-    },{
-      sideID: '3',
-      sidename: 'Chilli',
-      sideprice: 0.8,
-    },{
-      sideID: '4',
-      sidename: 'Mustard',
-      sideprice: 0.7,
-        }],
-    },
+    
+
+    
     {
       id: '10',
       name: 'Chicken wings',
@@ -243,6 +246,30 @@ const data={
     },
     {
       id: '11',
+      name: 'Fried chicken',
+      price: 11,
+      image: 'https://korpa.ba/product_uploads/hOqlMeB9BC1bXqyFwnrqagAYpXL28trg.jpg',
+      description: 'Chicken file 200g, fries, cabbage, sesame, mayonnaise, tartar sauce',
+      sides: [{
+        sideID: '1',
+        sidename: 'Ketchup',
+        sideprice: 0.5,
+      },{
+        sideID: '2',
+        sidename: 'Mayonnaise',
+        sideprice: 0.5,
+    },{
+      sideID: '3',
+      sidename: 'Chilli',
+      sideprice: 0.8,
+    },{
+      sideID: '4',
+      sidename: 'Mustard',
+      sideprice: 0.7,
+        }],
+    },
+    {
+      id: '12',
       name: 'Fried cheese',
       price: 10,
       image: 'https://korpa.ba/product_uploads/FwdmC8vc0PdgMy1vI8zHQsQOB149O2uz.jpg',
@@ -265,30 +292,8 @@ const data={
       sideprice: 0.7,
         }],
     },
-    {
-      id: '12',
-      name: 'Hot-dog',
-      price: 4,
-      image: 'https://korpa.ba/product_uploads/W9g6xRlSPUT6KTBbu5Uq0XQMaL1B4pWr.jpg',
-      description: 'Sausages 100g, mustard',
-      sides: [{
-        sideID: '1',
-        sidename: 'Ketchup',
-        sideprice: 0.5,
-      },{
-        sideID: '2',
-        sidename: 'Mayonnaise',
-        sideprice: 0.5,
-    },{
-      sideID: '3',
-      sidename: 'Chilli',
-      sideprice: 0.8,
-    },{
-      sideID: '4',
-      sidename: 'Mustard',
-      sideprice: 0.7,
-        }],
-    },
+    
+    
     {
       id: '13',
       name: 'Sausages',

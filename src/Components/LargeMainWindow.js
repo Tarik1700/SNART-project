@@ -8,6 +8,8 @@ import TimeToReady from './TimeToReady'
 import Basket from "./Basket";
 import Sides from "./Sides";
 import data from './data'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 Modal.setAppElement('#root');
 
@@ -101,7 +103,10 @@ const animate =() => {
 
 
   return (
-    <div id="firstmenu" className="snap-start ">
+   
+    <>
+   
+    <div >
        
       <div>
      
@@ -116,9 +121,9 @@ const animate =() => {
       </div>
 
 
-
+      <Element name={props.Foodname} id={props.Foodname} className={props.Foodname}>
      
-      <button   className=" active:scale-[1.1] transition-all duration-[25ms] 
+      <button  className=" active:scale-[1.1] transition-all duration-[25ms] 
       [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
         <div className="px-2  ">
         <div className=" bg-[#E7E7E7] h-[7rem]  top-3 mx-auto   relative rounded-lg"> 
@@ -134,21 +139,16 @@ const animate =() => {
         <h1 className=" text-2xl [line-height:1.5rem] mt-3 text-center ">{props.Foodname}</h1>
         <hr className="bg-white h-[0.2rem] mx-3 top-4 mt-2"></hr>
         </div>
-        
+    
         <div className="col-span-2  text-center text-2xl mt-2">
            <h1 className="mx-auto "> {props.Foodprice}</h1>
          </div>
-
         </div>
-        
-
-       
-        
-
         </div>
     </div>
     </button>
-    
+    </Element>
+
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"
@@ -220,7 +220,11 @@ setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={set
         </div>
       </Modal>
     </div>
+    
+    </>
+  
   )
+  
 }
 
 export default LargeMainWindow

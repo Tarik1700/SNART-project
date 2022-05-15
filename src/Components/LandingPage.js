@@ -13,6 +13,8 @@ import data from './data'
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, addDoc, serverTimestamp } from 'firebase/firestore/lite';
 import Sides from './Sides'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 const LandingPage = () => {
 
@@ -172,19 +174,28 @@ charactersLength));
         <div className="relative bg-[#F3F3F3] mt-6  h-24 mx-2 rounded-xl grid  grid-flow-col 
         shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth">
         <div className="h-24  ">
-            <SmallFoodWindow href="firstmenu" Foodname="Breakfast" imageurl= {img1}  />
+        <Link to="Original Burger"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+             <SmallFoodWindow Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
+            </Link>
         </div>
         <div>
-        <SmallFoodWindow Foodname="Lunch" imageurl= {img2}  />
+        <Link to="Sandwich"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+        <SmallFoodWindow Foodname="Sandwiches" imageurl= {img2}  />
+        </Link>
         </div>
         <div>
-        <SmallFoodWindow Foodname="Dinner" imageurl= {img3}  />
+        <Link to="Cezar salad"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+        <SmallFoodWindow Foodname="Salads" imageurl= {img3}  />
+        </Link>
         </div>
         <div>
-        <SmallFoodWindow Foodname="Pizza" imageurl= {img4}  />
+        <Link to="Chicken with sesame"  spy={true} smooth={true} duration={250} containerId="containerElement" >
+        
+        <SmallFoodWindow Foodname="Chicken" imageurl= {img4}  />
+        </Link>
         </div>
         <div className="h-24  ">
-            <SmallFoodWindow Foodname="Breakfast" imageurl= {img1}  />
+        <SmallFoodWindow Foodname="Chicken" imageurl= {img1}  />
         </div>
         <div>
         <SmallFoodWindow Foodname="Lunch" imageurl= {img2}  />
@@ -198,18 +209,19 @@ charactersLength));
 
 
         </div>
-        <div className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
-        shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-y scroll-smooth ">
+        <Element id="containerElement1" name="test" className="Element">
+        <div id="containerElement" className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
+        shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-scroll ">
 
 {products.map((product) =>( <LargeMainWindow setTest={setTest} sidepricingqty={sidepricingqty} setsidepricingqty={setsidepricingqty} sidepricing={sidepricing} setsidepricing={setsidepricing} products={products}
  sides={product.sides} key={product.id} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/> ) )}
         
-
+        
         <div className="pb-12"></div>
        
         </div>
-       
+        </Element>
 
     </div>
   )
