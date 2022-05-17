@@ -367,7 +367,7 @@ const data={
       name: 'Special pancakes',
       price: 6,
       image: 'https://korpa.ba/product_uploads/kk9KDuKgqM8aBVyA2OMxavUXie8fmd2L.jpg',
-      description: 'Nutella, whipped cream, chocolate flakes',
+      description: 'Nutella, whipped cream, chocolate flakes, walnuts',
       sides: [{
         sideID: '1',
         sidename: 'Whipped cream',
@@ -387,7 +387,7 @@ const data={
       name: 'Olimpija',
       price: 2,
       image: 'https://lombardija.com/wp-content/uploads/2021/01/187.png',
-      description: 'Olimpija negazirana 330ml',
+      description: 'Olimpija 330ml',
       sides: [],
     },
     {
@@ -395,7 +395,7 @@ const data={
       name: 'Olimpija sparkling',
       price: 2,
       image: 'https://lombardija.com/wp-content/uploads/2021/01/182.png',
-      description: 'Olimpija gazirana 330ml',
+      description: 'Olimpija Carbonated Water 330ml',
       sides: [],
     },
     {
