@@ -57,7 +57,7 @@ const passingtest = (product, sidesthings) => {
       )
     );
   }else{
- setTest([...test, { ...product, qty: 1, sides: sidesthings, id: countering() }])
+ setTest([...test, { ...product, id: countering(), qty: 1, sides: sidesthings,  }])
 }
 
 //setTest(test.filter((h) => h.id !== product.id));
@@ -122,7 +122,6 @@ const addToArray = (x) =>{
 
 
 const[user , setUser] = useState ({email:""});
-//const [details,setDetails] = useState ({name:"",email:"" ,password:""});
 var result  = '';
 var counter = 1;
 

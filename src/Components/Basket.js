@@ -131,7 +131,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
       
        <div  className="col-2 mt-2 text-xl grid grid-cols-9 "> 
       <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
-      <div className="col-span-6 text-lg place-self-end pr-[5.7rem] my-auto pl-1 ">
+      <div className="col-span-6 text-lg place-self-end pr-[4rem] my-auto pl-1 ">
          {sidepricing.toFixed(2)} KM
         </div>
       <div></div>
