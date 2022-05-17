@@ -1,13 +1,11 @@
 import React from 'react'
-import img1 from './img/plus.png'
-import {useState, useEffect} from 'react'
-import LargeMainWindow from './LargeMainWindow';
+import {useState} from 'react'
 import TimeToReady from './TimeToReady';
 
 const Basket = ( props) => {
 
  
-const {open1,  onClose1, price,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
+const {open1,  onClose1,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
   sidepricing, sidepricingqty } = props;
 
 
@@ -30,14 +28,6 @@ const [isOpenReady, setIsOpenReady] = useState ()
     }, 1000)
   }
   myLoop3();
-
-function openingTmeToReady() {
-  console.log("1" + opening)
-  
-  setOpening();
-  console.log("2" + opening)
-}
-
   
 
   
@@ -77,14 +67,6 @@ function openingTmeToReady() {
     
   }
   
-  const handleTest = () => {
-    console.log("worked")
-    props.passingtest2();
-  }
-
-
-
-
   
   const [message, setMessage] = useState("");
 
@@ -93,10 +75,11 @@ function openingTmeToReady() {
 
  
 
-  if(!open1) return <TimeToReady  opening={opening} setOpening={setOpening} sidepricingqty={sidepricingqty} sidepricing={sidepricing}  IsOpenReady={isOpenReady}  test={test} itemsPrice={itemsPrice} />
+  if(!open1) return <TimeToReady  opening={opening} setOpening={setOpening} sidepricingqty={sidepricingqty} 
+  sidepricing={sidepricing}  IsOpenReady={isOpenReady}  test={test} itemsPrice={itemsPrice} />
 
   return (
-      <>
+      <div >
       <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
    <div>   </div>
 <div className="">
@@ -122,11 +105,11 @@ function openingTmeToReady() {
         <div className="">
         {test.length === 0 && <div className="text-xl text-center">Basket is empty</div>}
 { test.map((item) => ( 
-  <>
+  <div key = {item.id}>
    <hr className="mx-4 "/>
-    <div key = {item.id} className="col-2 mr-2 text-center text-xl  grid grid-cols-9 ">
+    <div  className="col-2 mr-2 text-center text-xl  grid grid-cols-9 ">
      
-      <h1 className="text-left my-auto text-base col-span-4 pl-4">{item.name} {item.sides.map((items)=> (<div className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
+      <h1 className="text-left my-auto text-base col-span-4 pl-4">{item.name} {item.sides.map((items)=> (<div key = {item.id} className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
       <div className="col-span-4 text-lg ml-5 my-auto mt-0 ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>
@@ -141,9 +124,10 @@ function openingTmeToReady() {
     
 
        
- </>)) }
+ </div>)) }
+
     {test.length !== 0 && (
-      <>
+      <div >
       
        <div  className="col-2 mt-2 text-xl grid grid-cols-9 "> 
       <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
@@ -160,7 +144,7 @@ function openingTmeToReady() {
         <div className=" my-auto font-extrabold pl-4 text-2xl">Total:</div>
         <div className=" my-auto  text-2xl font-extrabold justify-self-end pr-6">{itemsPrice.toFixed(2)}  KM</div>
       </div>
-      </>
+      </div>
     )}
 </div>  
 
@@ -198,7 +182,7 @@ function openingTmeToReady() {
 
         </div>
         </div>
-    </> 
+    </div> 
     
   )
 }

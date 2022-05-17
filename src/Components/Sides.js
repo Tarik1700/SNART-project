@@ -1,13 +1,12 @@
 import React from 'react'
 
-export default function Sides({side, itemsPrice, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty, }) {
+export default function Sides({side, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty, }) {
 
-  let qty = 0;
   const handleChange = (e) => {
     let isChecked = e.target.checked;
 
-    console.log(isChecked)
-    // do whatever you want with isChecked value
+    //console.log(isChecked)
+    
     if(isChecked){
      
      setsidepricing(( (sidepricing) + (side.sideprice)))

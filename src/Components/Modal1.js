@@ -26,15 +26,8 @@ export default class Modal1 extends Component {
   }
 
   handleSubmit(event) {
-   // alert('Your table is ' + this.state.value);
-    this.props.addToArray2(this.state.value);
-    
-    
-    
+    this.props.addToArray2(this.state.value); 
     this.props.onClose();
-
-    
-    //this.props.test.push( this.state.value);
   }
 
 
@@ -62,10 +55,10 @@ export default class Modal1 extends Component {
     }
     
     const Login = details  => {
-console.log(this.state.details)
+
 
       if ( this.state.details.code === adminUser.code ) {
-        console.log("Logged in ");
+        //console.log("Logged in ");
         this.props.addToArray2(this.state1.value);
         this.props.onClose();
          this.props.setUser({

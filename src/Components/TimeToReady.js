@@ -1,9 +1,8 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
 
 const TimeToReady = ( props) => {
 
-    const { opening, setOpening, test, itemsPrice, sidepricing, onClose2, sidepricingqty } = props;
+    const { opening, test, itemsPrice, sidepricing } = props;
 
 
     
@@ -38,7 +37,7 @@ const TimeToReady = ( props) => {
       <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         
      
-<div> {console.log(props.passingtest2) }</div>
+
      
 
         <h1 className=" relative text-2xl pl-4 pt-3 font-bold">Bill:</h1>
@@ -47,10 +46,10 @@ const TimeToReady = ( props) => {
         <div className="">
         
 { test.map((item) => ( 
-<>
+<div key = {item.id}>
 <hr className="mx-4 "/>
-    <div key = {item.id} className="col-2 auto-rows-auto text-xl grid grid-cols-9 ">
-      <h1 className="text-left my-auto text-base col-span-5 pl-6">{item.name} {item.sides.map((items)=> (<div className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
+    <div  className="col-2 auto-rows-auto text-xl grid grid-cols-9 ">
+      <h1 className="text-left my-auto text-base col-span-5 pl-6">{item.name} {item.sides.map((items)=> (<div key = {item.id} className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
       
       <div className="col-span-4 text-lg my-auto place-self-end mt-0 pr-5">
       {item.qty} x {item.price.toFixed(2)} KM
@@ -61,7 +60,7 @@ const TimeToReady = ( props) => {
     
 
        
- </>)) }
+ </div>)) }
     {test.length !== 0 && (
       <>
       <div  className="col-2  text-xl grid grid-cols-9 "> 

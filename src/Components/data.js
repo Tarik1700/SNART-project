@@ -51,7 +51,7 @@ const data={
     },
     {
       id: '3',
-      name: 'Cheeseburger (double)',
+      name: 'Cheeseburger',
       price: 10,
       image: 'https://korpa.ba/product_uploads/G9d2njbFntkrGMpdGfZmHzjbPeOuFnvN.jpg',
       description: '300g of beef, cheese, bbq sauce, smoked mayonnaise, caramelized onion, cabbage, tomato, pickles, green salad',
@@ -364,7 +364,7 @@ const data={
     },
     {
       id: '16',
-      name: 'Pancakes with walnuts',
+      name: 'Special pancakes',
       price: 6,
       image: 'https://korpa.ba/product_uploads/kk9KDuKgqM8aBVyA2OMxavUXie8fmd2L.jpg',
       description: 'Nutella, whipped cream, chocolate flakes',

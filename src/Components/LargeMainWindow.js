@@ -82,7 +82,7 @@ myLoop()
   }
 
 const both = () => {
-  console.log(props.handleTest1);
+  //console.log(props.handleTest1);
 
   
   
