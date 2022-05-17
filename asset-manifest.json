@@ -1,19 +1,15 @@
 {
   "files": {
-    "main.css": "/SNART-project/static/css/main.3dc46f94.css",
-    "main.js": "/SNART-project/static/js/main.3d110808.js",
-    "static/media/foodimage.jpg": "/SNART-project/static/media/foodimage.24b373774d655f3cd77c.jpg",
-    "static/media/lunchphoto.jpg": "/SNART-project/static/media/lunchphoto.3887db3ba88c132b5b6c.jpg",
-    "static/media/pizzaphoto.jpg": "/SNART-project/static/media/pizzaphoto.8e944d798c5097b89076.jpg",
-    "static/media/dinnerphoto.jpg": "/SNART-project/static/media/dinnerphoto.b402fe6c833d45683080.jpg",
+    "main.css": "/SNART-project/static/css/main.e182ac81.css",
+    "main.js": "/SNART-project/static/js/main.a025612c.js",
     "static/media/logo1.png": "/SNART-project/static/media/logo1.c258394aa7585575980a.png",
     "static/media/logo2.png": "/SNART-project/static/media/logo2.5e1d2b6a04f9c59c2a6d.png",
     "index.html": "/SNART-project/index.html",
-    "main.3dc46f94.css.map": "/SNART-project/static/css/main.3dc46f94.css.map",
-    "main.3d110808.js.map": "/SNART-project/static/js/main.3d110808.js.map"
+    "main.e182ac81.css.map": "/SNART-project/static/css/main.e182ac81.css.map",
+    "main.a025612c.js.map": "/SNART-project/static/js/main.a025612c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dc46f94.css",
-    "static/js/main.3d110808.js"
+    "static/css/main.e182ac81.css",
+    "static/js/main.a025612c.js"
   ]
 }
