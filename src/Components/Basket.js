@@ -80,7 +80,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
 
   return (
       <div >
-      <div id="backdrop" className=" bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
+      <div id="backdrop" className="font-[poppins]  bg-[rgba(255,255,255,0)]  bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
    <div>   </div>
 <div className="">
 
@@ -159,7 +159,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
           
         <textarea value={message} 
       onChange={e => setMessage(e.target.value)}  placeholder="If you have any special requests for the kitchen write them here:"
-         className=" px-4 rounded-xl h-36 border-2 w-full  relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
+         className=" px-4 rounded-xl h-36 border-2 w-full relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
           type="text"  maxLength="130" name="message" rows="4" cols="1"  />
         
         

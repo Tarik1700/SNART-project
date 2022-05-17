@@ -195,7 +195,7 @@ const data={
     },
     {
       id: '9',
-      name: 'Chicken with sesame',
+      name: 'Chicken sesame',
       price: 11,
       image: 'https://korpa.ba/product_uploads/SpYR3s6Ig26xvyWQWagc43VNXcfdhT61.jpg',
       description: 'Diced chicken 200g, fries, cabbage, sesame, mayonnaise',
@@ -384,15 +384,15 @@ const data={
     },
     {
       id: '17',
-      name: 'Olimpija negazirana',
+      name: 'Olimpija',
       price: 2,
-      image: 'https://dragstor.ba/wp-content/uploads/2020/12/olimpija-negazirana-033-12-nepov-01.jpg',
+      image: 'https://lombardija.com/wp-content/uploads/2021/01/187.png',
       description: 'Olimpija negazirana 330ml',
       sides: [],
     },
     {
       id: '18',
-      name: 'Olimpija gazirana',
+      name: 'Olimpija sparkling',
       price: 2,
       image: 'https://lombardija.com/wp-content/uploads/2021/01/182.png',
       description: 'Olimpija gazirana 330ml',

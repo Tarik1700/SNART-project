@@ -13,6 +13,8 @@ import { Link, Element } from 'react-scroll'
 
 const LandingPage = () => {
 
+
+
   const firebaseConfig = {
     apiKey: "AIzaSyCTKSeLGWP2zwZaHTKVmUlyXBQ8ZuwKjsU",
     authDomain: "snart-54aa9.firebaseapp.com",
@@ -21,29 +23,34 @@ const LandingPage = () => {
     messagingSenderId: "1083026503280",
     appId: "1:1083026503280:web:fe3c1c06ee7a2dfdb866b5"
   };
+
+
+
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
-
-
-
-
   const [isOpen, setIsOpen] = useState(true)
   const [isOpen1, setIsOpen1] = useState(false)
-  
   const {products} = data;
-
-
   const [test, setTest] = useState([]);
-
-  const[numbers, setnumbers ] = useState (0)
+  const [numbers, setnumbers ] = useState (0)
+  const [sidepricing, setsidepricing] = useState (0);
+  const [sidepricingqty, setsidepricingqty] = useState ([]);
+  const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0) + sidepricing;
+  const [user , setUser] = useState ({email:""});
+  var result  = '';
+  var counter = 1;
+  let [arr3, setarr3] =useState([]);
+  let [arr4, setarr4] =useState([]);
+  
+  
 
 const countering = () =>{
-  
   setnumbers(numbers + 1) 
-  //console.log(numbers)
   return numbers;
 }
   
+
+
 const passingtest = (product, sidesthings) => {
   const exist = test.find((x) => x.id === product.id);
   if(exist && (product.sides === [])){
@@ -55,18 +62,15 @@ const passingtest = (product, sidesthings) => {
   }else{
  setTest([...test, { ...product, id: countering(), qty: 1, sides: sidesthings,  }])
 }
-
-//setTest(test.filter((h) => h.id !== product.id));
 };
+
 
 
 const passingtest2Remove =(product) =>{
 const exist = test.find((x) => x.id === product.id);
 if(exist.qty === 1){
   product.sides.map((items) => (setsidepricing(sidepricing => sidepricing - items.sidePrice)));
-
-  setTest(test.filter((x) => x.id !== product.id  ))
-  
+  setTest(test.filter((x) => x.id !== product.id  ))  
 }else{
   setTest(
     test.map((x)=> 
@@ -74,59 +78,36 @@ if(exist.qty === 1){
     )
   );
 }
-
 }
-const [sidepricing, setsidepricing] = useState (0);
-const [sidepricingqty, setsidepricingqty] = useState ([]);
-const itemsPrice = test.reduce((a, c) => a + c.price * c.qty, 0) + sidepricing;
-//console.log( test )
 
 
 
 const addOrderToFireBase = () => {
-//console.log("worked")
   const list1 = collection(db, 'orders')
-  
   return addDoc(list1, {
     created: serverTimestamp(),
     test1: [{ arr3 }]
 });
-   
 };
 
-let [arr3, setarr3] =useState([]);
-let [arr4, setarr4] =useState([]);
 
 
 const addToArray2 = (y) =>{
   setarr4(arr4 = test.concat(y));
-  
-  //console.log(arr4);
   return arr4;
 }
 
 
+
 const addToArray = (x) =>{
   arr3 = test.concat(x, arr4);
-
-  //const arr3 = [...test, ...x];
-  //console.log(arr3);
-  //console.log(result);
 }
 
 
 
-
-
-const[user , setUser] = useState ({email:""});
-var result  = '';
-var counter = 1;
-
 function makeid(length) {
-  
   var characters       = '0123456789';
   var charactersLength = characters.length;
-  
   if(counter === 1){
     counter++;
   for ( var i = 0; i < length ; i++ ) {
@@ -134,31 +115,22 @@ function makeid(length) {
 charactersLength));
  }
  console.log("New random ID code is: " + result)
- 
  return result;
 }else{
- 
   return result;
 }
 }
 
+
+
   return (
-    <div className=" overflow-y-clip ">
-
+    <div className=" overflow-y-clip font-[poppins]  ">
         <div>
-        
-        
-
         <Modal1 makeid={makeid}   user ={user} setUser={setUser} 
-         addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} >
-      </Modal1>
+         addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} ></Modal1>
 
-      <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
-      </Basket>
-
+        <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} ></Basket>
         </div>
-
-
 
         <div className="h-24 shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
         <img src={img10} alt="" className="  h-16   my-auto " /> 
@@ -170,8 +142,8 @@ charactersLength));
         shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth">
         <div className="h-24  ">
         <Link to="Original Burger"  spy={true} smooth={true} duration={500} containerId="containerElement" >
-             <SmallFoodWindow Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
-            </Link>
+        <SmallFoodWindow Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
+        </Link>
         </div>
         <div>
         <Link to="Sandwich"  spy={true} smooth={true} duration={500} containerId="containerElement" >

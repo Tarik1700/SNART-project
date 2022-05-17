@@ -7,7 +7,6 @@ import { Element } from 'react-scroll'
 
 
 Modal.setAppElement('#root');
-
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(255, 255, 255, 0)';
 Modal.defaultStyles.overlay.backdropFilter = 'tw-bg-opacity: 0.6';
 Modal.defaultStyles.overlay.backgroundClip = 'paddingBox';
@@ -77,18 +76,13 @@ myLoop()
   }
 
 const both = () => {
-  //console.log(props.handleTest1);
-
-  
-  
   closeModalWithSide();
   setIsOpen2(true);
   passingtest(product, sidepricingqty);
-  
   setsidepricingqty(sidepricingqty.filter((x) => x.sideName === 0 ))
- // console.log(test)
 }
-//console.log("items price:" + sidepricing)
+
+
 
 const animate =() => {
   document.getElementById("button").style.transform = "scale(1.1,1.1)";
@@ -99,42 +93,28 @@ const animate =() => {
 
   return (
    
-    <div className=" snap-start">
-   
-    <div >
-       
-      <div>
+    <div className=" snap-start font-[poppins] ">
+    <div>
+    <div>
      
 
 <Accent setsidepricing={setsidepricing} sidepricing={sidepricing} sidepricingqty={sidepricingqty} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
-   
-
-
-
 
       </div>
-
-
       <Element name={props.Foodname} id={props.Foodname} className={props.Foodname}>
-     
       <button  className=" active:scale-[1.1] transition-all duration-[25ms] 
       [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
         <div className="px-2  ">
         <div className=" bg-[#E7E7E7] h-[7rem]  top-3 mx-auto   relative rounded-lg"> 
-        
-
         <div className="grid grid-cols-3 grid-rows-2 h-[7rem] gap-1 ">
-
          <div className=" pt-2 pr-0 pl-0   row-span-2">
         <img src={props.imageurl} className=" object-cover h-24 w-28 mx-auto rounded-lg " /> 
         </div>
-
         <div className="col-span-2  row-span-1">
         <h1 className=" text-2xl [line-height:1.5rem] mt-3 text-center ">{props.Foodname}</h1>
         <hr className="bg-white h-[0.2rem] mx-3 top-4 mt-2"></hr>
         </div>
-    
         <div className="col-span-2  text-center text-2xl mt-2">
            <h1 className="mx-auto "> {props.Foodprice}</h1>
          </div>
@@ -143,48 +123,30 @@ const animate =() => {
     </div>
     </button>
     </Element>
-
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"
   }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-7 rounded-xl mt-[3rem]  font-[poppins] 
     transition-all duration-700 translate-y-[100vh] z-1000"
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-      >
+        onRequestClose={closeModal}>
         <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         <button onClick={closeModal} className="flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
-        
          <img src={props.imageurl} className=" object-cover h-[11rem] top-3 relative w-[14rem] mx-auto rounded-lg
           shadow-[5px_5px_5px_-1px_rgba(0,0,0,0.5)] " /> 
         <h1 className=" relative text-lg pl-3 mt-5 font-bold">{props.Foodname}</h1>
       <div className="grid grid-cols-4  pl-2"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">{props.Fooddesc}</h1>
         <h1 className="  text-xl font-bold pr-2 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
         <div className="relative h-auto">
-        
-    
-        
-                
-
         </div>
-        
-
-
         </div>
 
 
 <div className="grid auto-rows-auto gap-4 text-lg mt-9 relative font-[poppins]">
-
-
-
 {product.sides.map((side) => (   <Sides side={side} key={side.sideID} itemsPrice={itemsPrice} 
-setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={setsidepricingqty} sidepricingqty={sidepricingqty} />   ))}
-    
-
-           
-          
+setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={setsidepricingqty} sidepricingqty={sidepricingqty} />   ))}   
 </div>
 
         <div className="mx-2">
