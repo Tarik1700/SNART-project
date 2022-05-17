@@ -1,14 +1,9 @@
 import React from "react"
-import img1 from './img/plus.png'
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import {useState} from 'react'
 import Accent from './Accent'
-import TimeToReady from './TimeToReady'
-import Basket from "./Basket";
 import Sides from "./Sides";
-import data from './data'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element } from 'react-scroll'
 
 
 Modal.setAppElement('#root');
@@ -22,8 +17,8 @@ Modal.defaultStyles.overlay.backdropFilter = 'blur(6px)';
 
 const LargeMainWindow  = (props) =>  {
 
-  const {looping, textThing, id, product, passingtest, test, passingtest2Remove,
-     itemsPrice, addOrderToFireBase, addToArray, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty, setTest } = props;
+  const { product, passingtest, test, passingtest2Remove,
+     itemsPrice, addOrderToFireBase, addToArray, setsidepricing, sidepricing, setsidepricingqty, sidepricingqty } = props;
   
   
 
@@ -104,7 +99,7 @@ const animate =() => {
 
   return (
    
-    <>
+    <div className=" snap-start">
    
     <div >
        
@@ -221,7 +216,7 @@ setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={set
       </Modal>
     </div>
     
-    </>
+    </div>
   
   )
   
