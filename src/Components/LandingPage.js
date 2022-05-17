@@ -63,7 +63,8 @@ const passingtest = (product, sidesthings) => {
 const passingtest2Remove =(product) =>{
 const exist = test.find((x) => x.id === product.id);
 if(exist.qty === 1){
-  product.sides.map((items) => (setsidepricing(sidepricing - items.sidePrice)));
+  product.sides.map((items) => (setsidepricing(sidepricing => sidepricing - items.sidePrice)));
+
   setTest(test.filter((x) => x.id !== product.id  ))
   
 }else{

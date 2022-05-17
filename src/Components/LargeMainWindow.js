@@ -106,7 +106,7 @@ const animate =() => {
       <div>
      
 
-<Accent sidepricing={sidepricing} sidepricingqty={sidepricingqty} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
+<Accent setsidepricing={setsidepricing} sidepricing={sidepricing} sidepricingqty={sidepricingqty} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
    
 

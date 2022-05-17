@@ -6,7 +6,7 @@ const Basket = ( props) => {
 
  
 const {open1,  onClose1,  passingtest2, passingtest2Remove, test, itemsPrice, addOrderToFireBase, addToArray,
-  sidepricing, sidepricingqty } = props;
+  sidepricing, sidepricingqty, setsidepricing } = props;
 
 
   const [opening, setOpening] = useState(false)
@@ -103,13 +103,13 @@ const [isOpenReady, setIsOpenReady] = useState ()
         <hr className="mx-4 bg-black "></hr>
 
         <div className="">
-        {test.length === 0 && <div className="text-xl text-center">Basket is empty</div>}
+        {test.length === 0 &&  <div className="text-xl text-center">Basket is empty</div>}
 { test.map((item) => ( 
   <div key = {item.id}>
    <hr className="mx-4 "/>
     <div  className="col-2 mr-2 text-center text-xl  grid grid-cols-9 ">
      
-      <h1 className="text-left my-auto text-base col-span-4 pl-4">{item.name} {item.sides.map((items)=> (<div key = {item.id} className="text-xs pl-3"> {items.sideName} </div>) ) }</h1>
+      <h1 className="text-left my-auto text-base col-span-4 pl-4">{item.name} {item.sides.map((items)=> (<div key = {items.ID} className="text-xs pl-3"> {items.sideName}</div>) ) }</h1>
       <div className="col-span-4 text-lg ml-5 my-auto mt-0 ">
       {item.qty} x {item.price.toFixed(2)} KM
        </div>

@@ -3,7 +3,7 @@ import Basket from './Basket'
 import {useState} from 'react'
 
 export default function Accent( {onClose2, test, passingtest2,passingtest2Remove, itemsPrice, addOrderToFireBase,
-   addToArray, sidepricing, sidepricingqty  }) {
+   addToArray, sidepricing, sidepricingqty, setsidepricing  }) {
 
     
    
@@ -55,7 +55,7 @@ export default function Accent( {onClose2, test, passingtest2,passingtest2Remove
   return (
       <>
       
-      <Basket   sidepricingqty={sidepricingqty} sidepricing={sidepricing} addToArray={addToArray} 
+      <Basket  setsidepricing={setsidepricing} sidepricingqty={sidepricingqty} sidepricing={sidepricing} addToArray={addToArray} 
       addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} passingtest2Remove={passingtest2Remove}  
       test={test} passingtest2={passingtest2} open1={isOpen1}  onClose1={() => setIsOpen1(false)} >
       </Basket>
