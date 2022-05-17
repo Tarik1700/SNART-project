@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/SNART-project/static/css/main.3cc3f7b3.css",
-    "main.js": "/SNART-project/static/js/main.1019e899.js",
+    "main.js": "/SNART-project/static/js/main.0fdf8031.js",
     "static/media/logo1.png": "/SNART-project/static/media/logo1.c258394aa7585575980a.png",
     "static/media/logo2.png": "/SNART-project/static/media/logo2.5e1d2b6a04f9c59c2a6d.png",
     "index.html": "/SNART-project/index.html",
     "main.3cc3f7b3.css.map": "/SNART-project/static/css/main.3cc3f7b3.css.map",
-    "main.1019e899.js.map": "/SNART-project/static/js/main.1019e899.js.map"
+    "main.0fdf8031.js.map": "/SNART-project/static/js/main.0fdf8031.js.map"
   },
   "entrypoints": [
     "static/css/main.3cc3f7b3.css",
-    "static/js/main.1019e899.js"
+    "static/js/main.0fdf8031.js"
   ]
 }
