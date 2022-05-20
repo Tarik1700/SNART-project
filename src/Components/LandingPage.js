@@ -86,7 +86,7 @@ const addOrderToFireBase = () => {
   const list1 = collection(db, 'orders')
   return addDoc(list1, {
     created: serverTimestamp(),
-    test1: [{ arr3 }]
+    Order: [{ arr3 }]
 });
 };
 
