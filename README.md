@@ -1,4 +1,4 @@
-# SNART - This is a project for a university class, still in development.
+# SNART - This is a food ordering system. Mobile view with backend.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/71398993/166266396-9e94b03f-bb85-4758-92a5-d4a87c370db7.png">
