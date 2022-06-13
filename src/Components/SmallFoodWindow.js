@@ -6,11 +6,11 @@ const SmallFoodWindow = (props) => {
   return (
     <ul>
     <li>
-    <div className="px-2 snap-start  font-[poppins] ">
-        <div className=" bg-[#E7E7E7] h-[4.5rem]  top-3 mx-auto w-20  relative rounded-lg"> 
-        <div className=" relative p-1 h-11 w-18">
+    <div className=" snap-start  font-[poppins] w-32 h-24 ">
+        <div className=" bg-[#E7E7E7] h-[5rem]  top-2 mx-auto w-28  relative rounded-sm"> 
+        <div className=" relative p-1  h-14 w-[6rem] mx-auto">
           <div className="relative">
-        <img src={props.imageurl} alt="images" className=" relative  mx-auto rounded-lg" />
+        <img src={props.imageurl} alt="images" className=" relative  mx-auto rounded-sm" />
         </div>
         </div>
         

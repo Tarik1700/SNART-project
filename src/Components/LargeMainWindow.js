@@ -5,7 +5,6 @@ import Accent from './Accent'
 import Sides from "./Sides";
 import { Element } from 'react-scroll'
 
-
 Modal.setAppElement('#root');
 Modal.defaultStyles.overlay.backgroundColor = 'rgba(255, 255, 255, 0)';
 Modal.defaultStyles.overlay.backdropFilter = 'tw-bg-opacity: 0.6';
@@ -106,10 +105,10 @@ const animate =() => {
       <button  className=" active:scale-[1.1] transition-all duration-[25ms] 
       [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
         <div className="px-2  ">
-        <div className=" bg-[#E7E7E7] h-[7rem]  top-3 mx-auto   relative rounded-lg"> 
+         <div className=" bg-[#E7E7E7] bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 h-[7rem]  top-3 mx-auto   relative "> 
         <div className="grid grid-cols-3 grid-rows-2 h-[7rem] gap-1 ">
          <div className=" pt-2 pr-0 pl-0   row-span-2">
-        <img src={props.imageurl} className=" object-cover h-24 w-28 mx-auto rounded-lg " /> 
+        <img src={props.imageurl} className=" object-cover h-24 w-28 mx-auto  " /> 
         </div>
         <div className="col-span-2  row-span-1">
         <h1 className=" text-2xl [line-height:1.5rem] mt-3 text-center ">{props.Foodname}</h1>

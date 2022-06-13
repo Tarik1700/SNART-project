@@ -124,7 +124,8 @@ charactersLength));
 
 
   return (
-    <div className=" overflow-y-clip font-[poppins]  ">
+    <div className=" overflow-y-clip font-[poppins]   ">
+      
         <div>
         <Modal1 makeid={makeid}   user ={user} setUser={setUser} 
          addToArray2={addToArray2} test={test} open={isOpen}  onClose={() => setIsOpen(false)} ></Modal1>
@@ -132,13 +133,13 @@ charactersLength));
         <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} ></Basket>
         </div>
 
-        <div className="h-24 shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
+        <div className="h-[4.5rem] shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
         <img src={img10} alt="" className="  h-16   my-auto " /> 
         <img src={img11} alt="" className="  h-10  my-auto  justify-self-start " /> 
 
 
         </div>
-        <div className="relative bg-[#F3F3F3] mt-6  h-24 mx-2 rounded-xl grid  grid-flow-col 
+        <div className="relative bg-[#F3F3F3] mt-4  h-24 mx-2  grid  grid-flow-col 
         shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth">
         <div className="h-24  ">
         <Link to="Original Burger"  spy={true} smooth={true} duration={500} containerId="containerElement" >
@@ -183,10 +184,12 @@ charactersLength));
 
 
         </div>
+       
         <Element id="containerElement1" name="test" className="Element">
-        <div id="containerElement" className="relative    bg-[#F3F3F3] mt-6  h-[73.6vh] mx-2  rounded-xl rounded-b-none grid gap-4 grid-flow-row 
-        shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-scroll ">
-
+              
+        <div id="containerElement" className="relative bg-transparent   bg-cover mt-6  h-[73.6vh] mx-2  rounded-b-none grid gap-4 grid-flow-row 
+        shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-scroll " >
+       
 {products.map((product) =>( <LargeMainWindow setTest={setTest} sidepricingqty={sidepricingqty} setsidepricingqty={setsidepricingqty} sidepricing={sidepricing} setsidepricing={setsidepricing} products={products}
  sides={product.sides} key={product.id} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/> ) )}
