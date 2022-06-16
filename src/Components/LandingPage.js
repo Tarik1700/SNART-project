@@ -124,7 +124,9 @@ charactersLength));
 
 
   return (
-    <div className=" overflow-y-clip font-[poppins]   ">
+    <div className=" overflow-y-clip font-[poppins] 
+     bg-contain
+    [background-image:url(https://images.unsplash.com/photo-1587015566802-5dc157c901cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80)]  ">
       
         <div>
         <Modal1 makeid={makeid}   user ={user} setUser={setUser} 
@@ -133,20 +135,20 @@ charactersLength));
         <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} ></Basket>
         </div>
 
-        <div className="h-[4.5rem] shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
+        <div className=" h-[4.5rem] shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
         <img src={img10} alt="" className="  h-16   my-auto " /> 
         <img src={img11} alt="" className="  h-10  my-auto  justify-self-start " /> 
 
-
-        </div>
-        <div className="relative bg-[#F3F3F3] mt-4  h-24 mx-2  grid  grid-flow-col 
-        shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth">
+    </div>
+        <div className="relative  mt-4  h-24 mx-2  grid  grid-flow-col 
+         
+        shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth ">
         <div className="h-24  ">
         <Link to="Original Burger"  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
         </Link>
         </div>
-        <div>
+        <div className="">
         <Link to="Sandwich"  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow Foodname="Sandwiches" imageurl= 'https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'  />
         </Link>
