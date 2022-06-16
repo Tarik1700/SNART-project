@@ -140,20 +140,21 @@ charactersLength));
         <img src={img11} alt="" className="  h-10  my-auto  justify-self-start " /> 
 
     </div>
+    <div className="  ">
         <div className="relative  mt-4  h-24 mx-2  grid  grid-flow-col 
-         
+       
         shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth ">
-        <div className="h-24  ">
-        <Link to="Original Burger"  spy={true} smooth={true} duration={500} containerId="containerElement" >
-        <SmallFoodWindow Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
+        <div className="   backdrop-blur-lg bg-opacity-60 bg-white">
+        <Link to="Original Burger "  spy={true} smooth={true} duration={500} containerId="containerElement" >
+        <SmallFoodWindow  Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
         </Link>
         </div>
-        <div className="">
+        <div className="   backdrop-blur-lg bg-opacity-60 bg-white">
         <Link to="Sandwich"  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow Foodname="Sandwiches" imageurl= 'https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'  />
         </Link>
         </div>
-        <div>
+        <div className="  backdrop-blur-sm bg-opacity-60 bg-white">
         <Link to="Cezar salad"  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow Foodname="Salads" imageurl= 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'  />
         </Link>
@@ -186,7 +187,7 @@ charactersLength));
 
 
         </div>
-       
+       </div>
         <Element id="containerElement1" name="test" className="Element">
               
         <div id="containerElement" className="relative bg-transparent   bg-cover mt-6  h-[73.6vh] mx-2  rounded-b-none grid gap-4 grid-flow-row 
