@@ -124,9 +124,9 @@ charactersLength));
 
 
   return (
-    <div className=" overflow-y-clip font-[poppins] 
-     bg-contain
-    [background-image:url(https://images.unsplash.com/photo-1587015566802-5dc157c901cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80)]  ">
+    <div className=" overflow-y-clip font-[poppins] h-[100vh]
+      bg-cover
+    [background-image:url(https://images.unsplash.com/photo-1512388908228-685f99a66ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8)]  ">
       
         <div>
         <Modal1 makeid={makeid}   user ={user} setUser={setUser} 
@@ -143,18 +143,18 @@ charactersLength));
     <div className="  ">
         <div className="relative  mt-4  h-24 mx-2  grid  grid-flow-col 
        
-        shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-auto snap-x scroll-smooth ">
-        <div className="   backdrop-blur-lg bg-opacity-60 bg-white">
+        shadow-[0px_px_15px_-2px_rgba(0,0,0,0.5)]  auto-cols-auto overflow-auto snap-x scroll-smooth ">
+        <div className="   ">
         <Link to="Original Burger "  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow  Foodname="Burgers" imageurl= 'https://www.weschenfelder.co.uk/media/amasty/blog/uploads/2017/04/Multiple-Burgers-In-Buns.jpg'  />
         </Link>
         </div>
-        <div className="   backdrop-blur-lg bg-opacity-60 bg-white">
+        <div className="   ">
         <Link to="Sandwich"  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow Foodname="Sandwiches" imageurl= 'https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'  />
         </Link>
         </div>
-        <div className="  backdrop-blur-sm bg-opacity-60 bg-white">
+        <div className=" ">
         <Link to="Cezar salad"  spy={true} smooth={true} duration={500} containerId="containerElement" >
         <SmallFoodWindow Foodname="Salads" imageurl= 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'  />
         </Link>
@@ -190,15 +190,15 @@ charactersLength));
        </div>
         <Element id="containerElement1" name="test" className="Element">
               
-        <div id="containerElement" className="relative bg-transparent   bg-cover mt-6  h-[73.6vh] mx-2  rounded-b-none grid gap-4 grid-flow-row 
-        shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)] auto-cols-auto overflow-scroll " >
+        <div id="containerElement" className=" relative bg-transparent   bg-cover mt-3  h-[76vh] mx-0 w-full  rounded-b-none grid gap-1
+        overflow-scroll   " >
        
 {products.map((product) =>( <LargeMainWindow setTest={setTest} sidepricingqty={sidepricingqty} setsidepricingqty={setsidepricingqty} sidepricing={sidepricing} setsidepricing={setsidepricing} products={products}
  sides={product.sides} key={product.id} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} passingtest2Remove={passingtest2Remove} passingtest={passingtest} test={test}
 Foodname={product.name} itemsPrice={itemsPrice} imageurl={product.image} Foodprice={product.price +"KM"} id={product.id} product={product} Fooddesc={product.description}/> ) )}
         
         
-        <div className="pb-12"></div>
+        <div className="pb-14"></div>
        
         </div>
         </Element>

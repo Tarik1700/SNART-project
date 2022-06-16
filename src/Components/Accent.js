@@ -58,7 +58,7 @@ export default function Accent( {onClose2, test, passingtest2,passingtest2Remove
 <div onClick={animate} id="modal1" className=" border-[4px]   border-[#9f9f9f] [-webkit-tap-highlight-color:rgba(0,0,0,0);]
   transition-all fixed 
       -bottom-[4.5rem]  left-0 right-0 w-full  font-[poppins]  transform 
-     bg-white z-[999] rounded-[70px] rounded-br-none  h-32 translate-y-52 ">
+     bg-white  z-[999] rounded-[70px] rounded-br-none  h-32 translate-y-52 ">
         <div className="text-white text-xl  relative mx-auto ">
         <svg className=" animate-pulse mx-auto mt-4" width="132" height="7" viewBox="0 0 132 7" fill="none"
          xmlns="http://www.w3.org/2000/svg">

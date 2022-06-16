@@ -104,18 +104,18 @@ const animate =() => {
       <Element name={props.Foodname} id={props.Foodname} className={props.Foodname}>
       <button  className=" active:scale-[1.1] transition-all duration-[25ms] 
       [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
-        <div className="px-2  ">
-         <div className=" bg-[#E7E7E7] bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 h-[8rem]  top-3 mx-auto   relative "> 
+        <div className="px-1  ">
+         <div className=" bg-[#E7E7E7] bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 h-[8rem]  mx-auto   relative "> 
         <div className="grid grid-cols-4 grid-rows-2 h-[8rem] gap-1 ">
-         <div className=" pt-2 pr-0 pl-0 col-span-2 row-span-2">
-        <img src={props.imageurl} className=" object-cover h-[7rem] w-[11rem] mx-auto  " /> 
+         <div className=" pt-1 pr-0 pl-1 col-span-2 row-span-2">
+        <img src={props.imageurl} className=" object-cover h-[7.5rem] my-auto w-[12rem] mx-auto  " /> 
         </div>
 
         <div className="col-span-2  row-span-1">
         <h1 className=" text-2xl [line-height:1.5rem] mt-3 text-center ">{props.Foodname}</h1>
         <hr className="bg-white h-[0.2rem] mx-3 top-4 mt-2"></hr>
         </div>
-        
+
         <div className="col-span-2  text-center text-2xl mt-2">
            <h1 className="mx-auto "> {props.Foodprice}</h1>
          </div>
@@ -127,7 +127,7 @@ const animate =() => {
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"
-  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-7 rounded-xl mt-[3rem]  font-[poppins] 
+  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-2 rounded-xl mt-[3rem]  font-[poppins] 
     transition-all duration-700 translate-y-[100vh] z-1000"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}>
@@ -135,9 +135,9 @@ const animate =() => {
         <button onClick={closeModal} className="flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
-         <img src={props.imageurl} className=" object-cover h-[11rem] top-3 relative w-[14rem] mx-auto rounded-lg
-          shadow-[5px_5px_5px_-1px_rgba(0,0,0,0.5)] " /> 
-        <h1 className=" relative text-lg pl-3 mt-5 font-bold">{props.Foodname}</h1>
+         <img src={props.imageurl} className=" object-cover h-[14rem] top-7 relative w-[20rem] mx-auto rounded-sm
+          shadow-[0px_5px_5px_-1px_rgba(0,0,0,0.5)] " /> 
+        <h1 className=" relative text-lg pl-3 mt-10 font-bold">{props.Foodname}</h1>
       <div className="grid grid-cols-4  pl-2"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">{props.Fooddesc}</h1>
         <h1 className="  text-xl font-bold pr-2 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
         <div className="relative h-auto">

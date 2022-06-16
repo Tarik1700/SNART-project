@@ -6,7 +6,7 @@ const SmallFoodWindow = (props) => {
   return (
     <ul className="">
     <li>
-    <div className=" snap-start  font-[poppins] w-28 h-24 ">
+    <div className=" snap-start  font-[poppins] w-28 h-24 border-t-2 border-b-2 ">
         <div className="  h-[5rem]  top-2 mx-auto w-24  relative rounded-sm "> 
         <div className=" relative p-1  h-14 w-[6rem] mx-auto">
           <div className="relative">
@@ -15,7 +15,7 @@ const SmallFoodWindow = (props) => {
         </div>
         
         <div className="">
-        <h1 className=" text-xs pt-2 text-center ">{props.Foodname}</h1>
+        <h1 className=" text-xs pt-2 text-center text-black font-semibold ">{props.Foodname}</h1>
         </div>
         
 
