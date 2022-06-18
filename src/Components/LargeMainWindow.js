@@ -131,8 +131,8 @@ const animate =() => {
     transition-all duration-700 translate-y-[100vh] z-1000 focus:outline-none"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}>
-           <img src={props.imageurl} className=" object-cover h-[20.5rem] top-7 absolute  w-[35rem]  " /> 
-        <div className=" bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30  m-2 top-2 h-auto pb-3 
+           <img src={props.imageurl} className=" object-cover h-[21.5rem] top-  absolute  w-[30rem]  " /> 
+        <div className=" bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30  top- h-auto pb-9 
          rounded-sm focus:outline-none relative">
           
         <button onClick={closeModal} className="flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,15 +140,15 @@ const animate =() => {
 </svg> </button>
          <img src={props.imageurl} className=" object-cover h-[14rem] top-7 relative w-[20rem] mx-auto rounded-sm
           shadow-[0px_5px_5px_-1px_rgba(0,0,0,0.5)] " /> 
-        <h1 className=" relative text-lg pl-3 mt-10 font-bold">{props.Foodname}</h1>
-      <div className="grid grid-cols-4  pl-2"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 text-sm row-span-1 col-span-3 text-black ">{props.Fooddesc}</h1>
-        <h1 className="  text-xl font-bold pr-2 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
+        <h1 className=" relative text-lg pl-3 mt-16 font-bold">{props.Foodname}</h1>
+      <div className="grid grid-cols-4  pl-2"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 pr-2 text-justify text-sm row-span-1 col-span-3 text-black ">{props.Fooddesc}</h1>
+        <h1 className="  text-2xl font-bold pr-3 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
         <div className="relative h-auto">
         </div>
         </div>
 
 
-<div className="grid auto-rows-auto gap-4 text-lg mt-9 relative font-[poppins]">
+<div className="grid auto-rows-auto gap-4 text-lg mt-2 relative font-[poppins]">
 {product.sides.map((side) => (   <Sides side={side} key={side.sideID} itemsPrice={itemsPrice} 
 setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={setsidepricingqty} sidepricingqty={sidepricingqty} />   ))}   
 </div>
