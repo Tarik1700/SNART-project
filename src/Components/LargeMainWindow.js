@@ -99,8 +99,8 @@ const animate =() => {
 
 <Accent setsidepricing={setsidepricing} sidepricing={sidepricing} sidepricingqty={sidepricingqty} addToArray={addToArray} addOrderToFireBase={addOrderToFireBase} itemsPrice={itemsPrice} test={test} passingtest2Remove={passingtest2Remove} passingtest2={passingtest} 
           open2={isOpen2}  onClose2={() => setIsOpen2(false)} />
-
-      </div>
+ 
+      </div> 
       <Element name={props.Foodname} id={props.Foodname} className={props.Foodname}>
       <button  className=" active:scale-[1.1] transition-all duration-[25ms] 
       [-webkit-tap-highlight-color:rgba(0,0,0,0);] w-full" onClick={openModal}>
@@ -127,11 +127,14 @@ const animate =() => {
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"
-  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-2 rounded-xl mt-[3rem]  font-[poppins] 
-    transition-all duration-700 translate-y-[100vh] z-1000"
+  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-2 rounded-sm mt-[3rem]  font-[poppins] 
+    transition-all duration-700 translate-y-[100vh] z-1000 focus:outline-none"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}>
-        <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
+           <img src={props.imageurl} className=" object-cover h-[20.5rem] top-7 absolute  w-[35rem]  " /> 
+        <div className=" bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30  m-2 top-2 h-auto pb-3 
+         rounded-sm focus:outline-none relative">
+          
         <button onClick={closeModal} className="flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
