@@ -140,7 +140,7 @@ const animate =() => {
 </svg> </button>
          <img src={props.imageurl} className=" object-cover h-[14rem] top-7 relative w-[20rem] mx-auto rounded-sm
           shadow-[0px_5px_5px_-1px_rgba(0,0,0,0.5)] " /> 
-        <h1 className=" relative text-lg pl-3 mt-16 font-bold">{props.Foodname}</h1>
+        <h1 className=" relative text-xl pl-3 mt-16 font-bold">{props.Foodname}</h1>
       <div className="grid grid-cols-4  pl-2"> <h1 className=" text-opacity-60 justify-self-start my-auto pl-1 pr-2 text-justify text-sm row-span-1 col-span-3 text-black ">{props.Fooddesc}</h1>
         <h1 className="  text-2xl font-bold pr-3 justify-self-end my-auto">{props.Foodprice}</h1><div></div><div></div></div> 
         <div className="relative h-auto">

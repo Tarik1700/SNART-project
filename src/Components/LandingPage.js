@@ -135,7 +135,7 @@ charactersLength));
         <Basket  open1={isOpen1}  onClose1={() => setIsOpen1(false)} ></Basket>
         </div>
 
-        <div className=" h-[4.5rem] shadow-[5px_5px_15px_-2px_rgba(0,0,0,0.5)] relative  grid grid-cols-2 justify-items-end">
+        <div className=" h-[4.5rem] top-2 relative  grid grid-cols-2 justify-items-end">
         <img src={img10} alt="" className="  h-16   my-auto " /> 
         <img src={img11} alt="" className="  h-10  my-auto  justify-self-start " /> 
 
