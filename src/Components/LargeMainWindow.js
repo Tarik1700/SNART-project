@@ -127,7 +127,7 @@ const animate =() => {
     <Modal  aria={{
     labelledby: "heading1",
     describedby: "full_description1"
-  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-4 m-2 rounded-sm mt-[3rem]  font-[poppins] 
+  }} id="modal" overlayClassName="" className=" bg-[#F5F5F5] h-auto pb-2 m-2 rounded-sm mt-[3rem]  font-[poppins] 
     transition-all duration-700 translate-y-[100vh] z-1000 focus:outline-none"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}>
@@ -148,16 +148,16 @@ const animate =() => {
         </div>
 
 
-<div className="grid auto-rows-auto gap-4 text-lg mt-2 relative font-[poppins]">
+<div className="grid auto-rows-auto gap-4 text-lg mt-2 mb-4 relative font-[poppins]">
 {product.sides.map((side) => (   <Sides side={side} key={side.sideID} itemsPrice={itemsPrice} 
 setsidepricing={setsidepricing} sidepricing={sidepricing} setsidepricingqty={setsidepricingqty} sidepricingqty={sidepricingqty} />   ))}   
 </div>
 
-        <div className="mx-2">
-        <button  className=" relative  [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-xl mt-4 
+        <div className="mx-2 ">
+        <button  className=" relative  [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-sm mt-4 
         shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" onClick={both}>
         <div className=" ">
-        <svg className="mx-auto pt-2 pl-1 h-full " width="50"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="mx-auto pt-2 pl-1 h-full " width="55"  viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_2_83)">
 <path d="M21 39V21M21 21V3M21 21H39M21 21H3" stroke="white" strokeWidth="5" strokeLinecap="round" shapeRendering="crispEdges"/>
 </g>
