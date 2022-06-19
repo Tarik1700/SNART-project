@@ -87,7 +87,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
 </div>
 
 
-<div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
+<div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-2 ">
 <div id="basket" className=" transition-all relative    w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
      bg-[#F5F5F5]   z-[1000] rounded-sm translate-y-[100vh] duration-700  ">
 
@@ -131,7 +131,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
       
        <div  className="col-2 mt-2 text-xl grid grid-cols-9 "> 
       <h1 className=" pl-6 my-auto text-base col-span-3  text-left font-semibold">Sides:</h1>
-      <div className="col-span-6 text-lg place-self-end pr-[4rem] my-auto pl-1 ">
+      <div className="col-span-6 text-lg place-self-end pr-[4.7rem] my-auto pl-1 ">
          {sidepricing.toFixed(2)} KM
         </div>
       <div></div>

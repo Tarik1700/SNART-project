@@ -86,7 +86,9 @@ const TimeToReady = ( props) => {
         </div>
         <div className="text-sm mt-6 relative font-[poppins]">
             <h1 className="font-extrabold text-2xl font-poppins pl-3 ">Order status:</h1>
-            <div className="h-auto z-[999] bg-white relative mb-3 pb-1 rounded-sm m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+            {/* COMMENTED CODE BELOW NOT READY! */}
+            {/* <div className="hidden h-auto z-[999] bg-white relative mb-3 pb-1 rounded-sm m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">   
+ 
             <div className=" w-auto my-auto mr-2 h-10 top-[0.5rem] rounded-sm mx-2 relative bg-slate-400">
       
   <div className=" w-[95%]   h-7  rounded-sm mx-2 mt-[0.4rem] inline-block   bg-green-400">
@@ -116,7 +118,7 @@ Order <br></br> Ready!
     </div>
 
   </div>
-</div>
+</div> */}
             
         </div>
         <div className="h-16 z-[999] mt-6 bg-white relative  rounded-sm m-2  shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
