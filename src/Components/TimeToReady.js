@@ -32,9 +32,9 @@ const TimeToReady = ( props) => {
  <div id="backdrop" className=" bg-[rgba(255,255,255,0)] font-[poppins]   bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6">
 <div id="basket" className=" transition-all relative    w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#c7c7c7] pb-1  z-[1000] rounded-xl translate-y-[100vh] duration-700 ">
+     bg-[#F5F5F5]  pb-1  z-[1000] rounded-sm translate-y-[100vh] duration-700 ">
 
-      <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
+      <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-sm shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         
      
 
@@ -86,11 +86,11 @@ const TimeToReady = ( props) => {
         </div>
         <div className="text-sm mt-6 relative font-[poppins]">
             <h1 className="font-extrabold text-2xl font-poppins pl-3 ">Order status:</h1>
-            <div className="h-auto z-[999] bg-white relative mb-3 pb-1 rounded-xl m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
-            <div className=" w-auto my-auto mr-2 h-10 top-[0.5rem] rounded-[100rem] mx-2 relative bg-slate-400">
+            <div className="h-auto z-[999] bg-white relative mb-3 pb-1 rounded-sm m-2 shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+            <div className=" w-auto my-auto mr-2 h-10 top-[0.5rem] rounded-sm mx-2 relative bg-slate-400">
       
-  <div className=" w-[95%]   h-7  rounded-[100rem] mx-2 mt-[0.4rem] inline-block   bg-green-400">
-  <div className=" w-[50%]   -mt-[0.4rem]  ml-[50.1%] h-10 rounded-l-none   rounded-[100rem] mx-2 inline-block  bg-slate-400">
+  <div className=" w-[95%]   h-7  rounded-sm mx-2 mt-[0.4rem] inline-block   bg-green-400">
+  <div className=" w-[50%]   -mt-[0.4rem]  ml-[50.1%] h-10 rounded-l-none   rounded-sm mx-2 inline-block  bg-slate-400">
       
 
 </div>
@@ -119,7 +119,7 @@ Order <br></br> Ready!
 </div>
             
         </div>
-        <div className="h-16 z-[999] mt-6 bg-white relative  rounded-xl m-2  shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
+        <div className="h-16 z-[999] mt-6 bg-white relative  rounded-sm m-2  shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  ">
         <h1 className="font-extrabold text-center"> Your order will be ready in ___ minutes, we'll be with You shortly</h1>
         </div>
        

@@ -89,9 +89,9 @@ const [isOpenReady, setIsOpenReady] = useState ()
 
 <div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6 ">
 <div id="basket" className=" transition-all relative    w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
-     bg-[#F5F5F5]   z-[1000] rounded-xl translate-y-[100vh] duration-700  ">
+     bg-[#F5F5F5]   z-[1000] rounded-sm translate-y-[100vh] duration-700  ">
 
-      <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-xl shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
+      <div className=" bg-white m-2 top-2 h-auto pb-3  rounded-sm shadow-[0px_10px_15px_-2px_rgba(0,0,0,0.5)]  relative">
         <button id="btn3" onClick={closeBasketArrow} className="z-[1000] flex pl-2 pt-2 absolute focus:outline-none [-webkit-tap-highlight-color:rgba(0,0,0,0);]" > <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0.939337 10.9393C0.35355 11.5251 0.35355 12.4749 0.939337 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939337 10.9393ZM28.1725 10.5L2 10.5V13.5L28.1725 13.5V10.5Z" fill="black" fillOpacity="0.44"/>
 </svg> </button>
@@ -159,7 +159,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
           
         <textarea value={message} 
       onChange={e => setMessage(e.target.value)}  placeholder="If you have any special requests for the kitchen write them here:"
-         className=" px-4 rounded-xl h-36 border-2 w-full relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
+         className=" px-4 rounded-sm h-36 border-2 w-full relative shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]"
           type="text"  maxLength="130" name="message" rows="4" cols="1"  />
         
         
@@ -167,7 +167,7 @@ const [isOpenReady, setIsOpenReady] = useState ()
           
         </div>
         <div className="mx-2 mb-2">
-        <button  onClick={closeBasket} className=" relative mb-2 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-xl mt-4 
+        <button  onClick={closeBasket} className=" relative mb-2 [-webkit-tap-highlight-color:rgba(0,0,0,0);] h-16 w-full  ml-0   bg-[#5DBB63] rounded-sm mt-4 
         shadow-[2px_4px_6px_-1px_rgba(0,0,0,0.5)]" >
         <div className="text-white text-xl my-auto mx-auto font-poppins">
         CONFIRM ORDER
