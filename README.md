@@ -22,8 +22,9 @@
     
    <h1> Preview:
      <p align="center">
-     <img src="https://user-images.githubusercontent.com/71398993/170133501-a3bff862-d5ec-4c90-b9cd-9605ffd6eba5.png">
-     <img src="https://user-images.githubusercontent.com/71398993/170133806-3ec9cbc6-0761-4fee-a754-f0430b0221bd.png">
-       <img src="https://user-images.githubusercontent.com/71398993/170134007-d9181730-2b8a-413e-92f2-e36b10f9cf8a.png">
-        <img src="https://user-images.githubusercontent.com/71398993/170134249-8d04a449-4f6e-459d-8e2c-b81d89378358.png">
+     <img src="https://user-images.githubusercontent.com/71398993/174502479-ce54d38b-7758-4f70-b248-aa5cc84a492c.png">
+     <img src="https://user-images.githubusercontent.com/71398993/174502085-b04c9d45-a19d-4a12-abd9-940dcda3829a.png">
+       <img src="https://user-images.githubusercontent.com/71398993/174502120-712b282c-188b-48ad-94c1-11ceafb11c29.png">
+        <img src="https://user-images.githubusercontent.com/71398993/174502185-7c223840-e579-4988-a964-c6b353ab5ee0.png">
+       <img src="https://user-images.githubusercontent.com/71398993/174502276-96317c60-204b-4d1a-b4aa-025a611cc4eb.png">
     </p>
