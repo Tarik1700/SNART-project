@@ -30,7 +30,7 @@ const TimeToReady = ( props) => {
   return (
     <>
  <div id="backdrop" className=" bg-[rgba(255,255,255,0)] font-[poppins]   bg-clip-padding backdrop-filter backdrop-blur-[8px] bg-opacity-60  fixed top-0 left-0 right-0 bottom-0 z-[1000]"/>
-<div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-6">
+<div className="fixed left-0 right-0 top-0 bottom-0 z-[10000] mx-2">
 <div id="basket" className=" transition-all relative    w-full h-auto font-[poppins]  transform left-[50%] -translate-x-[50%]
      bg-[#F5F5F5]  pb-1  z-[1000] rounded-sm translate-y-[100vh] duration-700 ">
 
